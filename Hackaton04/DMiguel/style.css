@@ -1,0 +1,114 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+	background: #202e38;
+    color: #fff;
+}
+
+.tabla-periodica{
+    display: flex;
+}
+
+/* Grupos */
+
+.tp_grupo{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.grup_1_18{
+    margin-block-start: 0em;
+}
+
+.grup_2_13-17{
+    margin-block-start: 6.5em;
+}
+
+.grup_3-12{
+    margin-block-start: 19.5em;
+}
+
+.grup_4{
+    margin-block-start: 19.5em;
+}
+
+.tp_grupo_elemn{
+    width: 6.5em;
+    height: 6.5em;
+    text-align: center;
+}
+
+.elemn_invsible{
+    background-color: #fff;
+    display: none;
+}
+
+.tp_grupo_elemn .elemn_simbolo{
+    font-weight: bold;
+    font-size:3em
+}
+
+.tp_grupo_elemn .elemn_name{
+    font-weight: bold;
+}
+
+.tp_grupo_elemn .elemn_info{
+    display: flex;
+    justify-content: space-between;
+}
+
+.elemn_info span{
+    margin-inline: 0.5em;
+}
+
+/* Tipo de Elemento */
+
+/* Otros no metales */
+
+.alcalino{
+    background: radial-gradient(#eace5d 10%,#ffffff00 50%); 
+}
+
+.alcalinotérreos{
+    background: radial-gradient(#f1f165 10%,#ffffff00 50%); 
+}
+
+.lantanidos{
+    background: radial-gradient(#e8d19c 10%,#ffffff00 50%); 
+}
+
+.Actinido{
+    background: radial-gradient(#f5ccda 10%,#ffffff00 50%); 
+}
+
+.metalDeTransicion{
+    background: radial-gradient(#fac5b7 10%,#ffffff00 50%); 
+}
+
+.sinClasificar{
+    background: radial-gradient(#eee 10%,#ffffff00 50%);
+}
+
+.metalDelBloqueP{
+    background: radial-gradient(#acdfec 10%,#ffffff00 50%); 
+}
+
+.semimetales{
+    background: radial-gradient(#9ee5d4 10%,#ffffff00 50%); 
+}
+
+.noMetales{
+    background: radial-gradient(#8ced8c 10%,#ffffff00 50%);
+}
+
+.noMetales:hover{
+    transition: 3s all;
+    background-color: #8ced8c;
+}
+
+.gasesNobles{
+    background: radial-gradient(#e5bde5 10%,#ffffff00 50%);
+}
+

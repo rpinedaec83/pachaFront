@@ -9,5 +9,5 @@ Por último, tendríamos el caso ideal, donde el formulario tiene validación en
 
 
 ## ¿Cuáles son los beneficios?
-
+ 
 Los beneficios es que estas asegurando que la información que el usuario manda al servidor sea correcta y de tipo string como numérica y no haya conflictos para que luego esta infosea correctamente sea almacenada y utilizada mas adelante...
