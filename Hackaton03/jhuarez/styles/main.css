@@ -37,12 +37,10 @@ line-height: 16px;
 }
 
 .enviar {
-    background-color: #233451;
+    background-color: black;
     color: white;
-    width: 167px;
-    height: 56px;
-    font-family: 'Arial';
-    font-style: normal;
+    width: 196px;
+    height: 48px;
     font-weight: 700;
     font-size: 18px;
     line-height: 21px;

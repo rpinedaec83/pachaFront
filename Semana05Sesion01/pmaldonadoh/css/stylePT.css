@@ -1,0 +1,105 @@
+.container {  display: grid;
+    grid-template-columns: 1.5fr 1.5fr 1.5fr 1.5fr 1.5fr 1.5fr 1.5fr 1.5fr 1.5fr 1.5fr 1.5fr 1.5fr 1.5fr 1.5fr 1.5fr 1.5fr 1.5fr 1.5fr;
+    grid-template-rows: 1.5fr 1.5fr 1.5fr 1.5fr 1.5fr 1.5fr 1.5fr 1.5fr 1.5fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      ". espacio-vacio-1 espacio-vacio-1 espacio-vacio-1 espacio-vacio-1 espacio-vacio-1 espacio-vacio-1 espacio-vacio-1 espacio-vacio-1 espacio-vacio-1 espacio-vacio-1 espacio-vacio-1 espacio-vacio-1 espacio-vacio-1 espacio-vacio-1 espacio-vacio-1 espacio-vacio-1 ."
+      ". . espacio-vacio-2 espacio-vacio-2 espacio-vacio-2 espacio-vacio-2 espacio-vacio-2 espacio-vacio-2 espacio-vacio-2 espacio-vacio-2 espacio-vacio-2 espacio-vacio-2 . . . . . ."
+      ". . espacio-vacio-3 espacio-vacio-3 espacio-vacio-3 espacio-vacio-3 espacio-vacio-3 espacio-vacio-3 espacio-vacio-3 espacio-vacio-3 espacio-vacio-3 espacio-vacio-3 . . . . . ."
+      ". . . . . . . . . . . . . . . . . ."
+      ". . . . . . . . . . . . . . . . . ."
+      ". . . . . . . . . . . . . . . . . ."
+      ". . . . . . . . . . . . . . . . . ."
+      "boro boro boro . . . . . . . . . . . . . . ."
+      "boro boro boro . . . . . . . . . . . . . . ."
+      "boro boro boro alcalico . . . . . . . . . . . . . .";
+  }
+  
+  .espacio-vacio-2 { 
+    grid-area: espacio-vacio-2; 
+}
+  
+  .espacio-vacio-3 { grid-area: espacio-vacio-3; }
+  
+  .espacio-vacio-1 { grid-area: espacio-vacio-1; }
+  
+  .boro { grid-area: boro; }
+  
+  .alcalico {  
+    
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr;
+    grid-template-rows: 2fr 2fr 2fr;
+    gap: 0px 50px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      ". . ."
+      ". . ."
+      ". . .";
+    grid-area: alcalico;
+  }
+  
+.container div {
+    border: 0.5px solid black;
+    font-size: 1.8em;
+    padding: 2%;
+    font-weight: bold;
+
+}
+  
+.metales {
+    background-color: yellow;
+    text-align: center;
+}
+ 
+.no-metales {
+    background-color: #317BF5;
+    text-align: center;
+}
+
+.m-transicion {
+    background-color: #B2F946;
+    text-align: center;
+}
+
+.m-alcalicos {
+    background-color: #F54439;
+    text-align: center;
+}
+
+.a-terreo {
+    background-color: #F99A46;
+    text-align: center;
+}
+
+.halogenos {
+    background-color: #D221E7;
+    text-align: center; 
+}
+
+.gases-nobles {
+    background-color: #0CE9D5;
+    text-align: center; 
+}
+
+.metaloide {
+    background-color: #53F71F;
+    text-align: center;
+}
+
+.lantanidos {
+    background-color: #6FBFC7;
+    text-align: center;
+}
+
+.actinidos {
+    background-color: #6A8F74;
+    text-align: center;
+}
+
+
+.nada {
+ border-bottom: none;
+}
+
