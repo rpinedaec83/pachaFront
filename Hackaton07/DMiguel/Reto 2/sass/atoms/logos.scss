@@ -1,0 +1,35 @@
+@import "./colors.scss";
+@import "./text-font.scss";
+
+$medida-log: 1.3em;
+$media-size: 1.2em;
+
+.logo-1{
+    font-size: $media-size;
+    width: $medida-log;
+    height: $medida-log;
+    border: 0.09em solid $color-logo-nav;
+    border-radius: 50%;
+    box-shadow: -9px 0px 0px 0px $color-logo-nav;
+    color: $color-logo-nav;
+    font-family: $font-logo;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-2{
+    width: $medida-log;
+    height: $medida-log;
+    font-size: $media-size;
+    border: 0.09em solid $color-logo-nav;
+    border-radius: 50%;
+    box-shadow: -9px 0px 0px 0px $color-logo-footer;
+    color: $color-logo-nav;
+    font-family: $font-logo;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+

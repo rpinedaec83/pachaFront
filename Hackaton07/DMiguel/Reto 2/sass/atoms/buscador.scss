@@ -1,0 +1,57 @@
+@import './colors.scss';
+@import './text-font.scss';
+
+input{
+    outline: none;
+}
+
+.search{
+    margin-block: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .search__input{
+        width:  90%;
+        max-width: 50%;
+        font-family: $font-normal;
+        background: $color-search;
+        color: $color-text-principal;
+        padding: 0.7em 2em;
+        font-size: 1.2em;
+        border-radius:0.2em
+    }
+    i{
+        color: $color-text-principal;
+        position: relative;
+        left: 1.4em;
+        z-index: 100000;
+        &:focus{
+            border: 0;
+
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

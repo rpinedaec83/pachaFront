@@ -1,0 +1,31 @@
+.row_d_flex {
+    display: flex;
+    flex-direction: row; /* Alineación horizontal */
+    justify-content: space-between; /* Espacio entre los elementos */
+    align-items: center;
+    top: 0px;
+}
+
+.navbar-nav-mr-auto li:hover {
+    background-color: #ffcc00; /* Cambia el valor de fondo según tus necesidades */
+}
+
+.header{
+    margin-top: 200px;
+}
+
+ul li {
+    list-style: none; /* Elimina los puntos por defecto */
+}
+
+.nav-item-active {
+    height: 50px;
+}
+
+.navbar-nav-mr-auto {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 35px;
+}

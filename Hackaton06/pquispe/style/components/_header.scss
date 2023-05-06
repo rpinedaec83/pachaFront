@@ -1,0 +1,53 @@
+.header {
+    width: 100%;
+
+    &__navbar {
+        background-color: $background-page;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 100%;
+        max-width: 1319px;
+        padding: 48px 30px;
+        margin: 0 auto;
+        gap: 20px;
+
+        &__logo {
+            width: 46.35px;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        .navbar-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+
+            &__item a {
+                @include header-navbar(disabled);
+            }
+
+            &__item--active a {
+                @include header-navbar(active);
+            }
+        }
+    }
+
+
+    &__presentation {
+        background: url('../assets/imgs/background-header.svg') no-repeat center;
+        background-size: cover;
+        padding: 55px 20px;
+
+        &__title {
+            @include header-presentation(title);
+        }
+
+        &__content {
+            @include header-presentation(content);
+        }
+    }
+}

@@ -1,0 +1,11 @@
+@import "./colors.scss";
+@import "./text-font.scss";
+
+button{
+    padding: 1.2em 3.9em;
+    background: $color-button;
+    color: $color-text-footer;
+    font-size: 0.7em;
+    font-family: $font-normal !important;
+}
+

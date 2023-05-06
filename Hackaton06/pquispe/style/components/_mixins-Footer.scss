@@ -1,0 +1,33 @@
+
+@mixin containersFooter($element) {
+    background-color: $background-footer;
+    width: 100%;
+    display: grid;
+    justify-content: center;
+    grid-template-rows: repeat(2, auto);
+
+    @if $element == about {
+        grid-template-columns: repeat(2, minmax(260px, 467px));
+        padding: 91px 20px;
+        border-bottom: 1px solid #fff;
+    }
+    @else if $element == links {
+        grid-template-columns: minmax(220px, 467px) repeat(2, minmax(110px, 233.5px));
+        padding: 98px 20px 64px;
+    } 
+}
+
+
+@mixin footer-text($size, $weight, $spacing, $font, $color) {
+    font-size: 1.6rem + $size;
+    font-weight: 400 + $weight;
+    font-family: $font;
+    letter-spacing: 0.032rem + $spacing;
+
+    @if $color == normal {
+        color: $footer-content;
+    }
+    @else if $color == opacity {
+        color: $footer-opacity;
+    }
+}

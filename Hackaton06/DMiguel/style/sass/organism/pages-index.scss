@@ -1,0 +1,23 @@
+@import '../atoms/buscador.css';
+@import '../atoms/button.css';
+@import '../atoms/icons.css';
+@import '../atoms/imgs.css';
+
+@import '../molecules/article.scss';
+@import '../molecules/footer.scss';
+@import '../molecules/menu-article.scss';
+@import '../molecules/nav.scss';
+@import '../molecules/posts.scss';
+
+
+*{
+    margin:0;
+    border:0;
+    padding: 0;
+}
+
+@media screen and (max-width: 800px) {
+    .left, .main, .right {
+        width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
+    }
+}

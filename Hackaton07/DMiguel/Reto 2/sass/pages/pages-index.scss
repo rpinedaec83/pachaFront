@@ -1,0 +1,256 @@
+@import '../atoms/buscador.css';
+@import '../atoms/button.css';
+@import '../atoms/icons.css';
+@import '../atoms/imgs.css';
+
+@import '../organism/article.scss';
+@import '../organism/footer.scss';
+@import '../molecules/menu-article.scss';
+@import '../molecules/nav.scss';
+@import '../organism/posts.scss';
+
+*{
+    margin:0;
+    border:0;
+    padding: 0;
+}
+
+
+
+// Definicion de breakpoints - mapa
+
+$breakpoints :(
+    sm: 300px,
+    md: 780px,
+    lg: 1024px,
+    xl: 1319px,
+);
+
+@mixin media-up($breakpoint){
+    // validacion de mapa breakpoint
+    @if map-has-key($breakpoints,$breakpoint){
+        // Media Query
+        @media screen and(min-width: map-get($breakpoints, $breakpoint)){
+            @content;
+        }
+    } @else{
+        @warn "El valor del breakpoint '#{$breakpoint}' no existe";
+    }
+    
+}
+
+@media screen and (max-width: 800px) {
+    .left, .main, .right {
+        width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
+    }
+}
+
+main{
+    .header__presentation{
+        h2{
+            @include media-up(sm){
+                width: 50%;
+            }
+            @include media-up(md){
+                width: 60%;
+            }
+            @include media-up(lg){
+                width: 80%;
+            }
+            @include media-up(xl){
+                width: 100%;
+            }
+        }
+    }
+
+    .search{
+        .search__input{
+            @include media-up(sm){
+                max-width: 98%;
+            }
+            @include media-up(md){
+                max-width: 98%;
+            }
+            @include media-up(lg){
+                max-width: 65%;
+            }
+            @include media-up(xl){
+                max-width: 50%;
+            }
+        }
+    }
+    
+    .menu-article{
+        @include media-up(sm){
+            max-width: 98%;
+            justify-content: end;
+            #menu-article-opc1{
+                display: none;
+            }
+        }
+        @include media-up(md){
+            max-width: 98%;
+            justify-content: normal;
+            #menu-article-opc1{
+                display: flex;
+            }
+        }
+        @include media-up(lg){
+            max-width: 65%;
+        }
+        @include media-up(xl){
+            max-width: 50%;
+        }
+    } 
+}
+
+
+.all_posts{
+    @include media-up(sm){
+        max-width: 98%;
+        grid-template-columns: repeat(1, auto);
+        grid-template-rows: repeat(5, auto);
+        grid-template-areas: "h2" "post1" "post2" "post3" "post4";
+        .post__1,.post__2, .post__3, .post__4{
+            grid-template-columns: repeat(1, auto);
+            grid-template-rows: repeat(4, auto);
+            grid-template-areas: "image"
+                                "title"
+                                "info_p"
+                                "texto";
+        }
+
+        .post__4{
+            display:none;
+        }
+        .title-h2{
+            font-size:1.8em;
+        }
+    }
+    @include media-up(md){
+        max-width: 98%;
+        grid-template-columns: repeat(3, auto);
+        grid-template-rows: repeat(3, auto);
+        grid-template-areas: "h2 h2 h2"
+                            "post1 post1 post1"
+                            "post2 post3 post4";
+        .post__1{
+            grid-template-columns: repeat(3, auto);
+            grid-template-rows: repeat(3, auto);
+            grid-template-areas: "title image image"
+                                "texto image image"
+                                "info_p image image";
+        }
+        .post__2, .post__3, .post__4{
+            grid-template-columns: repeat(1, auto);
+            grid-template-rows: repeat(4, auto);
+            grid-template-areas: "image"
+                                "title"
+                                "info_p"
+                                "texto";
+        }
+        .post__4{
+            display:grid;
+        }
+        .title-h2{
+            font-size:1.4em;
+        }
+    }
+    @include media-up(lg){
+        max-width: 65%;
+    }
+    @include media-up(xl){
+        max-width: 50%;
+    }
+}
+
+.all_article{
+    @include media-up(sm){
+        max-width: 98%;
+        section{
+            grid-template-columns: repeat(1, auto);
+            grid-template-rows: repeat(4, auto);
+            grid-template-areas:"image "
+                                "title"
+                                "texto"
+                                "info_p";
+        }
+        .article__3,.article__4,.article__5{
+            display: none;
+        }
+    }
+    @include media-up(md){
+        max-width: 98%;
+        section{
+            grid-template-columns: repeat(2, auto);
+            grid-template-rows: repeat(3, auto);
+            grid-template-areas:"image title"
+                                "image texto"
+                                "image info_p";
+            }
+        .article__3,.article__4,.article__5{
+            display: grid;
+        }
+    }
+    @include media-up(lg){
+        max-width: 65%;
+    }
+    @include media-up(xl){
+        max-width: 50%;
+    }
+}
+
+footer{
+    .footer-1{
+        @include media-up(sm){
+            max-width: 98%;
+            grid-template-columns: repeat(1,auto);
+            grid-template-rows: repeat(3,auto);
+            grid-template-areas: "title"
+                                 "text"
+                                 "button";
+        }
+        @include media-up(md){
+            grid-template-columns: repeat(2,auto);
+            grid-template-rows: repeat(2,auto);
+            grid-template-areas: "title button"
+                                "text button";
+            max-width: 98%;
+        }
+        @include media-up(lg){
+            max-width: 65%;
+        }
+        @include media-up(xl){
+            max-width: 50%;
+            
+        }
+    }
+    .button{
+        button{
+            @include media-up(sm){
+                width: 100%;
+            }
+            @include media-up(md){
+                width: auto;
+            }
+        }
+    }
+    .footer-2{
+        @include media-up(sm){
+            max-width: 98%;
+            display: flex;
+            flex-direction: column;
+        }
+        @include media-up(md){
+            max-width: 98%;
+            display: grid;
+        }
+        @include media-up(lg){
+            max-width: 65%;
+        }
+        @include media-up(xl){
+            max-width: 50%;
+        }
+    }
+}
+

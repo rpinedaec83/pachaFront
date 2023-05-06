@@ -1,0 +1,138 @@
+@use 'variables';
+.article{
+  margin-top: 2rem;
+  width: 100%;
+  position: relative;
+  &__title-head{
+    font-size: 1.3rem;
+    font-family: variables.$helvetica;
+    font-weight: variables.$bold;
+    text-transform: uppercase;
+    color: variables.$primary;
+    margin-bottom: 1rem;
+  }
+  &__container{
+    display: grid;
+    grid-template-areas: "imgpost" "title" "description" "tools";
+    gap: 10px;
+    margin-bottom: 2rem;
+  }
+  &__title{
+    font-size: 1.25rem;
+    font-family: variables.$helvetica;
+    font-weight: variables.$bold;
+    color: variables.$secondary;
+    grid-area: title;
+  }
+  &__description{
+    color: rgba(0, 0, 0, 0.6);;
+    font-size: 0.8rem;
+    font-weight: variables.$normal;
+    line-height: 26px;
+    grid-area: description;
+  }
+  &__about{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    grid-area: tools;
+  }
+  &__author{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.8rem;
+    &-name{
+      font-family: variables.$helvetica;
+      font-weight: variables.$bold;
+      color: variables.$secondary;
+    }
+    &-date{
+      font-weight: variables.$normal;
+      color: variables.$secondary;
+    }
+  }
+  &__tools{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+  }
+  &__icon{
+    font-size: 1.1rem;
+    color: variables.$primary;
+  }
+  &__img{
+    width: 100%;
+    height: 200px;
+    grid-area: imgpost;
+  }
+  &__tools-page{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    &-old{
+      display: none;
+      cursor: pointer;
+    }
+    &-new{
+      font-size: 1rem;
+      font-weight: variables.$normal;
+      color: variables.$primary;
+      cursor: pointer;
+    }
+  }
+  &__icon-old{
+    visibility: hidden;
+  }
+  &__icon-new{
+    visibility: hidden;
+  }
+}
+
+@media (min-width: 768px) {
+  .article{
+    margin-bottom: 10rem;
+    &__title-head{
+      margin-bottom: 2rem;
+    }
+    &__container{
+      display: grid;
+      grid-template-areas: 
+        "imgpost title" "imgpost description" "imgpost tools";
+      gap: 10px;
+      margin-bottom: 2rem;
+    }
+    &__img{
+      min-width: 300px;
+      max-width: 300px;
+      height: 200px;
+      grid-area: imgpost;
+    }
+    &__tools-page{
+      justify-content: space-between;
+      &-old{
+        display: block;
+        font-size: 1rem;
+        font-weight: variables.$normal;
+        color: variables.$primary;
+      }
+      &-new{
+        font-size: 1rem;
+        font-weight: variables.$normal;
+        color: variables.$primary;
+      }
+    }
+    &__icon-old{
+      visibility: visible;
+      margin-right: 8px;
+    }
+    &__icon-new{
+      visibility: visible;
+      margin-left: 8px;
+    }
+  }
+}

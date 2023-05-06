@@ -1,4 +1,4 @@
-.DS_Store
+z.DS_Store
 node_modules/
 /dist/
 
@@ -19,3 +19,4 @@ yarn-error.log*
 *.njsproj
 *.sln
 *.sw*
+*.mp3
