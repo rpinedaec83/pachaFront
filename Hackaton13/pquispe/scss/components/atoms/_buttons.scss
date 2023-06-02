@@ -1,0 +1,29 @@
+
+.header__button {
+    background-color: $background-color-header;
+    color: $text-primary-color;
+    @include font-text (0.3);
+    cursor: pointer;
+}
+
+.main__button {
+    background-color: $background-color-button;
+    color: $text-primary-color;
+    @include font-text (0.9);
+    padding: 26px 52px 20px;
+    cursor: pointer;
+}
+
+.button__accept {
+    background-color: $background-color-button;
+    color: $text-primary-color;
+    padding: 12px 40px;
+    cursor: pointer;
+}
+
+.button__cancel {
+    background-color: $background-color-button;
+    color: $text-primary-color;
+    padding: 12px 40px;
+    cursor: pointer;
+}

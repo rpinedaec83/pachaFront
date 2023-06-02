@@ -1,0 +1,6 @@
+
+@mixin font-text ($size) {
+    font-size: 0.9rem + $size;
+    font-weight: $font-weight-stack;
+    font-style: $font-style-stack;
+}

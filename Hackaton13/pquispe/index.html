@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Dog Crud | Hackaton 13</title>
+        <link rel="stylesheet" href="./css/styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <header class="header">
+            <h1 class="header__title">Dog Crud</h1>
+            <button type="button" class="header__button">Agregar mascota</button>
+        </header>
+
+        <main class="main  main--containerCards">
+            <!-- <button type="button" class="main__button">Agregar mascota</button> -->
+
+            <ul class="containerCards">
+                <li class="itemCard">
+                    <div class="editContainer">
+                        <img class="editContainer__icon" src="./assets/edit.svg" alt="">
+                        <span class="editContainer__title">Edit</span>
+                    </div>
+                    <div class="deleteContainer">
+                        <img class="deleteContainer__icon" src="./assets/delete.svg" alt="">
+                        <span class="deleteContainer__title">Delete</span>
+                    </div>
+                    <img class="itemCard__image" src="" alt="">
+                    <h3 class="itemCard__name">Nombre</h3>
+                    <p class="itemCard__contact">Telefono | Correo</p>
+                    <p class="itemCard__country">Pais</p>
+                    <p class="itemCard__about">
+                        About me about me about me about me about me about me about me about me about me about me about me
+                    </p>
+                </li>
+                <li class="itemCard">
+                    <img class="itemCard__image" src="" alt="">
+                    <h3 class="itemCard__name">Nombre</h3>
+                    <p class="itemCard__contact">Telefono | Correo</p>
+                    <p class="itemCard__country">Pais</p>
+                    <p class="itemCard__about">
+                        About me about me about me about me about me about me about me about me about me about me about me
+                    </p>
+                </li>
+                <li class="itemCard">
+                    <img class="itemCard__image" src="" alt="">
+                    <h3 class="itemCard__name">Nombre</h3>
+                    <p class="itemCard__contact">Telefono | Correo</p>
+                    <p class="itemCard__country">Pais</p>
+                    <p class="itemCard__about">
+                        About me about me about me about me about me about me about me about me about me about me about me
+                    </p>
+                </li>
+                <li class="itemCard">
+                    <img class="itemCard__image" src="" alt="">
+                    <h3 class="itemCard__name">Nombre</h3>
+                    <p class="itemCard__contact">Telefono | Correo</p>
+                    <p class="itemCard__country">Pais</p>
+                    <p class="itemCard__about">
+                        About me about me about me about me about me about me about me about me about me about me about me
+                    </p>
+                </li>
+                <li class="itemCard">
+                    <img class="itemCard__image" src="" alt="">
+                    <h3 class="itemCard__name">Nombre</h3>
+                    <p class="itemCard__contact">Telefono | Correo</p>
+                    <p class="itemCard__country">Pais</p>
+                    <p class="itemCard__about">
+                        About me about me about me about me about me about me about me about me about me about me about me
+                    </p>
+                </li>
+                <li class="itemCard">
+                    <img class="itemCard__image" src="" alt="">
+                    <h3 class="itemCard__name">Nombre</h3>
+                    <p class="itemCard__contact">Telefono | Correo</p>
+                    <p class="itemCard__country">Pais</p>
+                    <p class="itemCard__about">
+                        About me about me about me about me about me about me about me about me about me about me about me
+                    </p>
+                </li>
+                <li class="itemCard">
+                    <img class="itemCard__image" src="" alt="">
+                    <h3 class="itemCard__name">Nombre</h3>
+                    <p class="itemCard__contact">Telefono | Correo</p>
+                    <p class="itemCard__country">Pais</p>
+                    <p class="itemCard__about">
+                        About me about me about me about me about me about me about me about me about me about me about me
+                    </p>
+                </li>
+                <li class="itemCard">
+                    <img class="itemCard__image" src="" alt="">
+                    <h3 class="itemCard__name">Nombre</h3>
+                    <p class="itemCard__contact">Telefono | Correo</p>
+                    <p class="itemCard__country">Pais</p>
+                    <p class="itemCard__about">
+                        About me about me about me about me about me about me about me about me about me about me about me
+                    </p>
+                </li>
+            </ul>
+
+            <section class="formContainer">
+                <form class="form" action="#" method="post">
+                    <div class="form__presentation">
+                        <h2 class="form__title">Agregar Mascota</h2>
+                        <img class="form__iconClose" src="./assets/close.svg" alt="">
+                    </div>
+                    <div class="form__inputsContainer">
+                        <input type="text" id="nombre" name="nombre" placeholder="Nombre">
+                        <input type="text" id="apellido" name="apelldio" placeholder="Apellido">
+                        <input type="text" id="raza" name="raza" placeholder="Raza">
+                        <input type="number" id="telefono" name="telefono" placeholder="Telefono">
+                        <input type="text" id="pais" name="pais" placeholder="Pais">
+                        <input type="text" id="fotografia" name="fotografia" placeholder="Url de Fotografia">
+
+                        <textarea name="descripcion" id="descripcion" placeholder="Sobre él/ella"></textarea>
+                    </div>
+                    <div class="form__buttons">
+                        <button class="button__accept" type="submit">Aceptar</button>
+                        <button class="button__cancel" type="button">Cancelar</button>
+                    </div>
+                </form>
+            </section>
+        </main>
+
+        <script src="./js/script.js"></script>
+    </body>
+</html>
