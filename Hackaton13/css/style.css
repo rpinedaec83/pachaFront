@@ -44,6 +44,10 @@
   text-align: left;
 }
 
+.form-group {
+  margin-bottom: 10px;
+}
+
 img {
   border-radius: 200px 200px 200px 200px;
 }

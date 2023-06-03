@@ -19,7 +19,7 @@ class Modal {
 
     closeModal(event) {
         if (event.target == this.modal) {
-            this.modal.style.display = "none";
+            this.modal.style.display = 'none';
         }
     };
   
