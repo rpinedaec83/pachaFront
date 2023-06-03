@@ -5,6 +5,7 @@ const addPetLocalStore = (pet) => {
 		localStorage.setItem('petsList', JSON.stringify(pets));
 		console.log(pets);
 	}
+	loadPets(pets);
 };
 
 const editPetLocalStore = (petList) => {
