@@ -1,20 +1,10 @@
 
 .editContainer {
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    position: absolute;
-    top: 10px;
+    @include options-card;
     left: 10px;
-    cursor: pointer;
 }
 
 .deleteContainer {
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    position: absolute;
-    top: 10px;
+    @include options-card;
     right: 10px;
-    cursor: pointer;
 }

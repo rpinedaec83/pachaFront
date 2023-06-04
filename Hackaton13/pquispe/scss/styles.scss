@@ -17,6 +17,7 @@
 @import "./components/atoms/span";
 @import "./components/atoms/inputs";
 @import "./components/atoms/textareas";
+@import "./components/atoms/loading";
 
 // Molecules
 @import "./components/molecules/header";
@@ -25,9 +26,13 @@
 @import "./components/molecules/titleFormContainer";
 @import "./components/molecules/inputsFormContainer";
 @import "./components/molecules/buttonsFormContainer";
+@import "./components/molecules/loadingContainer";
 
 // Organisms
 @import "./components/organisms/cardsContainer";
 @import "./components/organisms/main";
 @import "./components/organisms/form";
 @import "./components/organisms/formContainer";
+
+// Breakpoints
+@import "./components/breakpoints/laptop";

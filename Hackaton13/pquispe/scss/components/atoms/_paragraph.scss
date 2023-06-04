@@ -17,3 +17,9 @@
     text-align: center;
     line-height: 1.6rem;
 }
+
+.form__questionDelete {
+    @include font-text (0.5);
+    text-align: center;
+    margin-bottom: 20px;
+}
