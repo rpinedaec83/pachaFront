@@ -6,17 +6,17 @@
   background-color: gray;
 }
 
-.contenedor {
+.fila {
   display: flex;
 }
 
-.vertical {
+.centrar-vertical {
   align-items: center;
   justify-content: center;
   height: 80vh;
 }
 
-/* The Modal (background) */
+/* Fondo modal */
 .modal {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
@@ -31,7 +31,7 @@
   background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
 }
 
-/* Modal Content */
+/* Contenido modal */
 .modal-contenido {
   background-color: #fefefe;
   margin: auto;
@@ -46,6 +46,14 @@
 
 .form-group {
   margin-bottom: 10px;
+}
+
+.oculto {
+  display: none;
+}
+
+.visible {
+  display: block;
 }
 
 img {
