@@ -1,21 +1,22 @@
+let perros = JSON.parse(localStorage.getItem("perros")) || [];
+
 //OBJETO MODAL
 
 class Modal {
 
-    constructor() {
-      this.modal = document.getElementById('myModal');
-      this.openBtn1 = document.getElementById('openModalBtn1');
-      this.openBtn2 = document.getElementById('openModalBtn2');
-      this.acceptBtn = document.getElementById('acceptBtn');
-      this.cancelBtn = document.getElementById('cancelBtn');
-  
-      this.openBtn1.addEventListener('click', this.agregarNuevoPerro.bind(this));
-      this.openBtn1.addEventListener('click', this.agregarNuevoPerro.bind(this));
-      this.acceptBtn.addEventListener('click', this.accept.bind(this));
-      this.cancelBtn.addEventListener('click', this.cancel.bind(this));
-      window.addEventListener("click", this.closeModal.bind(this));
+  constructor() {
+    this.modal = document.getElementById('myModal');
+    this.openBtn1 = document.getElementById('openModalBtn1');
+    this.openBtn2 = document.getElementById('openModalBtn2');
+    this.acceptBtn = document.getElementById('acceptBtn');
+    this.cancelBtn = document.getElementById('cancelBtn');
 
-    }
+    this.openBtn1.addEventListener('click', this.agregarNuevoPerro.bind(this));
+    this.openBtn2.addEventListener('click', this.agregarNuevoPerro.bind(this));
+    this.acceptBtn.addEventListener('click', this.accept.bind(this));
+    this.cancelBtn.addEventListener('click', this.cancel.bind(this));
+    window.addEventListener("click", this.closeModal.bind(this));
+  }
   
     openModal() {
       this.modal.style.display = 'block';
@@ -30,6 +31,7 @@ class Modal {
     agregarNuevoPerro() {
       // Restablecer los valores del formulario
       const formulario = document.getElementById("formularioPerro");
+      
       formulario.reset();
       
       // Abrir el modal
@@ -39,22 +41,36 @@ class Modal {
     accept() {
       const index = this.acceptBtn.dataset.index; // Obtén el índice del perro
       const perros = JSON.parse(localStorage.getItem("perros")); // Obtén los perros del almacenamiento local
-      const perro = perros[index]; // Obtén el perro correspondiente al índice
     
-      // Actualiza los valores del perro con los valores del formulario
-      perro.nombre = document.getElementById("nombrePerro").value;
-      perro.apellido = document.getElementById("apellidoPerro").value;
-      perro.raza = document.getElementById("razaPerro").value;
-      perro.telefono = document.getElementById("telefonoPerro").value;
-      perro.pais = document.getElementById("paisPerro").value;
-      perro.descripcion = document.getElementById("descripcionPerro").value;
+      if (perros && perros.length > 0) {
+        const perro = perros[index]; // Obtén el perro correspondiente al índice
     
-      // Guarda los perros actualizados en el almacenamiento local
-      localStorage.setItem("perros", JSON.stringify(perros));
+        // Verifica si el perro existe
+        if (perro) {
+          // Actualiza los valores del perro con los valores del formulario
+          perro.nombre = document.getElementById("nombrePerro").value;
+          perro.apellido = document.getElementById("apellidoPerro").value;
+          perro.raza = document.getElementById("razaPerro").value;
+          perro.telefono = document.getElementById("telefonoPerro").value;
+          perro.pais = document.getElementById("paisPerro").value;
+          perro.descripcion = document.getElementById("descripcionPerro").value;
     
-      // Cierra el modal y actualiza la lista de perros en la página
-      this.modal.style.display = "none";
-      mostrarPerrosEnPagina();
+          // Guarda los perros actualizados en el almacenamiento local
+          localStorage.setItem("perros", JSON.stringify(perros));
+    
+          // Cierra el modal y actualiza la lista de perros en la página
+          this.modal.style.display = "none";
+          mostrarPerrosEnPagina();
+        } else {
+          this.modal.style.display = "none";
+          console.log("El perro no existe.");
+          return; // Salir del método o realizar alguna acción adicional
+        }
+      } else {
+        this.modal.style.display = "none";
+        console.log("El arreglo de perros está vacío o no existe.");
+        return; // Salir del método o realizar alguna acción adicional
+      }
     }
   
     cancel() {
@@ -136,6 +152,37 @@ class Modal {
     }
 }
 
+class Modal2 {
+  constructor() {
+    this.modal = document.getElementById('myModal2');
+    this.modalMensaje = document.getElementById('modal2Mensaje');
+    this.modalAceptarBtn = document.getElementById('modal2AceptarBtn');
+    this.modalCancelarBtn = document.getElementById('modal2CancelarBtn');
+
+    this.modalAceptarBtn.addEventListener('click', this.aceptar.bind(this));
+    this.modalCancelarBtn.addEventListener('click', this.cancelar.bind(this));
+  }
+
+  mostrar(mensaje, aceptarCallback) {
+    this.modalMensaje.textContent = mensaje;
+    this.modalAceptarBtn.addEventListener('click', aceptarCallback);
+    this.modal.style.display = 'block';
+  }
+
+  ocultar() {
+    this.modal.style.display = 'none';
+    this.modalAceptarBtn.removeEventListener('click', this.aceptar);
+  }
+
+  aceptar() {
+    this.ocultar();
+  }
+
+  cancelar() {
+    this.ocultar();
+  }
+}
+
 
 class Perro {
   constructor(nombre, apellido, raza, telefono, pais, foto, descripcion, index) {
@@ -152,6 +199,7 @@ class Perro {
 }
 
 const modal = new Modal();
+const modal2 = new Modal2();
 
 //let perros=[];
 
@@ -255,7 +303,9 @@ async function mostrarPerrosEnPagina() {
 
     for (let i = 0; i < botonesEliminar.length; i++) {
       botonesEliminar[i].addEventListener("click", function (event) {
-        eliminarPerro(event, perros);
+        const index = event.target.dataset.index;
+        const perro = perros[index];
+        mostrarModalConfirmacion(perro, index);
       });
     }
 
@@ -292,3 +342,16 @@ function resetFileInput() {
   inputFoto.value = ""; // Restablecer el valor del campo de entrada de archivo
 }
 
+function mostrarModalConfirmacion(perro, index) {
+  const mensaje = `¿Estás seguro de que quieres eliminar a ${perro.nombre} ${perro.apellido}?`;
+  modal2.mostrar(mensaje, () => {
+    eliminarPerro(index);
+  });
+}
+
+async function eliminarPerro(index) {
+  const perros = await obtenerPerros();
+  perros.splice(index, 1);
+  localStorage.setItem("perros", JSON.stringify(perros));
+  mostrarPerrosEnPagina();
+}
