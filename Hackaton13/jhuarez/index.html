@@ -13,7 +13,7 @@
 <body>
     <header id="encabezado">
         <div class="contenedor">
-            <div class="fila">
+            <div class="fila separados">
                 <h1>Dog CRUD</h1>
                 <button id="openModalBtn2" class="oculto" onclick="modal.openModal()">Agregar Mascota</button>
             </div>            
@@ -76,14 +76,16 @@
                         <input type="text" class="form-control" id="descripcionPerro" placeholder="De una breve descripcion">
                       </div>
 
-                    <button type="submit" id="acceptBtn" class="btn btn-primary">Ingresar</button>
+                    <button type="submit" id="acceptBtn" class="btn btn-primary">Aceptar</button>
                     <button id="cancelBtn" class="btn btn-primary">Cancelar</button>
                 </form>
             </div>
         </div>
     </section>
 
-    <section id="listaPerros">
+    <section id="cuerpo">
+        <ul id="listaPerros" class="fila activarWrap">
+        </ul>
     </section>
 
 

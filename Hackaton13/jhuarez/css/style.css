@@ -56,8 +56,18 @@
   display: block;
 }
 
+.separados {
+  justify-content: space-between;
+}
+
+.activarWrap {
+  flex-wrap: wrap;
+}
+
 img {
   border-radius: 200px 200px 200px 200px;
+  width: 200px;
+  height: 200px;
 }
 
 ul {
