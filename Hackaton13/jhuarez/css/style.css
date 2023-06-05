@@ -64,6 +64,24 @@
   flex-wrap: wrap;
 }
 
+.espaciado-vertical {
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.espaciado-horizontal {
+  width: 90%;
+  margin: auto;
+}
+
+.paddingPerros {
+  padding: 20px 60px 20px;
+}
+
+.bordes {
+  border: 1px solid #a6a6a6;
+}
+
 img {
   border-radius: 200px 200px 200px 200px;
   width: 200px;

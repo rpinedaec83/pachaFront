@@ -276,15 +276,19 @@ async function mostrarPerrosEnPagina() {
 
     perros.forEach((perro, index) => {
       const perroHTML = `
-        <li>
-          <img src="${perro.foto}" alt="Foto del perro">
-          <h3>${perro.nombre} ${perro.apellido}</h3>
-          <p>Raza: ${perro.raza}</p>
-          <p>Teléfono: ${perro.telefono}</p>
-          <p>País: ${perro.pais}</p>          
-          <p>Descripción: ${perro.descripcion}</p>
-          <button class="btn-editar" data-index="${index}">Editar</button>
-          <button class="btn-eliminar" data-index="${index}">Eliminar</button>
+        <li class="espaciado-vertical">
+          <div class="paddingPerros">
+            <div class="paddingPerros bordes">
+              <img src="${perro.foto}" alt="Foto del perro">
+              <h3>${perro.nombre} ${perro.apellido}</h3>
+              <p>Raza: ${perro.raza}</p>
+              <p>Teléfono: ${perro.telefono}</p>
+              <p>País: ${perro.pais}</p>          
+              <p>Descripción: ${perro.descripcion}</p>
+              <button class="btn-editar" data-index="${index}">Editar</button>
+              <button class="btn-eliminar" data-index="${index}">Eliminar</button>
+            </div>
+          </div>
         </li>
       `;
 
