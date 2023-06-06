@@ -15,14 +15,14 @@ header {
   color: #fff;
 }
 
-.bloque1,
-.services,
-.bloque5 {
+.seccion1,
+.seccion3,
+.seccion5 {
   margin: 0 0 22px 22px;
 }
 
-.about,
-.cuarto {
+.seccion2,
+.seccion4 {
   margin: 0 22px 22px 0;
 }
 
@@ -110,6 +110,12 @@ li a:hover {
   width: 150px;
   height: 50px;
   border: none;
+  position: relative;
+  top: 30px;
+}
+#especial {
+  position: relative;
+  top: -45px;
 }
 
 .titulo {
@@ -137,7 +143,7 @@ li a:hover {
   height: 500px;
 }
 
-.about {
+.seccion2 {
   display: flex;
   flex: 50%;
   justify-content: center;
@@ -160,7 +166,7 @@ li a:hover {
   padding-left: 20px;
 }
 
-.services {
+.seccion3 {
   background-color: #1f1c45;
   color: #fff;
   font-family: "Poppins", sans-serif;
@@ -175,7 +181,7 @@ li a:hover {
   font-size: 50px;
 }
 
-.cafes_imagenes {
+.taza_cafes {
   display: flex;
   justify-content: space-between;
   margin: 50px;
@@ -215,7 +221,7 @@ li a:hover {
   text-align: center;
 }
 
-.cuarto {
+.seccion4  {
   display: flex;
   color: #fff;
   background-color: #1f1c45;
