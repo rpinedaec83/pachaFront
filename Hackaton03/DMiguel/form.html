@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="forms.css">
+    <title>Formulario HTML</title>
+</head>
+<body>
+    <form action="./invitado.php" method="post">
+        <fieldset>
+            <legend>
+                Mi formulario
+            </legend>
+            <label for="fname">Nombre : </label>
+            <input type="text" id="fname" name="fname" placeholder="Miguel Angel" required pattern="[a-zA-Z]+">
+            <br>
+            <label for="lname">Apellido : </label>
+            <input type="text" name="lname" id="lname" placeholder="Dominguez Valentin" required pattern="[a-zA-Z]+">
+            <br>
+            <label for="edad">Edad :</label>
+            <input type="number" name="edad" title="edad del 18 al 80" id="edad" placeholder="Ingrese su edad aquí" required max="80" min="18">
+            <br>
+            <label for="sex">Sexo : </label>
+            <select name="sex" id="sex" required>
+                <option value="Masculino">Masculino</option>
+                <option value="Femenino">Femenino</option>
+                <option value="otro">otro</option>
+            </select>
+            <br>
+            <label for="dni">DNI : </label>
+            <input type="text" name="dni" id="dni" placeholder="983 324 23" required pattern="[0-9]{8}$">
+            <br>
+            <label for="email">Correo : </label>
+            <input type="email" name="email" id="email" placeholder="ejemplo@domino.es" required pattern="[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{1,5}">
+            <input type="submit">
+            <input type="reset">
+        </fieldset>
+    </form>
+</body>
+</html>

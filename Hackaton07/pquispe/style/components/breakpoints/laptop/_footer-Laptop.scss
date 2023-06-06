@@ -1,0 +1,37 @@
+.footer {
+    &__contact {
+        padding: 91px 193px;
+
+        &__content {
+            max-width: none;
+        }
+
+        &__btn {
+            padding: 20px 77px;
+            align-self: center;
+            justify-self: end;
+        }
+    }
+
+    &__about {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, auto);
+        padding: 98px 193px 64px;
+
+        .about__list {
+            justify-self: end;
+
+            &__item--title {
+                h4,
+                h5 {
+                    margin-bottom: 30px;
+                }
+            }
+        }
+
+        &__copyright {
+            grid-column: 1 / 4;
+            grid-row: 2 / 3;
+        }
+    }
+}

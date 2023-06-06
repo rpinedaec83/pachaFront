@@ -1,0 +1,30 @@
+@use 'variables';
+
+.nav{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  width: 100%;
+  height: 150px;
+
+  &__logo-img{
+    width: 48px;
+    height: 32px;
+  }
+  &__links{
+    display: flex;
+    gap: 16px;
+    font-family: variables.$helvetica;
+    font-size: 1rem;
+  }
+  &__link{
+    font-weight: variables.$normal;
+    cursor: pointer;
+    &--active{
+      color: variables.$secondary;
+      font-weight: variables.$bold;
+    }
+  }
+}

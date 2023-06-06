@@ -1,0 +1,105 @@
+$urlFont: '"https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200;300;400;600;700;900&display=swap"';
+
+@import url(#{$urlFont});
+@import "colores";
+
+$font-stack: 'Titillium Web', sans-serif;
+$font-size-stack: 6;
+$padding-stack: 40px;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: $back-stack;
+    font-family: $font-stack;
+}
+
+h1 {
+    font-size:#{$font-size-stack}rem;
+
+    p {
+        font-size: #{$font-size-stack+8}px;
+    }
+}
+
+$mapaColores: (
+    "blanco":$box-blanco,
+    "amarillo":$box-amarillo,
+    "rojo":$box-rojo,
+    "azul":$box-azul
+);
+
+@each $nombre,
+$color in $mapaColores {
+    .box-#{$nombre} {
+        background: $color;
+    }
+}
+
+.container {
+    display: grid;
+    padding: $padding-stack;
+    gap: 20px;
+    grid-template-columns: repeat(6, 1fr);
+    height: 100vh;
+}
+
+.box {
+    padding: $padding-stack;
+}
+
+@for $i from 1 through 8 {
+    .box:nth-of-type(#{$i}) {
+        @if $i ==1 {
+            grid-row: 1;
+            grid-column: 1;
+        }
+
+        @else if $i ==2 {
+            grid-row: 1/6;
+            grid-column: 2/4;
+        }
+
+        @else if $i ==3 {
+            grid-row: 1;
+            grid-column: 4/7;
+        }
+
+        @else if $i ==4 {
+            grid-row: 2/6;
+            grid-column: 1;
+        }
+
+        @else if $i ==5 {
+            grid-row: 2/5;
+            grid-column: 4/7;
+            text-align: right;
+            padding-left: 200px;
+
+            h1 {
+                line-height: 1.1em;
+                padding-top: 40px;
+                padding-bottom: 30px;
+            }
+        }
+
+        @else if $i ==6 {
+            grid-row: 5/6;
+            grid-column: 4;
+        }
+
+        @else if $i ==7 {
+            grid-area: 5/6;
+            grid-column: 5;
+        }
+
+        @else {
+            grid-row: 5/6;
+            grid-column: 6;
+        }
+    }
+}

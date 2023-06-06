@@ -1,0 +1,145 @@
+@import 'variables';
+
+footer{
+    overflow: hidden;
+    .content-row{
+        &.footer-row-1{
+            margin-bottom: 100px;
+            padding-bottom: 100px;
+            position: relative;
+            &::before{
+                content: "";
+                width: 100vw;
+                height: 1px;
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                transform: translateX(-50%);
+                background-color: $white;
+                opacity: 0.4;
+            }
+            .content-column{
+                &:first-child{
+                    .column-inner{
+                        max-width: 460px;
+                        .title-wrapper{
+                            .title{
+                                --headingWeight: #{$regular};
+                                @media only screen and (max-width: 767px){
+                                    --headingSize: 28px;
+                                }
+                                max-width: 304px;
+                            }
+                        }
+                        .content-wrapper{
+                            opacity: 0.6;
+                        }
+                    }
+                }
+                &:last-child{
+                    .button-wrapper{
+                        --buttonAlign: center;
+                        @media only screen and (min-width: 990px){
+                            --buttonAlign: right;
+                        }
+                        text-align: var(--buttonAlign);
+                    }
+                }
+            }
+        }
+        &.footer-row-2{
+            margin-bottom: 70px;
+            .footer-menu{
+                .menu-item{
+                    &:not(:last-child){
+                        margin-bottom: 10px;
+                    }
+                }
+            }
+            .content-column{
+                &:first-child{
+                    .column-inner{
+                        max-width: 264px;
+                    }
+                    .footer-logo{
+                        margin-bottom: 20px;
+                        .logo{
+                            display: flex;
+                            align-items: center;
+                            width: 196px;
+                            height: 48px;
+                            position: relative;
+                            img{
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                width: 100%;
+                                height: 100%;
+                            }
+                        }
+                    }
+                    .info-list{
+                        .info-item{
+                            position: relative;
+                            padding-left: 2em;
+                            &:not(:last-child){
+                                margin-bottom: 20px;
+                            }
+                            &::before{
+                                content: "";
+                                font-weight: $bold;
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                            }
+                            &.addres{
+                                &::before{
+                                    content: "A.";
+                                }
+                            }
+                            &.telephone{
+                                &::before{
+                                    content: "T.";
+                                }
+                            }
+                            &.email{
+                                &::before{
+                                    content: "E.";
+                                }
+                            }
+                        }
+                    }
+                }
+                &:nth-child(2),
+                &:last-child{
+                    .column-inner{
+                        max-width: 160px;
+                    }
+                }
+                &:nth-child(2){
+                    .column-inner{
+                        
+                        @media only screen and (min-width: 768px){
+                            margin: 0 auto;
+                        }
+                    }
+                }
+                &:last-child{
+                    .column-inner{
+                        @media only screen and (min-width: 990px){
+                            margin: 0 0 0 auto;
+                        }
+                    }
+                }
+                &:not(:last-child){
+                    margin-bottom: 50px;
+                }
+            }
+        }
+        &.footer-socket{
+            .content-wrapper{
+                opacity: 0.4;
+            }
+        }
+    }
+}

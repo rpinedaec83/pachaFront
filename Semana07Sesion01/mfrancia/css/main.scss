@@ -1,0 +1,48 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.movie-container{
+    --boxSize: 100%;
+    margin: 0 auto;
+    max-width: 1310px;
+    padding: 50px 7.5vw;
+    height: 100vh;
+    @media only screen and (min-width: 768px){
+        padding: 50px;
+    }
+    @media only screen and (min-width: 601px) and (max-width: 767px){
+        --boxSize: 50%;
+    }
+    @media only screen and (min-width: 768px) and (max-width: 1199px){
+        --boxSize: 33.33%;
+    }
+    @media only screen and (min-width: 1200px){
+        --boxSize: 16.66%;
+    }
+    .movie-wrapper{
+        display: flex;
+        flex-wrap: wrap;
+        margin: -0.35rem;
+        height: 100%;
+        align-items: center;
+    }
+    .movie-item{
+        width: var(--boxSize);
+        padding: 0.35rem;
+        .movie-item-inner{
+            position: relative;
+            aspect-ratio: 226 / 339;
+        }
+        img{
+            position: absolute;
+            top: 0;
+            width: 100%;
+            left: 0;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}

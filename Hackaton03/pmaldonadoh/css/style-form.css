@@ -1,0 +1,57 @@
+.inpt-frm {
+    padding: 14px 30px;
+    border: 0.5px solid #19647E ;
+    border-radius: 5px;
+    margin: 0 auto;
+    display: flex;
+}
+
+input.inpt-frm:focus {
+   background-color: aliceblue;   
+}
+
+.formulario {
+    width: 500px;
+    height: 650px;
+    border: 5px solid #19647E;
+    border-radius: 15px;
+    margin: 0 auto;
+    display: block;
+    background-image: url("../imgs/bg-frm3.jpg") ;
+}
+
+label {
+    margin-left: 25px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.formulario h2 {
+    text-align: center;
+    color: #19647E;
+    font-size: 2.2em;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+#envio {
+    padding: 15px 30px;
+    border-color: #19647E;
+    color: #19647E;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: white;
+    font-size: 20px;
+    cursor: pointer;
+    margin: 0 auto;
+    display: block;
+    border-radius: 4px;
+}
+
+#envio:hover{
+    border-color: white;
+    background-color: #19647E;
+    font-weight: bold;
+    color: white;
+    transition: 0.3s;
+}
+

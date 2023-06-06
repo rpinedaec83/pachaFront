@@ -1,0 +1,104 @@
+.item-grid-post{ 
+    .post-item{
+        padding: 15px;
+        padding-bottom: 25px;
+        .post-item-inner{
+            height: 100%;
+            display: flex;
+            align-items: center;
+            @media only screen and (max-width: 989px) {
+                flex-direction: column;
+            }
+            .post-grid-media{
+                width: 25.19%;
+                @media only screen and (max-width: 989px) {
+                    width: 100%;
+                    margin-bottom: 25px;
+                }
+                .post-image{
+                    width: 100%;
+                    position: relative;
+                    aspect-ratio: 330 / 200;
+                    img{
+                        display: block;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        object-position: center;
+                    }
+                }
+            }
+            .post-grid-content{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                width: calc(100% - 25.19%);
+                margin-left: 2.29%;
+                height: 100%;
+                @media only screen and (max-width: 989px) {
+                    width: 100%;
+                    margin-left: 0;
+                }
+                .post-content{
+                    margin-bottom: 25px;
+                    .post-grid-title{
+                        margin-bottom: 15px;
+                        h2{
+                            font-family: $heading-font-family;
+                            font-size: 18px;
+                        }
+                    }
+                    .post-grid-text{
+                        p{
+                            font-family: $body-font-family;
+                            font-size: 16px;
+                            color: rgba($color: $black, $alpha: 0.6);
+                        }
+                    }
+                }
+                .post-date-and-author{
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    .info-post{
+                        .author-name{
+                            p{
+                                color: $blue2;
+                                font-size: 14px;
+                                font-weight: $bold;
+                                font-family: $heading-font-family;
+                            }
+                        }
+                        .date-post{
+                            margin-top: 5px;
+                            p{
+                                color: rgba($color: $blue2, $alpha: 0.4);
+                                font-size: 14px;
+                                font-family: $body-font-family 
+                            }
+                        }
+                    }
+                    .iconos-post{
+                        a{
+                            &:not(:last-child){
+                                margin-right: 30px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .buttons-grid{
+        margin-top: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        @media only screen and (max-width: 480px) {
+           flex-direction: column;
+        }
+    }
+}

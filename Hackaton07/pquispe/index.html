@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Blog Afrianska</title>
+        <link rel="stylesheet" href="./style/main.css">
+        <link rel="stylesheet" href="https://cdn.rawgit.com/mfd/09b70eb47474836f25a21660282ce0fd/raw/e06a670afcb2b861ed2ac4a1ef752d062ef6b46b/Gilroy.css">
+    </head>
+
+    <body>
+
+        <!-------------------------- HEADER -------------------------->
+        <header class="header">
+            <nav class="header__navbar">
+                <picture class="header__navbar__logo">
+                    <img src="./assets/icons/logo-header.svg" alt="Blog Afrianska Logo" title="Blog Afrianska">
+                </picture>
+
+                <ol class="navbar-list">
+                    <li class="navbar-list__item  navbar-list__item--active">
+                        <a href="./index.html">Home</a>
+                    </li>
+
+                    <li class="navbar-list__item">
+                        <a href="#">Espectáculo</a>
+                    </li>
+
+                    <li class="navbar-list__item">
+                        <a href="#">Deportes</a>
+                    </li>
+                </ol>
+            </nav>
+
+            <section class="header__presentation">
+                <h1 class="header__presentation__title">
+                    Blog Afrianska
+                </h1>
+                <p class="header__presentation__content">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+            </section>
+        </header>
+        <!-------------------------- /HEADER -------------------------->
+
+        <!-------------------------- MAIN -------------------------->
+        <main class="main">
+            <section class="main__search">
+                <div class="main__search__background">
+                    <img src="./assets/icons/search-icon.svg" alt="Search" title="Search">
+                    <input type="search" name="search" id="search" placeholder="Search Article">
+                </div>
+            </section>
+
+            <!-------------------------- POPULAR POSTS -------------------------->
+            <section class="main__popular">
+                <h4 class="main__popular__title">
+                    POPULAR
+                </h4>
+
+                <article class="popular  popular--large">
+                    <picture class="popular__image--large">
+                        <source media="(min-width:1320px)" srcset="./assets/imgs/laptop/popular-1.png">
+                        <source media="(min-width:830px)" srcset="./assets/imgs/tablet/popular-1.png">
+                        <img src="./assets/imgs/mobile/popular-1.png" alt="Popular 1">
+                    </picture>
+
+                    <div class="popular__content">
+                        <h2 class="popular__content__title--large">
+                            Feugiat sodales at nullam tellus.
+                        </h2>
+                        <p class="popular__content__description  popular__content__description--large">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mi posuere nibh tempor fringilla porta pellentesque ipsum.
+                            <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span>
+                        </p>
+
+                        <div class="popular__details">
+                            <div class="popular__details__info">
+                                <p>Samatha Leuthex</p>
+                                <span>May 5, 3 min read</span>
+                            </div>
+                            <picture class="popular__details__options">
+                                <img src="./assets/icons/save-icon.svg" alt="Save" title="Save">
+                                <img src="./assets/icons/share-icon.svg" alt="Share" title="Share">
+                            </picture>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="popular">
+                    <picture class="popular__image">
+                        <source media="(min-width:1320px)" srcset="./assets/imgs/laptop/popular-2.png">
+                        <source media="(min-width:830px)" srcset="./assets/imgs/tablet/popular-2.png">
+                        <img src="./assets/imgs/mobile/popular-2.png" alt="Popular 2">
+                    </picture>
+
+                    <h3 class="popular__content__title">
+                        Porta proin tellus sed pulvinar odio eu pulvinar.
+                    </h3>
+                    <p class="popular__content__description">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    </p>
+
+                    <div class="popular__details">
+                        <div class="popular__details__info">
+                            <p>Samatha Leuthex</p>
+                            <span>May 5, 3 min read</span>
+                        </div>
+                        <picture class="popular__details__options">
+                            <img src="./assets/icons/save-icon.svg" alt="Save" title="Save">
+                            <img src="./assets/icons/share-icon.svg" alt="Share" title="Share">
+                        </picture>
+                    </div>
+                </article>
+
+                <article class="popular">
+                    <picture class="popular__image">
+                        <source media="(min-width:1320px)" srcset="./assets/imgs/laptop/popular-3.png">
+                        <source media="(min-width:830px)" srcset="./assets/imgs/tablet/popular-3.png">
+                        <img src="./assets/imgs/mobile/popular-3.png" alt="Popular 3">
+                    </picture>
+
+                    <h3 class="popular__content__title">
+                        Non quam tortor, proin eu egestas scelerisque.
+                    </h3>
+                    <p class="popular__content__description">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    </p>
+
+                    <div class="popular__details">
+                        <div class="popular__details__info">
+                            <p>Samatha Leuthex</p>
+                            <span>May 5, 3 min read</span>
+                        </div>
+                        <picture class="popular__details__options">
+                            <img src="./assets/icons/save-icon.svg" alt="Save" title="Save">
+                            <img src="./assets/icons/share-icon.svg" alt="Share" title="Share">
+                        </picture>
+                    </div>
+                </article>
+
+                <article class="popular  popular--none">
+                    <picture class="popular__image">
+                        <source media="(min-width:1320px)" srcset="./assets/imgs/laptop/popular-4.png">
+                        <img src="./assets/imgs/tablet/popular-4.png" alt="Popular 4">
+                    </picture>
+
+                    <h3 class="popular__content__title">
+                        Amet amet sed pharetra risus sit eget interdum.
+                    </h3>
+                    <p class="popular__content__description">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    </p>
+
+                    <div class="popular__details">
+                        <div class="popular__details__info">
+                            <p>Samatha Leuthex</p>
+                            <span>May 5, 3 min read</span>
+                        </div>
+                        <picture class="popular__details__options">
+                            <img src="./assets/icons/save-icon.svg" alt="Save" title="Save">
+                            <img src="./assets/icons/share-icon.svg" alt="Share" title="Share">
+                        </picture>
+                    </div>
+                </article>
+
+                <a href="#" class="main__popular__more">
+                    SEE ALL POPULAR ARTICLE
+                </a>
+            </section>
+            <!-------------------------- /POPULAR POSTS -------------------------->
+
+            <!-------------------------- ALL POSTS -------------------------->
+            <section class="main__articles">
+                <h4 class="main__articles__title">
+                    ALL ARTICLE
+                </h4>
+
+                <article class="article">
+                    <picture class="article__image">
+                        <source media="(min-width:1320px)" srcset="./assets/imgs/laptop/post-1.png">
+                        <source media="(min-width:830px)" srcset="./assets/imgs/tablet/post-1.png">
+                        <img src="./assets/imgs/mobile/post-1.png" alt="Post 1">
+                    </picture>
+
+                    <section class="article__content">
+                        <h5 class="article__content__title">
+                            Massa eu in laoreet enim augue vulputate nunc.
+                        </h5>
+                        <p class="article__content__description">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <span>Lectus quisque magna in nisl nibh bibendum ipsum, elit duis. Donec.</span>
+                        </p>
+
+                        <div class="article__details">
+                            <div class="article__details__info">
+                                <p>Samatha Leuthex</p>
+                                <span>May 5, 3 min read</span>
+                            </div>
+                            <picture class="article__details__options">
+                                <img src="./assets/icons/save-icon.svg" alt="Save" title="Save">
+                                <img src="./assets/icons/share-icon.svg" alt="Share" title="Share">
+                            </picture>
+                        </div>
+                    </section>
+                </article>
+
+                <article class="article">
+                    <picture class="article__image">
+                        <source media="(min-width:1320px)" srcset="./assets/imgs/laptop/post-2.png">
+                        <source media="(min-width:830px)" srcset="./assets/imgs/tablet/post-2.png">
+                        <img src="./assets/imgs/mobile/post-2.png" alt="Post 2">
+                    </picture>
+
+                    <section class="article__content">
+                        <h5 class="article__content__title">
+                            Feugiat a euismod arcu feugiat posuere morbi.
+                        </h5>
+                        <p class="article__content__description">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <span>Lectus quisque magna in nisl nibh bibendum ipsum, elit duis. Donec.</span>
+                        </p>
+
+                        <div class="article__details">
+                            <div class="article__details__info">
+                                <p>Samatha Leuthex</p>
+                                <span>May 5, 3 min read</span>
+                            </div>
+                            <picture class="article__details__options">
+                                <img src="./assets/icons/save-icon.svg" alt="Save" title="Save">
+                                <img src="./assets/icons/share-icon.svg" alt="Share" title="Share">
+                            </picture>
+                        </div>
+                    </section>
+                </article>
+
+                <article class="article  article--none">
+                    <picture class="article__image">
+                        <source media="(min-width:1320px)" srcset="./assets/imgs/laptop/post-3.png">
+                        <img src="./assets/imgs/tablet/post-3.png" alt="Post 3">
+                    </picture>
+
+                    <section class="article__content">
+                        <h5 class="article__content__title">
+                            Sociis purus pellentesque faucibus vitae et felis.
+                        </h5>
+                        <p class="article__content__description">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lectus quisque magna in nisl nibh bibendum ipsum, elit duis. Donec.
+                        </p>
+
+                        <div class="article__details">
+                            <div class="article__details__info">
+                                <p>Samatha Leuthex</p>
+                                <span>May 5, 3 min read</span>
+                            </div>
+                            <picture class="article__details__options">
+                                <img src="./assets/icons/save-icon.svg" alt="Save" title="Save">
+                                <img src="./assets/icons/share-icon.svg" alt="Share" title="Share">
+                            </picture>
+                        </div>
+                    </section>
+                </article>
+
+                <article class="article  article--none">
+                    <picture class="article__image">
+                        <source media="(min-width:1320px)" srcset="./assets/imgs/laptop/post-4.png">
+                        <img src="./assets/imgs/tablet/post-4.png" alt="Post 4">
+                    </picture>
+
+                    <section class="article__content">
+                        <h5 class="article__content__title">
+                            Cursus feugiat mi pellentesque mauris sed eu.
+                        </h5>
+                        <p class="article__content__description">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lectus quisque magna in nisl nibh bibendum ipsum, elit duis. Donec.
+                        </p>
+
+                        <div class="article__details">
+                            <div class="article__details__info">
+                                <p>Samatha Leuthex</p>
+                                <span>May 5, 3 min read</span>
+                            </div>
+                            <picture class="article__details__options">
+                                <img src="./assets/icons/save-icon.svg" alt="Save" title="Save">
+                                <img src="./assets/icons/share-icon.svg" alt="Share" title="Share">
+                            </picture>
+                        </div>
+                    </section>
+                </article>
+
+                <article class="article  article--none">
+                    <picture class="article__image">
+                        <source media="(min-width:1320px)" srcset="./assets/imgs/laptop/post-5.png">
+                        <img src="./assets/imgs/tablet/post-5.png" alt="Post 5">
+                    </picture>
+
+                    <section class="article__content">
+                        <h5 class="article__content__title">
+                            A morbi arcu curabitur etiam fringilla augue.
+                        </h5>
+                        <p class="article__content__description">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lectus quisque magna in nisl nibh bibendum ipsum, elit duis. Donec.
+                        </p>
+
+                        <div class="article__details">
+                            <div class="article__details__info">
+                                <p>Samatha Leuthex</p>
+                                <span>May 5, 3 min read</span>
+                            </div>
+                            <picture class="article__details__options">
+                                <img src="./assets/icons/save-icon.svg" alt="Save" title="Save">
+                                <img src="./assets/icons/share-icon.svg" alt="Share" title="Share">
+                            </picture>
+                        </div>
+                    </section>
+                </article>
+
+                <div class="main__articles__btn">
+                    <a href="#" class="btn--none">
+                        <img src="./assets/icons/arrow-left.svg" alt="Old Post" title="Old Post">Old Post
+                    </a>
+
+                    <a href="#">
+                        New Post<img src="./assets//icons/arrow-right.svg" alt="New Post" title="New Post">
+                    </a>
+                </div>
+            </section>
+            <!-------------------------- /ALL POSTS -------------------------->
+        </main>
+        <!-------------------------- /MAIN -------------------------->
+
+        <!-------------------------- FOOTER -------------------------->
+        <footer class="footer">
+            <section class="footer__contact">
+                <h2 class="footer__contact__question">
+                    Intersted to work<br>with our team?
+                </h2>
+                <p class="footer__contact__content">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+                </p>
+
+                <a href="#" class="footer__contact__btn">Let’s Talk</a>
+            </section>
+
+            <section class="footer__about">
+                <ul class="about__list">
+                    <li class="about__list__item  about__list__item--title">
+                        <picture>
+                            <img src="./assets/icons/logo-footer.svg" alt="Blog Afrianska Logo" title="Blog Afrianska">
+                        </picture>
+                        <h4>Afrianska</h4>
+                    </li>
+
+                    <li class="about__list__item  about__list__item--spacing">
+                        <span>A.</span><a href="#">Lorem ipsum dolor sit amet,<br>consectetur adipisicing elit.</a>
+                    </li>
+                    
+                    <li class="about__list__item">
+                        <span>T.</span><a href="#">+62-812-7313-4321</a>
+                    </li>
+
+                    <li class="about__list__item">
+                        <span>E.</span><a href="#">hello.afrian@gmail.com</a>
+                    </li>
+                </ul>
+                
+                <ul class="about__list">
+                    <li class="about__list__item  about__list__item--title">
+                        <h5>About US</h5>
+                    </li>
+
+                    <li class="about__list__item">
+                        <a href="#">About</a>
+                    </li>
+
+                    <li class="about__list__item">
+                        <a href="#">What We Do</a>
+                    </li>
+
+                    <li class="about__list__item">
+                        <a href="#">Project</a>
+                    </li>
+
+                    <li class="about__list__item">
+                        <a href="#">How It Work With Us</a>
+                    </li>
+                </ul>
+
+                <ul class="about__list">
+                    <li class="about__list__item  about__list__item--title">
+                        <h5>Follow US</h5>
+                    </li>
+
+                    <li class="about__list__item">
+                        <a href="#">Instagram</a>
+                    </li>
+
+                    <li class="about__list__item">
+                        <a href="#">Facebook</a>
+                    </li>
+
+                    <li class="about__list__item">
+                        <a href="#">LinkedIn</a>
+                    </li>
+
+                    <li class="about__list__item">
+                        <a href="#">Youtube</a>
+                    </li>
+                </ul>
+
+                <p class="footer__about__copyright">
+                    2019 &copy; Afrianska. All rights reserved.
+                </p>
+            </section>
+        </footer>
+        <!-------------------------- /FOOTER -------------------------->
+
+    </body>
+</html>

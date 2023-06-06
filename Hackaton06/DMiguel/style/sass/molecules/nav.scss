@@ -1,0 +1,52 @@
+@import '../atoms/logos.scss';
+@import '../atoms/texto.scss';
+
+body{
+    width: 100%;    
+}
+
+header{
+    background-color: #FFFF;
+    padding: 1em 0em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    z-index: 10000;
+    width: 100%;
+    nav{
+        margin: 0 2em;
+    }
+    span{
+        margin: 0 1em;
+    }
+}
+
+main{
+    padding-block-start: 3.75em;;
+    .header__presentation{
+        padding-block: 4em;
+        text-align: center;
+        background-image: url('../../img/Mask\ Group.png');
+        background-size: cover;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

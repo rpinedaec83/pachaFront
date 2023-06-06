@@ -1,0 +1,20 @@
+header {
+    background-color: $backg-color;
+    position: relative;
+    padding: $padding-containers + 7px;
+
+    a img {
+        position: absolute;
+        width: 10%;
+        transition: filter 0.4s;
+    }
+
+    a img:hover {
+        filter: drop-shadow(0 0 1.5px #333);
+    }
+
+    a h1,
+    h2 {
+        text-align: center;
+    }
+}

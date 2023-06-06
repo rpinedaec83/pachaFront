@@ -25,6 +25,6 @@ SmartyPants converts ASCII punctuation characters into "smart" typographic punct
 
 Gracias por leerme
 
-Saludos
+Saludos.
 
 **Vivian Ruiz**

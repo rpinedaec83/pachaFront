@@ -1,0 +1,258 @@
+div {
+    width: 300px;
+    border: 15px solid green;
+    padding: 50px;
+    margin: 20px;
+  }
+  p {outline-color:red;}
+
+  p.dotted {outline-style: dotted;}
+  p.dashed {outline-style: dashed;}
+  p.solid {outline-style: solid;}
+  p.double {outline-style: double;}
+  p.groove {outline-style: groove;}
+  p.ridge {outline-style: ridge;}
+  p.inset {outline-style: inset;}
+  p.outset {outline-style: outset;}
+
+
+  p.ex1 {
+    border: 1px solid black;
+    outline-style: solid;
+    outline-color: red;
+    outline-width: thin;
+  }
+  
+  p.ex2 {
+    border: 1px solid black;
+    outline-style: solid;
+    outline-color: red;
+    outline-width: medium;
+  }
+  
+  p.ex3 {
+    border: 1px solid black;
+    outline-style: solid;
+    outline-color: red;
+    outline-width: thick;
+  }
+  
+  p.ex4 {
+    border: 1px solid black;
+    outline-style: solid;
+    outline-color: red;
+    outline-width: 4px;
+  }
+
+  p.ex1 {
+    border: 2px solid black;
+    outline-style: solid;
+    outline-color: red;
+  }
+  
+  p.ex2 {
+    border: 2px solid black;
+    outline-style: dotted;
+    outline-color: blue;
+  }
+  
+  p.ex3 {
+    border: 2px solid black;
+    outline-style: outset;
+    outline-color: grey;
+  }
+
+  body {
+    color: blue;
+  }
+  
+  h1 {
+    color: green;
+  }
+  
+  h1 {
+    text-align: center;
+  }
+  
+  h2 {
+    text-align: left;
+  }
+  
+  h3 {
+    text-align: right;
+  }
+
+  div {
+    border: 1px solid black;
+    padding: 10px;
+    width: 200px;
+    height: 200px;
+    text-align: justify;
+  }
+
+  h1 {
+    text-decoration-line: overline;
+  }
+  
+  h2 {
+    text-decoration-line: line-through;
+  }
+  
+  h3 {
+    text-decoration-line: underline;
+  }
+  
+  p {
+    text-decoration-line: overline underline;
+  }
+
+  h1 {
+    text-decoration-line: overline;
+    text-decoration-color: red;
+  }
+  
+  h2 {
+    text-decoration-line: line-through;
+    text-decoration-color: blue;
+  }
+  
+  h3 {
+    text-decoration-line: underline;
+    text-decoration-color: green;
+  }
+  
+  p {
+    text-decoration-line: overline underline;
+    text-decoration-color: purple;
+  }
+
+  p.uppercase {
+    text-transform: uppercase;
+  }
+  
+  p.lowercase {
+    text-transform: lowercase;
+  }
+  
+  p.capitalize {
+    text-transform: capitalize;
+  }
+
+  h1 {
+    text-shadow: 2px 2px;
+  }
+  h1 {
+    text-shadow: 2px 2px red;
+  }
+
+  h1 {
+    text-shadow: 2px 2px 5px red;
+  }
+
+  h1 {
+    color: white;
+    text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+  }
+
+  .p1 {
+    font-family: "Times New Roman", Times, serif;
+  }
+  
+  .p2 {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  .p3 {
+    font-family: "Lucida Console", "Courier New", monospace;
+  }
+
+  body {
+    font-family: "Sofia", sans-serif;
+  }
+  /* latin */
+@font-face {
+    font-family: 'Sofia';
+    font-style: normal;
+    font-weight: 400;
+    src: url(../fonts/sofia.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+
+
+  div.relative {
+    position: relative;
+    width: 400px;
+    height: 200px;
+    border: 3px solid #73AD21;
+  } 
+  
+  div.absolute {
+    position: absolute;
+    top: 80px;
+    right: 0;
+    width: 200px;
+    height: 100px;
+    border: 3px solid #73AD21;
+  }
+
+
+  div.sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    padding: 5px;
+    background-color: #cae8ca;
+    border: 2px solid #4CAF50;
+  }
+
+  div {
+    width: 100px;
+    height: 100px;
+    background: red;
+    transition: width 2s, height 4s;
+  }
+  
+  div:hover {
+    width: 300px;
+  height: 300px;
+  }
+
+
+  div {
+    width: 100px;
+    height: 100px;
+    background: red;
+    transition: width 2s;
+  }
+  
+  #div1 {transition-timing-function: linear;}
+  #div2 {transition-timing-function: ease;}
+  #div3 {transition-timing-function: ease-in;}
+  #div4 {transition-timing-function: ease-out;}
+  #div5 {transition-timing-function: ease-in-out;}
+  
+  div:hover {
+    width: 300px;
+  }
+
+  div {
+    width: 100px;
+    height: 100px;
+    background: red;
+    transition: width 3s;
+    transition-delay: 1s;
+  }
+  
+  div:hover {
+    width: 300px;
+  }
+
+
+
+  div {
+    width: 300px;
+    height: 100px;
+    background-color: yellow;
+    border: 1px solid black;
+    transform: translate(50px,100px);
+  }

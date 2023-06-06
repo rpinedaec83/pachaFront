@@ -1,0 +1,107 @@
+.all_posts{
+    width:  90%;
+    max-width: 50%;
+    margin: 2em auto;
+    display: grid;
+    grid-gap: 1em;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas: "h2 h2 h2"
+                         "post1 post1 post1"
+                         "post2 post3 post4";
+    .title-h2{
+        margin-block-start: 3em;
+    }
+    p{
+        opacity: 0.6;
+    }
+    section{
+        span{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-block-start: 1em;
+            p{
+                opacity: 1;
+            }
+            h3, p{
+                font-size:0.8em;
+            }
+            .icons{
+                display: flex;
+                i{
+                    margin-inline: 0.3em;
+                }
+            }
+            .post-fecha{
+                margin-block-start: 0.5em;
+            }
+        }
+    }
+}
+
+.title-h2{
+    grid-area: h2;
+}
+
+.all_posts .post__1{
+    width: 100%;
+    grid-area: post1;
+    display: grid;
+    grid-gap: 1.5em;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas: "title image image"
+                         "texto image image"
+                         "info_p image image"; 
+    .title-h1{
+        grid-area: title;
+    }
+    p{
+        grid-area: texto;
+    }
+    span{
+        grid-area: info_p;
+    }
+    .img-principal{
+        grid-area: image;
+    }
+}
+
+.post__2, .post__3, .post__4{
+    width: 100%;
+    display: grid;
+    grid-gap: 1em;
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas: "image"
+                         "title"
+                         "texto"
+                         "info_p";
+    .img-secundary{
+        grid-area: image;
+    }
+    .title-h1{
+        font-size: 1.5em;
+        grid-area: title;
+    }
+    p{
+        grid-area: texto;
+    }
+
+    span{
+        grid-area: info_p;
+    }
+}
+
+.all_posts .post__2{
+    grid-area: post2;
+}
+
+.all_posts .post__3{
+    grid-area: post3;
+}
+
+.all_posts .post__4{
+    grid-area: post4;
+}
+

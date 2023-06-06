@@ -1,0 +1,17 @@
+@import "./components/variables/variables";
+
+@import "./components/mixins/mixins-Header";
+
+@import "./components/mixins/mixins-Main";
+
+@import "./components/mixins/mixins-Footer";
+
+@import "./components/reset/reset";
+
+@import "./components/page/header";
+
+@import "./components/page/main";
+
+@import "./components/page/footer";
+
+@import "./components/breakpoints/breakpoints";

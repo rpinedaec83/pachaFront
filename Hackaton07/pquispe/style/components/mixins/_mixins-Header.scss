@@ -1,0 +1,35 @@
+
+@mixin header-navbar($element) {
+    font-family: $fuente-primary;
+    font-size: 1.4rem;
+
+    @if $element == disabled {
+        font-weight: 400;
+        color: $color-navDisabled;
+    }
+    @else if $element == active {
+        font-weight: 700;
+        color: $color-navActive;
+    }
+}
+
+
+@mixin header-presentation($element) {
+    width: 100%;
+    font-family: $fuente-secondary;
+    font-weight: 400;
+    margin: 0 auto;
+    text-align: center;
+    letter-spacing: 0.064rem;
+
+    @if $element == title {
+        color: $header-content;
+        font-size: 3.2rem;
+        margin-bottom: 30px;
+    }
+    @else if $element == content {
+        color: $header-opacity;
+        font-size: 1.3rem;
+        line-height: 2.3rem;
+    }
+}

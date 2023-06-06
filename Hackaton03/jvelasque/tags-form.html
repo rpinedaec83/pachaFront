@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <p>La p funciona para poner un parrafro</p>
+<form action="getform.php" method="get">
+    <label>Nombres: <input type="text"></label><br>
+    <p>label nos sirve para que nos aparezca en pantalla y el input lo que podemos ingresar por teclado</p>
+     <label>Apellidos: <input type="text"></label><br>
+        <label>E-mail: <input type="email"></label><br>
+<input type="submit" value="Submit">
+</form>
+
+<label>lOS MEJORES JUEGOS</label>
+<input list="juegos" name="list" />
+<p>podemos poner una lista con list y el input</p>
+<datalist id="juegos">
+    <option label="futbol" value="MESSI">
+    <option label="beisball" value="CAMPO">
+    <option label="kiwi" value="LATAS"> 
+</datalist>
+
+<br>
+
+<input type="email" id="user-email" placeholder="e.g. jhosepvelasque@gmail.com" required/>
+
+<br>
+<input type="text" id="user" autofocus />
+
+<br>
+<textarea name="textarea" rows="10" cols="50">Escribe algo aquí</textarea>
+
+<br>
+<form action="" method="post">
+    <fieldset>
+      <legend>Título</legend>
+      <input type="radio" name="radio" id="radio"> <label for="radio">Clic aquí</label>
+    </fieldset>
+  </form>
+  <br>
+  <form action="">
+    <label for="GET-name">Nombre:</label>
+    <input id="GET-name" type="text" name="name">
+    <input type="submit" value="Save">
+  </form>
+
+
+</body>
+</html>

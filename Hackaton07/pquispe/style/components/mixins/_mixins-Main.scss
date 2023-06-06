@@ -1,0 +1,48 @@
+
+@mixin containersMain($element) {
+    width: 100%;
+    display: grid;
+    justify-content: center;
+
+    @if $element == popular {
+        grid-template-columns: repeat(1, 100%);
+        grid-template-rows: repeat(5, auto);
+        padding: 35px 20px 0;
+    }
+    @else if $element == posts {
+        grid-template-columns: repeat(1, 100%);
+        grid-template-rows: repeat(3, auto);
+        padding: 120px 20px 80px;
+        gap: 40px;
+    }
+}
+
+
+@mixin main-nameSection($size) {
+    font-family: $fuente-primary;
+    color: $color-nameSection;
+    letter-spacing: 0.064rem;
+    font-weight: 600;
+    font-size: 1.6rem + $size;
+}
+
+
+@mixin main-encabezados($size) {
+    color: $color-postEncabezados;
+    font-family: $fuente-primary;
+    font-weight: 700;
+    font-size: 1.4rem + $size;
+    letter-spacing: 0.064rem;
+    margin-bottom: 5px;
+}
+
+
+@mixin main-content($size, $line, $bottom, $opacity) {
+    color: rgba($color-postContent, $opacity);
+    font-family: $fuente-secondary;
+    font-weight: 400;
+    font-size: 1.4rem + $size;
+    letter-spacing: 0.064rem;
+    line-height: 2.4rem + $line;
+    margin-bottom: $bottom;
+}

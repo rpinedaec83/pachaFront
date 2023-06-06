@@ -1,0 +1,33 @@
+nav {
+    background-color: $backg-color;
+    margin-top: $margin-containers;
+    padding: $padding-containers;
+
+    ul {
+        display: flex;
+        justify-content: center;
+        list-style: none;
+
+        li:first-child {
+            font-size: 110%;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+
+        li:not(li:last-child) {
+            padding-right: $padding-elements;
+        }
+
+        li a {
+            font-size: 110%;
+            text-transform: uppercase;
+            font-weight: $fontWeight-body;
+            transition: font-weight 0.4s, color 0.4s;
+        }
+
+        li a:hover {
+            font-weight: 700;
+            color: #ff0000;
+        }
+    }
+}

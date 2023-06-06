@@ -1,0 +1,414 @@
+$color-logo: #316099;
+$color-titulo-1: #356EAD;
+$color-titulo-2: #1F3F68;
+$color-cuerpo: rgba(0, 0, 0, 0.6);
+$color-autor: rgba(0, 0, 0, 0.4);
+
+
+
+$font-1: Arial;
+$font-2: Helvetica;
+
+html {
+    box-sizing: border-box;
+  }
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit;
+  }
+
+  .titulote {
+    color: $color-titulo-1;
+}
+
+.titulo {
+    color: $color-titulo-2;
+    font-weight: bold;
+}
+
+.titulo.autor {
+    color: $color-titulo-2;
+    font-weight: normal;
+}
+
+.cuerpo {
+    color: $color-cuerpo;
+}
+
+.fechas {
+    color: $color-autor;
+}
+
+nav {
+    
+    font-family: $font-2;
+    display: flex;
+    background: transparent;
+    position: relative;
+    justify-content: space-between;
+    flex: 1;
+    padding: 1%;
+    width: 100%;
+    height: auto;
+
+}
+
+nav > .navigator {
+    display: flex;
+    width: 30%;
+    justify-content: space-evenly;
+    gap: 10px;
+    align-items: center;
+
+    
+}
+
+nav > .logo {
+    width: 33%;
+    height: auto;
+}
+
+.navigator > .home {
+    color: $color-titulo-2;
+    font-weight: bold;
+}
+
+
+.header--background {
+    
+    background-image: url('../img/banner-2.png'), url('../img/banner.png');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.header--structure{
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 40vh;
+    width: 100%;
+}
+
+
+.header--title, .header--content {
+    font-family: $font-1;
+    color: white;
+    text-align: center;
+    width: 50%;
+    letter-spacing: 0.04em;
+}
+
+.header--title {
+
+    font-size: 2.5rem;
+
+}
+
+.header--content {
+
+    font-size: 1.25rem;
+    color: rgba(255, 255, 255, 0.78);
+}
+
+
+.search-box {
+    display: flex;
+    background: #fff;
+    border-radius: 18px;
+    justify-content: center;
+    padding: 20px;
+    }
+
+.search-box .btn {
+    background: #fff;
+    border:1px solid #000;
+    height: 36px;
+    padding: 10px;
+    margin-right: 10px;
+    border: 0;
+    cursor: pointer;
+    outline: 0;
+
+    }
+    
+.search-box .form-control{
+
+    width:50%;
+    border: 0;
+    height: 36px;
+    padding:0 10px;
+    outline: 0;
+    
+    }
+
+
+/*POPULAR*/
+
+/*MIXIN POSICION*/
+
+@mixin position-grid($position-x, $span-x, $position-y, $span-y ) {
+    grid-column: $position-x / span $span-x;
+    grid-row: $position-y / span $span-y;
+}
+
+/*MIXIN ALINEAMIENTO GRID*/
+@mixin align-grid($align-x:center, $align-y:center){
+
+    align-self: $align-x;
+    justify-self: $align-y;
+}
+
+
+/*MIXIN ESTILO*/
+
+
+
+
+/*classes*/
+.popular-1-1 {
+    padding-left: 20vh;
+    padding-right: 20vh;
+    font-family: $font-2;
+}
+
+.popular-1 {
+    display: grid;
+    grid-template-columns: 7fr 5vh 5vh 9fr;
+    grid-template-rows: auto;
+    grid-gap: 0 20px;  
+
+}
+
+.popular-grid{
+    display: grid;
+    grid-template-columns: 6fr 4vh 4vh;
+    grid-template-rows:auto;
+    grid-gap: 1rem 20px;
+
+}
+.popular1-main-title{
+
+    @include position-grid(1, 4, 1, 1);
+
+ 
+}
+.popular1-img {
+    
+    @include position-grid(4, 1, 2, 4);
+    @include align-grid;
+}
+
+.popular1-title {
+    @include position-grid(1, 3, 2, 1);
+
+
+}
+
+.popular1-content {
+    @include position-grid(1, 3, 3, 1);
+
+}
+
+.popular1-author {
+    @include position-grid(1, 1, 4, 1);
+}
+
+.popular1-date{
+    @include position-grid(1, 1, 5, 1);
+}
+
+.save-icon {
+    @include position-grid(2,1,4,2);
+    @include align-grid;
+}
+
+.share-icon {
+    @include position-grid(3,1,4,2);
+    @include align-grid;
+}
+
+.pop-flexbox {
+    display: flex;
+    justify-content: space-between;
+    gap: 5rem;
+    
+    
+    
+}
+
+
+
+.pop1 {
+    @include position-grid(1, 3, 1, 1);
+}
+
+.pop2 {
+    @include position-grid(1, 3, 2, 1);
+}
+
+.pop3 {
+    @include position-grid(1, 3, 3, 1);
+}
+
+.pop4 {
+    @include position-grid(1, 1, 4, 1);
+}
+
+.pop5 {
+    @include position-grid(1, 1, 5, 1);
+}
+
+.pop6 {
+    @include position-grid(2, 1, 4, 1);
+}
+
+.pop7 {
+    @include position-grid(3, 1, 4, 1);
+}
+
+.pop-flexbox-2 {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.all-flexbox-1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+      
+}
+
+.all-flexbox-2 {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.all-grid {
+    display: grid;
+    grid-template-columns: 5fr 7fr 5vh 5vh;
+    grid-template-rows: auto; 
+}
+
+.all1 {
+    @include position-grid(1, 1, 1, 4);
+}
+
+.all2 {
+    @include position-grid(2, 3, 1, 1);
+}
+
+.all3 {
+    @include position-grid(2, 3, 2, 1);
+}
+
+.all4 {
+    @include position-grid(2, 1, 3, 1);
+}
+
+.all5 {
+    @include position-grid(2, 1, 4, 1);
+}
+
+.all6 {
+    @include position-grid(3, 1, 3, 2);
+}
+
+.all7 {
+    @include position-grid(4, 1, 3, 2);
+}
+
+.interested-flex {
+    display: flex;
+    background-color: $color-logo;
+    padding-left: 20vh;
+    padding-right: 20vh;
+    gap: 15vh;    
+}
+
+.info, .hablemos {
+    flex-basis: 50%;
+    height: 25rem;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.info > h3 {
+    font-family: $font-2;
+    font-size: 2rem;
+    color: white;
+    font-weight: 400;
+
+}
+
+.info > h4 {
+    font-family: $font-1;
+    font-size: 1rem;
+    color: $color-autor;
+    font-weight: 400;
+    color: $font-1;
+
+    
+}
+
+.hablemos > button {
+    padding: 3vh;
+    width: 60%;
+    background-color: #5A98D0;
+    color: white;
+}
+
+.footer-flex-main {
+    display: flex;
+    background-color: $color-logo;
+    padding-left: 20vh;
+    padding-right: 20vh;
+    gap: 15vh;
+}
+
+.flex-footer {
+    display: flex;
+    flex-direction: column;
+
+    gap: 2vh;
+    height: 20rem;
+}
+
+
+.logo-footer {
+    display: flex;
+    align-items: center;
+    color: white;
+    font-family: $font-2;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding-bottom: 2vh;
+}
+
+.logo-footer > img {
+    padding-right: 2vh;
+}
+
+.content-footer > span {
+    font-weight: bold;
+    padding-right: 1.5vh;
+}
+
+.content-footer {
+    color: white;
+    font-family: $font-1;
+}
+
+.goodbye {
+    color: $color-autor;
+    font-family: $font-2;
+
+}

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Validación de Formularios</title>
+        <style>
+            body {
+                font-family: Arial, Helvetica, sans-serif;
+                padding: 10px 20px 80px;
+            }
+
+            html {
+                font-size: 62.5%;
+            }
+
+            h1 {
+                text-align: center;
+                color: #1271e7;
+                font-size: 4.0rem;
+            }
+
+            form {
+                background: #87a0fac7;
+                display: flex;
+                flex-direction: column;
+                max-width: 500px;
+                border-radius: 10px;
+                margin: 0 auto;
+                padding: 40px 20px;
+            }
+
+            label {
+                font-weight: 600;
+                font-size: 1.8rem;
+                margin-bottom: 10px;
+            }
+
+            input,
+            select {
+                font-size: 1.6rem;
+                outline: none;
+                border: 2px solid #858585;
+                margin-bottom: 20px;
+                padding: 10px 20px;
+            }
+
+            input:hover,
+            select:hover {
+                box-shadow: 0 0 8px 0 #333;
+            }
+
+            input:focus,
+            select:focus {
+                border: 2px solid #ff0000;
+            }
+
+            input:valid,
+            select:valid {
+                border: 2px solid #1ea71e;
+            }
+
+            .btnContainer {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                column-gap: 30px;
+                row-gap: 10px;
+            }
+
+            .btnContainer input {
+                border: none;
+                margin-bottom: 0;
+            }
+
+            .btnContainer input,
+            select {
+                cursor: pointer;
+            }
+
+            .btnContainer input[type="reset"] {
+                background-color: #555;
+                color: #fff;
+                font-weight: 600;
+                border-radius: 10px;
+            }
+
+            .btnContainer input[type="submit"] {
+                background-color: #009500;
+                color: #fff;
+                font-weight: 600;
+                border-radius: 10px;
+            }
+        </style>
+    </head>
+
+    <body>
+        
+        <h1>Reto 03 Hackaton 03</h1>
+
+        <form action="./enviarFormPrueba.html" method="post">
+            <label for="nombre">Nombre: </label>
+            <input type="text" name="nombre" id="nombre" pattern="[A-Za-z]{1,30}" title="Solo se aceptan letras mayúsculas y minúsculas en un máximo de 30 caracteres." required> <br><br>
+
+            <label for="apellido">Apellido: </label>
+            <input type="text" name="apellido" id="apellido" pattern="[A-Za-z]{1,50}" title="Solo se aceptan letras mayúsculas y minúsculas en un máximo de 50 caracteres." required> <br><br>
+
+            <label for="edad">Edad: </label>
+            <input type="number" name="edad" id="edad" min="18" max="80" title="Solo se aceptan números entre 18 y 80." required> <br><br>
+
+            <label for="sexo">Sexo: </label>
+            <select name="sexo" id="sexo" required>
+                <option></option>
+                <option value="femenino">Femenino</option>
+                <option value="masculino">Masculino</option>
+                <option value="intersexual">Intersexual</option>
+                <option value="intersexualFem">Intersexual con características femeninas</option>
+                <option value="intersexualMas">Intersexual con características masculinas</option>
+            </select> <br><br>
+
+            <label for="dni">DNI: </label>
+            <input type="text" name="dni" id="dni" pattern="^[a-zA-Z0-9]{8,}$" title="Solo se aceptan letras mayúsculas, minúsculas y número, pero se reuqiere de un mínimo de 8 números." required> <br><br>
+
+            <label for="correo">Email: </label>
+            <input type="email" name="correo" id="correo" required> <br><br>
+
+            <div class="btnContainer">
+                <input type="reset" value="Borrar">
+                <input type="submit" value="Enviar">
+            </div>
+        </form>
+
+    </body>
+
+</html>

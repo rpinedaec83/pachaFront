@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>reto 02</title>
+</head>
+<body>
+    <label>Superhéroe favorito</label>
+    <input list="superheroes" name="list" />
+    <datalist id="superheroes">
+        <option label="Iron Man" value="Iron Man">
+        <option label="The Hulk" value="The Hulk">
+    </datalist>
+    <br>
+    <br>
+    <input type="email" id="user-email" placeholder="e.g. john.doe@mozilla.com" required/>
+
+  <br>
+    <br>
+    <p>Simple input box</p>
+<input type="text" value="Type here">
+<br>
+<br>
+<p>Simple input box</p>
+<input type="text" value="Type here">
+<br>
+<br>
+<p>A common form that includes input tags</p>
+<form action="getform.php" method="get">
+    <label>First name: <input type="text"></label><br>
+     <label>Last name: <input type="text"></label><br>
+        <label>E-mail: <input type="email"></label><br>
+<input type="submit" value="Submit">
+</form>
+<br>
+<br>
+<input type="text" mozactionhint="next">
+<label>Choose a browser from this list:
+    <input list="browsers" name="myBrowser" /></label>
+    <datalist id="browsers">
+      <option value="Chrome">
+      <option value="Firefox">
+      <option value="Internet Explorer">
+      <option value="Opera">
+      <option value="Safari">
+      <option value="Microsoft Edge">
+    </datalist>
+    <br>
+    <br>
+    <!-- Formulario simple que enviará una petición GET -->
+<form action="">
+    <label for="GET-name">Nombre:</label>
+    <input id="GET-name" type="text" name="name">
+    <input type="submit" value="Save">
+  </form>
+  
+  <!-- Formulario simple que enviará una petición POST -->
+  <form action="" method="post">
+    <label for="POST-name">Nombre:</label>
+    <input id="POST-name" type="text" name="name">
+    <input type="submit" value="Save">
+  </form>
+  
+  <!-- Formulario con conjunto de campos, leyenda y etiqueta -->
+  <form action="" method="post">
+    <fieldset>
+      <legend>Título</legend>
+      <input type="radio" name="radio" id="radio"> <label for="radio">Clic aquí</label>
+    </fieldset>
+  </form>
+  <br>
+  <br>
+<!-- The second value will be selected initially -->
+<select name="select">
+    <option value="value1">Value 1</option>
+    <option value="value2" selected>Value 2</option>
+    <option value="value3">Value 3</option>
+  </select>
+  <br>
+  <br>
+  <form oninput="result.value=parseInt(a.value)+parseInt(b.value)">
+    <input type="range" id="b" name="b" value="50" /> +
+    <input type="number" id="a" name="a" value="10" /> =
+    <output name="result" for="a b">60</output>
+  </form>
+  <br>
+  <br>
+  <textarea name="textarea" rows="10" cols="50">Write something here</textarea>
+  <br>
+  <br>
+  <br>
+  <button name="favorito" type="button">
+    <svg aria-hidden="true" viewBox="0 0 10 10"><path d="m7.4 8.8-2.4-1.3-2.4 1.3.46-2.7-2-1.9 2.7-.39 1.2-2.5 1.2 2.5 2.7.39-1.9 1.9z"/></svg>
+    Agregar a favoritos
+  </button>
+  <br>
+  <br>
+
+
+</body>
+</html>

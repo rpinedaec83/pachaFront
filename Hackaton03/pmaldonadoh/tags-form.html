@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reto 01</title>
+    <style>
+        input {
+            padding: 10px;
+            margin: 7px;
+        }
+
+    </style>
+</head>
+<body>
+    <h2> ETIQUETAS DE FORMULARIO EN HTML5 </h2>
+    <form action="" style="height: 470px; width: 380px; ">
+        <label for="">Nombre Completo</label>
+        <input type="text" pattern="" placeholder="Nombre Completo" >
+        <label for="">Edad</label>
+        <input type="number" pattern="" placeholder="Edad" >
+        <br>
+        <label for="">Fecha de Nacimiento</label>
+        <input type="datetime-local" pattern="" placeholder="Fecha de Nacimiento" >
+        <label for="">Contraseña</label>
+        <input type="password" pattern="" placeholder="Contraseña" >
+        <br>
+        <label for="">Teléfono</label>
+        <input type="tel" pattern="" placeholder="Número" maxlength="9" >
+        <input type="search" pattern="" placeholder="" >
+        <br>
+        <label for="">Correo</label>
+        <input type="email" pattern="" placeholder="Correo" >
+        <br>
+        <label for="">Elige un Superheroe</label>
+        <input list="superheroes" name="list" />
+        <datalist id="superheroes" >
+            <option label="Iron Man" value="Iron Man">
+            <option label="Hulk" value="Hulk">
+            <option label="Superman" value="Superman"> 
+            <option label= "Capitan" value="Capitan America">   
+        </datalist>
+        <input type="checkbox">
+        <textarea name="" id="" cols="30" rows="10" ></textarea>
+        <input type="submit">
+    </form>
+</body>
+</html>

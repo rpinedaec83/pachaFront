@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Formulario</title>
+    <link rel="stylesheet" href="css/styleform.css">
+    
+</head>
+
+<body>
+    <section class="avia-section">
+        <div class="container">
+            <div class="content">
+                <h1 class="title-form">Mi Formulario</h1>
+                <form action="alert-form.html" method="get">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required pattern="[A-Za-záéíóúÁÉÍÓÚñÑ\s]+" />
+            
+                    <label for="apellido">Apellido:</label>
+                    <input type="text" id="apellido" name="apellido" required pattern="[A-Za-záéíóúÁÉÍÓÚñÑ\s]+" />
+            
+                    <label for="edad">Edad:</label>
+                    <input type="number" id="edad" name="edad" min="18" max="80" required />
+            
+                    <label for="sexo">Sexo:</label>
+                    <select id="sexo" name="sexo" required>
+                        <option value="">Seleccione una opción</option>
+                        <option value="masculino">Masculino</option>
+                        <option value="femenino">Femenino</option>
+                        <option value="otro">Otro</option>
+                    </select>
+            
+                    <label for="dni">DNI:</label>
+                    <input type="text" id="dni" name="dni" required pattern="[A-Za-z0-9\s]{8,}" />
+            
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required />
+            
+                    <input type="submit" value="Enviar" />
+                </form>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
