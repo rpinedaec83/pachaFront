@@ -16,6 +16,7 @@ export default {
   data() {
     return {
       arrayVideos: [],
+      apiFake: 'http://localhost:3000/'
     };
   },
   mounted() {
@@ -23,7 +24,8 @@ export default {
   },
   methods: {
     getVideos() {
-      fetch(`http://localhost:3000/videos/`, {
+      let endpoint = `videos/`
+      fetch(`${this.apiFake}${endpoint}`, {
         method: 'GET'
       })
         .then(response => response.json())
@@ -35,8 +37,9 @@ export default {
         });
     },
     async createVideo(newVideo) {
+      let endpoint = `videos/`
       try {
-        const response = await fetch(`http://localhost:3000/videos/`, {
+        const response = await fetch(`${this.apiFake}${endpoint}`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'
@@ -58,8 +61,9 @@ export default {
       }
     },
     async updateVideo(updateVideo, index) {
+      let endpoint = `videos/${index}`
       try {
-        const response = await fetch(`http://localhost:3000/videos/${index}`, {
+        const response = await fetch(`${this.apiFake}${endpoint}`, {
           method: 'PUT',
           headers: {
             'Content-Type': 'application/json'
@@ -81,8 +85,9 @@ export default {
       }
     },
     async deleteVideo(index) {
+      let endpoint = `videos/${index}`
       try {
-        const deleteData = await fetch(`http://localhost:3000/videos/${index}`, {
+        const deleteData = await fetch(`${this.apiFake}${endpoint}`, {
           method: 'DELETE'
         });
 
