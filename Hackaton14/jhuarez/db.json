@@ -4,52 +4,49 @@
       "id": 1,
       "titulo": "Street Fighter 6",
       "url": "https://www.youtube.com/embed/UfZR2_T3dEU",
-      "descripcion":"Ranked Ken Street fighter 6 new"
+      "descripcion": "Ranked Ken Street fighter 6 new"
     },
     {
       "id": 2,
       "titulo": "Viaja y Prueba ceviches",
       "url": "https://www.youtube.com/embed/xFS2nHxZ6L4",
-      "descripcion":"Capitulo donde vemos lugares donde comer un rico cebiche"
+      "descripcion": "Capitulo donde vemos lugares donde comer un rico cebiche"
     },
     {
       "id": 3,
       "titulo": "Pokemon Pikachu vs Raichu",
       "url": "https://www.youtube.com/embed/Dic-RmdOSFs",
-      "descripcion":"Batalla de la serie original de Pokemon"
+      "descripcion": "Batalla de la serie original de Pokemon"
     },
     {
       "id": 4,
       "titulo": "Opening Yu Gi Oh Español Latino",
       "url": "https://www.youtube.com/embed/timXx6CBjoA",
-      "descripcion":"Primer opening de la serie de yu gi oh"
+      "descripcion": "Primer opening de la serie de yu gi oh"
     },
     {
       "id": 5,
       "titulo": "Los guardianes del universo Caballeros del Zodiaco",
       "url": "https://www.youtube.com/embed/Tedch5p83Is",
-      "descripcion":"Primer tema de los caballeros del zodiaco en el español de españa"
-    }
-    ,
+      "descripcion": "Primer tema de los caballeros del zodiaco en el español de españa"
+    },
     {
       "id": 6,
       "titulo": "Como hacer peso muerto en 5 pasos",
       "url": "https://www.youtube.com/embed/MBbyAqvTNkU",
-      "descripcion":"Alan Thrall nos enseña la forma correcta de realizar este ejercicio"
-    }
-    ,
+      "descripcion": "Alan Thrall nos enseña la forma correcta de realizar este ejercicio"
+    },
     {
       "id": 7,
       "titulo": "EVO moment 37",
       "url": "https://www.youtube.com/embed/JzS96auqau0",
-      "descripcion":"Momento epico del EVO numero 37 con la victoria de Daigo Umehara vs Justin Wong"
-    }
-    ,
+      "descripcion": "Momento epico del EVO numero 37 con la victoria de Daigo Umehara vs Justin Wong"
+    },
     {
       "id": 8,
       "titulo": "Tekken 8 Trailer oficial",
       "url": "https://www.youtube.com/embed/603dCoqtoeE",
-      "descripcion":"Trailer oficial del nuevo juego de la famosa franquicia de juegos de pelea"
+      "descripcion": "Trailer oficial del nuevo juego de la famosa franquicia de juegos de pelea"
     }
   ]
 }

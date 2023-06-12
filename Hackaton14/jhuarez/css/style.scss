@@ -1,3 +1,10 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
 #encabezado {
     background-color: #FF5252;
     color: white;
@@ -16,6 +23,8 @@
 
 .contenedor-iframe {
     position: relative;
+    width: 100%;
+    height: auto;
 }
 
 .btn-editar {
@@ -29,7 +38,7 @@
     display: none;
     position: absolute;
     top: 15px;
-    right: 15px;
+    right: 0px;
 }
 
 .contenedor-iframe:hover .iframe-button {
@@ -37,8 +46,8 @@
 }
 
 /* Fondo modal */
-.modal, .modal2 {
-    display: none; /* Hidden by default */
+.modal-video {
+    //display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
     padding-top: 30vh; /* Location of the box */
@@ -52,7 +61,7 @@
   }
 
   /* Contenido modal */
-.modal-contenido, .modal2-content {
+.modal-contenido {
     background-color: #fefefe;
     margin: auto;
     padding: 20px;
@@ -70,10 +79,6 @@
 
 .oculto {
     display: none;
-}
-
-.visible {
-    display: block;
 }
 
 .separados {

@@ -14,20 +14,20 @@
         <div class="contenedor espaciado-horizontal">
             <div class="fila separados">
                 <h1 class="espaciado-vertical">PACHATUBE</h1>
-                <button id="openModalBtn2" class="visible espaciado-vertical" onclick="modal.openModal()">Agregar Video</button>
+                <button id="" class="espaciado-vertical">Agregar Video</button>
             </div>            
         </div>
     </header>
 
     <section id="home">
 
-        <div id="openModalBtn1" class="contenedor visible">
+        <div class="contenedor">
             <div class="fila centrar-vertical">
-                <button  onclick="modal.openModal()">Agregar Video</button>
+                <button id="openModalBtn">Agregar Video</button>
             </div>
         </div>
 
-        <div id="myModal" class="modal">
+        <div id="myModal" class="modal-video oculto">
             <div class="modal-contenido texto-izquierda">
                 <h3 id="tituloFormulario">Agregar Video</h3>
                 <form id="formularioVideo">                    
@@ -51,11 +51,12 @@
                     <button id="cancelBtn" class="btn btn-primary">Cancelar</button>
                     <input type="hidden" name="id">
                 </form>
+                    
             </div>
         </div>
 
           <!-- Modal de Confirmación -->
-        <div id="myModal2" class="modal2">
+        <!-- <div id="myModal2" class="modal2">
             <div class="modal2-content">
             <span id="modal2Mensaje"></span>
             <div class="modal2-buttons">
@@ -63,7 +64,7 @@
                 <button id="modal2CancelarBtn">Cancelar</button>
             </div>
             </div>
-        </div>
+        </div> -->
     </section>
 
   
@@ -77,10 +78,10 @@
     <template id="crud-template">
         <li>
             <div class="contenedor-iframe">
-                <button class="btn-editar iframe-button" data-index="">Editar</button>
-                <button class="btn-eliminar iframe-button" data-index="">Eliminar</button> 
+                <button class="btn-editar iframe-button">Editar</button>
+                <button class="btn-eliminar iframe-button">Eliminar</button> 
 
-                <iframe class="urlillo" width="560" height="315" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <iframe class="urlillo" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </div>
 
             <p class="titulillo"></p>
