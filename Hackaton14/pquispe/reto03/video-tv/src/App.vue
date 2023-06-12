@@ -1,6 +1,6 @@
 <template>
-  <HomeComponent v-if="arrayVideos.length == 0"></HomeComponent>
-  <CrudComponent v-else :arrayVideos="arrayVideos"></CrudComponent>
+  <HomeComponent v-if="arrayVideos.length == 0" @emitCreateVideo2="createVideo"></HomeComponent>
+  <CrudComponent v-else :arrayVideos="arrayVideos" @emitDeleteVideo2="deleteVideo" @emitCreateVideo2="createVideo" @emitUpdateVideo2="updateVideo"></CrudComponent>
 </template>
 
 <script>
@@ -15,7 +15,7 @@ export default {
   },
   data() {
     return {
-      arrayVideos: []
+      arrayVideos: [],
     };
   },
   mounted() {
@@ -34,44 +34,66 @@ export default {
           console.error(`Error al traer los datos: ${error}`)
         });
     },
-    async createVidio() {
+    async createVideo(newVideo) {
       try {
         const response = await fetch(`http://localhost:3000/videos/`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'
           },
-          body: JSON.stringify()
+          body: JSON.stringify(newVideo)
         });
+
         const data = await response.json();
-        await this.getVideos();
+
+        const getData = await this.getVideos();
+
+        return {
+          response,
+          data,
+          getData
+        };
       } catch (error) {
-        console.error(`Error al crear nuevo video: ${error}`)
+        console.error(`Error al crear nuevo video: ${error}`);
       }
     },
-    async updateVideo(index) {
+    async updateVideo(updateVideo, index) {
       try {
         const response = await fetch(`http://localhost:3000/videos/${index}`, {
           method: 'PUT',
           headers: {
             'Content-Type': 'application/json'
           },
-          body: JSON.stringify()
+          body: JSON.stringify(updateVideo)
         });
+
         const data = await response.json();
-        await this.getVideos();
+
+        const getData = await this.getVideos();
+
+        return {
+          response,
+          data,
+          getData
+        };
       } catch (error) {
-        console.error(`Error al editar video: ${error}`)
+        console.error(`Error al editar video: ${error}`);
       }
     },
     async deleteVideo(index) {
       try {
-        await fetch(`http://localhost:3000/videos/${index}`, {
+        const deleteData = await fetch(`http://localhost:3000/videos/${index}`, {
           method: 'DELETE'
         });
-        await this.getVideos();
+
+        const getData = await this.getVideos();
+
+        return {
+          deleteData,
+          getData
+        };
       } catch (error) {
-        console.log(`Error al eliminar el video: ${error}`)
+        console.log(`Error al eliminar el video: ${error}`);
       }
     }
   }
