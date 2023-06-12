@@ -5,6 +5,8 @@ const tituloFormulario = d.getElementById("tituloFormulario");
 const template=d.getElementById("crud-template").content; //no entiendo bien porque el content
 const fragment=d.createDocumentFragment();
 
+const openBtn=d.getElementById("openModalBtn");
+
 const getAll = async() => {
     try{
         let res=await fetch("http://localhost:3000/videos"),
@@ -18,6 +20,12 @@ const getAll = async() => {
             template.querySelector(".titulillo").innerText=el.titulo;
             template.querySelector(".urlillo").src=el.url;
             template.querySelector(".descripciencillo").innerText=el.descripcion;
+
+            template.querySelector(".btn-editar").dataset.id=el.id;
+            template.querySelector(".btn-editar").dataset.titulo=el.titulo;
+            template.querySelector(".btn-editar").dataset.url=el.url;
+            template.querySelector(".btn-editar").dataset.descripcion=el.descripcion;
+            template.querySelector(".btn-eliminar").dataset.id=el.id;
 
             let clone=d.importNode(template,true);
             fragment.appendChild(clone);
@@ -33,115 +41,75 @@ const getAll = async() => {
 
 d.addEventListener("DOMContentLoaded", getAll);
 
+d.addEventListener("submit", async e=>{
+    if(e.target===formulario){
+        e.preventDefault();
+
+        if(!e.target.id.value ){
+            //CREATE POST
+            try{
+                let options = {
+                    method: "POST",
+                    headers: {
+                        "Content-type":"application/json; charset=utf-8"
+                    },
+                    body:JSON.stringify({
+                        titulo: e.target.tituloVideo.value,
+                        url: e.target.urlVideo.value,
+                        descripcion: e.target.descripcionVideo.value
+                    })    
+                },
+                    res= await fetch("http://localhost:3000/videos",options),
+                    json= await res.json();
+
+                    
+
+                    if(!res.ok) throw{ status:res.status, statusText: res.statusText};
+
+                    modal.closeModal(); 
+
+            } catch(err){
+                let message = err.statusText || "Ocurrio un error";
+                formulario.insertAdjacentHTML("afterend", `<p><b> Error ${err.status}: ${message}</b></p>`);
+            }
+        }
+        else {
+            //update por PUT
+        }
+    }
+})
+
 //OBJETO MODAL
-/*class Modal {
+class Modal {
 
   constructor(idModal, idBtnModal, idAcceptBtn, idCancelBtn) {
     this.modal = document.getElementById(idModal);
-    this.openBtn1 = document.getElementById(idBtnModal);
+    this.openBtn = document.getElementById(idBtnModal);
     this.acceptBtn = document.getElementById(idAcceptBtn);
     this.cancelBtn = document.getElementById(idCancelBtn);
 
-    this.openBtn1.addEventListener('click', this.agregarNuevoVideo.bind(this));
-    this.acceptBtn.addEventListener('click', this.accept.bind(this));
-    this.cancelBtn.addEventListener('click', this.cancel.bind(this));
-    window.addEventListener("click", this.closeModal.bind(this));
+    this.addCloseEventListener(idModal, idCancelBtn);
   }
   
     openModal() {
-      this.modal.style.display = 'block';
+        this.modal.classList.remove("oculto");
     }
 
-    closeModal(event) {
-        if (event.target == this.modal) {
-            this.modal.style.display = 'none';
-        }
+    closeModal() {
+        this.modal.classList.add("oculto");
     };
 
-    agregarNuevoVideo() {
-      // Restablecer los valores del formulario
-      
-      formulario.reset();
-      
-      // Abrir el modal
-      this.openModal();
-    }
-  
-    accept() {
-      const index = this.acceptBtn.dataset.index; // Obtén el índice del perro
-      const perros = JSON.parse(localStorage.getItem("perros")); // Obtén los perros del almacenamiento local
-    
-      if (perros && perros.length > 0) {
-        const perro = perros[index]; // Obtén el perro correspondiente al índice
-    
-        // Verifica si el perro existe
-        if (perro) {
-          // Actualiza los valores del perro con los valores del formulario
-          perro.nombre = document.getElementById("tituloVideo").value;
-          perro.apellido = document.getElementById("urlVideo").value;
-          perro.descripcion = document.getElementById("descripcionVideo").value;
-    
-          // Guarda los perros actualizados en el almacenamiento local
-          localStorage.setItem("perros", JSON.stringify(perros));
-    
-          // Cierra el modal y actualiza la lista de perros en la página
-          this.modal.style.display = "none";
-          mostrarPerrosEnPagina();
-        } else {
-          this.modal.style.display = "none";
-          console.log("El perro no existe.");
-          return; // Salir del método o realizar alguna acción adicional
-        }
-      } else {
-        this.modal.style.display = "none";
-        console.log("El arreglo de videos está vacío o no existe.");
-        return; 
-      }
-    }
-  
-    cancel() {
-      console.log('Botón Cancelar presionado');
-      this.modal.style.display = 'none';
-    }
-
-    llenarFormulario(perro) {
-      const tituloVideo = document.getElementById("tituloVideo");
-      const urlVideo = document.getElementById("urlVideo");
-      const descripcionVideo = document.getElementById("descripcionVideo");
-  
-      tituloVideo.value = perro.nombre;
-      urlVideo.value = perro.apellido;
-      descripcionVideo.value = perro.descripcion;
-    }
-
-    aceptarEdicion(event, index, perros) {
-      event.preventDefault();
-    
-      // Obtener los valores actualizados del formulario
-      const tituloVideo = document.getElementById("tituloVideo").value;
-      const urlVideo = document.getElementById("urlVideo").value;
-      const descripcionVideo = document.getElementById("descripcionVideo").value;
-    
-      // Actualizar los valores del perro seleccionado
-      const perro = perros[index];
-      perro.nombre = tituloVideo;
-      perro.apellido = urlVideo;
-      perro.raza = razaPerro;
-      perro.telefono = telefonoPerro;
-      perro.pais = paisPerro;
-      perro.descripcion = descripcionVideo;
-    
-      // Actualizar el array de perros en el almacenamiento local
-      localStorage.setItem("perros", JSON.stringify(perros));
-    
-      // Cerrar el modal y actualizar la lista de perros en la página
-      modal.modal.style.display = "none";
-      mostrarPerrosEnPagina();
-      resetFileInput(); // Restablecer el campo de entrada de archivo
-      
+    addCloseEventListener = (idModal, idCancelBtn) => {
+        this.modal.addEventListener("click",(e) => {
+            if (e.target.id === idCancelBtn || e.target.id === idModal){
+                this.closeModal();
+            }
+        })
     }
 }
 
+
+/*
 class Modal2 {
   constructor() {
     this.modal = document.getElementById('myModal2');
@@ -172,18 +140,11 @@ class Modal2 {
     this.ocultar();
   }
 }
-
-
-class Video {
-  constructor(tituloVideo, urlVideo, descripcionVideo) {
-    this.tituloVideo = tituloVideo;
-    this.urlVideo = urlVideo;
-    this.descripcionVideo = descripcionVideo;
-  }
-}
-
-const modalAddVideo1 = new Modal("myModal", "openModalBtn1", "acceptBtn", "cancelBtn");
-const modalAddVideo2 = new Modal("myModal", "openModalBtn2", "acceptBtn", "cancelBtn")
-const modalConfirmacion = new Modal2();
-
 */
+const modal = new Modal("myModal", "openModalBtn", "acceptBtn", "cancelBtn");
+//const modalConfirmacion = new Modal2();
+
+//abrir modal
+modal.openBtn.addEventListener("click", () => {
+    modal.openModal();
+  });
