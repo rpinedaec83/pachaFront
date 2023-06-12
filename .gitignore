@@ -21,3 +21,4 @@ yarn-error.log*
 *.sw*
 *.mp3
 Semana14Sesion02/rpineda/tutorial-vue/ngrok
+.DS_Store
