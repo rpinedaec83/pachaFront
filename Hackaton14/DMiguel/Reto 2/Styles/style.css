@@ -29,7 +29,7 @@ body, html {
   align-items: center;
 }
 
-.btn-danger {
+.btn-danger-adapt {
   padding: 0.7em 1.4em;
 }
 
@@ -48,4 +48,24 @@ body, html {
 }
 .contenido-addPost .modal-body .modal-body-texto {
   grid-area: texto;
+}
+
+.card {
+  width: -moz-min-content;
+  width: min-content;
+}
+.card .card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.contenido-posts {
+  width: 80%;
+  margin: 2em auto;
+}
+.contenido-posts .card-img-top {
+  height: 15em;
+  width: 25em;
+  -o-object-fit: cover;
+     object-fit: cover;
 }/*# sourceMappingURL=style.css.map */

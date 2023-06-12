@@ -12,6 +12,7 @@
         crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./Styles/style.css">
     <link rel="stylesheet" href="./Styles/normalize.css">
+    <link href='https://css.gg/css' rel='stylesheet'>
     <title>Document</title>
 </head>
 
@@ -21,13 +22,13 @@
             <h1 class="contenido-nav-title">
                 Video Pacha TV
             </h1>
-            <button type="button" class="btn btn-danger contenido-nav-addPet" data-bs-toggle="modal"
+            <button type="button" class="btn btn-danger contenido-nav-addPet btn-danger-adapt" data-bs-toggle="modal"
                 data-bs-target="#newVideo">
                 Agregar Video
             </button>
         </div>
         <div class="contenido-button-addPet">
-            <button type="button" class="btn btn-danger contenido-addPet" data-bs-toggle="modal"
+            <button type="button" class="btn btn-danger contenido-addPet btn-danger-adapt" data-bs-toggle="modal"
                 data-bs-target="#newVideo">
                 Agregar Video
             </button>
@@ -80,8 +81,8 @@
             </div>
             <div class="contenido-posts row row-cols-1 row-cols-md-3 g-4">
                 <div class="col">
-                    <div class="card h-100">
-                        <img src="..." class="card-img-top" alt="...">
+                    <div class="card">
+                        <img src="./source/image/imagen-test.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">Card title</h5>
                             <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
@@ -91,14 +92,18 @@
                             <button type="button" class="btn btn-danger contenido-nav-addPet" data-bs-toggle="modal" data-bs-target="#editVideo">
                                 Editar Video
                             </button>
+                            <div class="footer__btn-opt">
+                                <button type="button" class="btn" aria-label="Close">
+                                    <i class="gg-close"></i>
+                                </button>
+                                <button type="button" class="btn" aria-label="Edit">
+                                    <i class="gg-play-list-add"></i>
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
-                
-
-                
             </div>
         </div>
 </body>
-
 </html>
