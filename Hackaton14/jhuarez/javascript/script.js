@@ -15,6 +15,16 @@ const getAll = async() => {
         if(!res.ok) throw{ status:res.status, statusText: res.statusText};
 
         console.log(json);
+        if(json.length === 0) {
+            document.getElementById("principal").classList.remove("oculto");
+            document.getElementById("pachaTube").classList.add("oculto");
+            document.getElementById("openModalBtn2").classList.add("oculto");
+        }
+        else{
+            document.getElementById("principal").classList.add("oculto");
+            document.getElementById("pachaTube").classList.remove("oculto");
+            document.getElementById("openModalBtn2").classList.remove("oculto");
+        }
 
         json.forEach(el => {
             template.querySelector(".titulillo").innerText=el.titulo;
@@ -59,32 +69,69 @@ d.addEventListener("submit", async e=>{
                         descripcion: e.target.descripcionVideo.value
                     })    
                 },
-                    res= await fetch("http://localhost:3000/videos",options),
-                    json= await res.json();
-
-                    
+                    res= await fetch("http://localhost:3000/videos", options),
+                    json= await res.json();                  
 
                     if(!res.ok) throw{ status:res.status, statusText: res.statusText};
 
                     modal.closeModal(); 
+                    location.reload(); 
 
-            } catch(err){
+            } catch(error){
                 let message = err.statusText || "Ocurrio un error";
                 formulario.insertAdjacentHTML("afterend", `<p><b> Error ${err.status}: ${message}</b></p>`);
             }
         }
         else {
             //update por PUT
+            try{
+                let options = {
+                    method: "PUT",
+                    headers: {
+                        "Content-type":"application/json; charset=utf-8"
+                    },
+                    body:JSON.stringify({
+                        titulo: e.target.tituloVideo.value,
+                        url: e.target.urlVideo.value,
+                        descripcion: e.target.descripcionVideo.value
+                    })    
+                },
+                    res= await fetch(`http://localhost:3000/videos/${e.target.id.value}`, options),
+                    json= await res.json();                
+
+                    if(!res.ok) throw{ status:res.status, statusText: res.statusText};
+
+                    modal.closeModal(); 
+
+                    location.reload();
+
+            } catch(error){
+                let message = err.statusText || "Ocurrio un error";
+                formulario.insertAdjacentHTML("afterend", `<p><b> Error ${err.status}: ${message}</b></p>`);
+            }
         }
+    }
+})
+
+d.addEventListener("click", e =>{
+    if(e.target.matches(".btn-editar")){
+
+        modal.openModal();
+
+        tituloFormulario.textContent="Editar Video";
+        formulario.titulo.value=e.target.dataset.titulo;
+        formulario.url.value=e.target.dataset.url;
+        formulario.descripcion.value=e.target.dataset.descripcion;;
+        formulario.id.value = e.target.dataset.id;
     }
 })
 
 //OBJETO MODAL
 class Modal {
 
-  constructor(idModal, idBtnModal, idAcceptBtn, idCancelBtn) {
+  constructor(idModal, classBtnModal, idAcceptBtn, idCancelBtn) {
     this.modal = document.getElementById(idModal);
-    this.openBtn = document.getElementById(idBtnModal);
+    this.openBtn = document.querySelectorAll(classBtnModal);
     this.acceptBtn = document.getElementById(idAcceptBtn);
     this.cancelBtn = document.getElementById(idCancelBtn);
 
@@ -141,10 +188,12 @@ class Modal2 {
   }
 }
 */
-const modal = new Modal("myModal", "openModalBtn", "acceptBtn", "cancelBtn");
+const modal = new Modal("myModal", ".openModalBtn", "acceptBtn", "cancelBtn");
 //const modalConfirmacion = new Modal2();
 
 //abrir modal
-modal.openBtn.addEventListener("click", () => {
+modal.openBtn.forEach(button=>{
+    button.addEventListener("click", () => {
     modal.openModal();
-  });
+    });
+})
