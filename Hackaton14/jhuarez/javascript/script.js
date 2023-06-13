@@ -77,7 +77,7 @@ d.addEventListener("submit", async e=>{
                     modal.closeModal(); 
                     location.reload(); 
 
-            } catch(error){
+            } catch(err){
                 let message = err.statusText || "Ocurrio un error";
                 formulario.insertAdjacentHTML("afterend", `<p><b> Error ${err.status}: ${message}</b></p>`);
             }
@@ -102,10 +102,9 @@ d.addEventListener("submit", async e=>{
                     if(!res.ok) throw{ status:res.status, statusText: res.statusText};
 
                     modal.closeModal(); 
-
                     location.reload();
 
-            } catch(error){
+            } catch(err){
                 let message = err.statusText || "Ocurrio un error";
                 formulario.insertAdjacentHTML("afterend", `<p><b> Error ${err.status}: ${message}</b></p>`);
             }
@@ -113,7 +112,7 @@ d.addEventListener("submit", async e=>{
     }
 })
 
-d.addEventListener("click", e =>{
+d.addEventListener("click", async e =>{
     if(e.target.matches(".btn-editar")){
 
         modal.openModal();
@@ -123,6 +122,31 @@ d.addEventListener("click", e =>{
         formulario.url.value=e.target.dataset.url;
         formulario.descripcion.value=e.target.dataset.descripcion;;
         formulario.id.value = e.target.dataset.id;
+    }
+
+    if(e.target.matches(".btn-eliminar")){
+        /*let isDelete=confirm(`¿Estas seguro de eliminar el id ${e.target.dataset.id}?`);
+
+        if(isDelete){
+            //DELETE
+            try{
+                let options = {
+                    method: "DELETE",
+                    headers: {
+                        "Content-type":"application/json; charset=utf-8"
+                    },
+                },
+                    res= await fetch(`http://localhost:3000/videos/${e.target.dataset.id}`, options),
+                    json= await res.json();                
+
+                    if(!res.ok) throw{ status:res.status, statusText: res.statusText};
+                    location.reload();
+
+            } catch(err){
+                let message = err.statusText || "Ocurrio un error";
+                alert(`Error ${err.status}: ${message}`);
+            }
+        }*/
     }
 })
 
@@ -136,6 +160,7 @@ class Modal {
     this.cancelBtn = document.getElementById(idCancelBtn);
 
     this.addCloseEventListener(idModal, idCancelBtn);
+    this.addOpenEventListener();
   }
   
     openModal() {
@@ -153,47 +178,17 @@ class Modal {
             }
         })
     }
+
+    addOpenEventListener = () => {
+        this.openBtn.forEach(b => {
+            b.addEventListener("click", () => {
+                this.openModal();
+                console.log("me hicieron click");
+            })
+        })
+    }
 }
 
-
-/*
-class Modal2 {
-  constructor() {
-    this.modal = document.getElementById('myModal2');
-    this.modalMensaje = document.getElementById('modal2Mensaje');
-    this.modalAceptarBtn = document.getElementById('modal2AceptarBtn');
-    this.modalCancelarBtn = document.getElementById('modal2CancelarBtn');
-
-    this.modalAceptarBtn.addEventListener('click', this.aceptar.bind(this));
-    this.modalCancelarBtn.addEventListener('click', this.cancelar.bind(this));
-  }
-
-  mostrar(mensaje, aceptarCallback) {
-    this.modalMensaje.textContent = mensaje;
-    this.modalAceptarBtn.addEventListener('click', aceptarCallback);
-    this.modal.style.display = 'block';
-  }
-
-  ocultar() {
-    this.modal.style.display = 'none';
-    this.modalAceptarBtn.removeEventListener('click', this.aceptar);
-  }
-
-  aceptar() {
-    this.ocultar();
-  }
-
-  cancelar() {
-    this.ocultar();
-  }
-}
-*/
 const modal = new Modal("myModal", ".openModalBtn", "acceptBtn", "cancelBtn");
 //const modalConfirmacion = new Modal2();
-
-//abrir modal
-modal.openBtn.forEach(button=>{
-    button.addEventListener("click", () => {
-    modal.openModal();
-    });
-})
+const modal2 = new Modal("myModal2", ".btn-eliminar", "modal2AceptarBtn", "modal2CancelarBtn");
