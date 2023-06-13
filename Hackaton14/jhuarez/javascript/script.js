@@ -199,4 +199,10 @@ class Modal {
 
 const modal = new Modal("myModal", ".openModalBtn", "acceptBtn", "cancelBtn");
 //const modalConfirmacion = new Modal2();
-const modal2 = new Modal("myModal2", ".btn-eliminar", "modal2AceptarBtn", "modal2CancelarBtn");
+
+//abrir modal
+modal.openBtn.forEach(button=>{
+    button.addEventListener("click", () => {
+    modal.openModal();
+    });
+})
