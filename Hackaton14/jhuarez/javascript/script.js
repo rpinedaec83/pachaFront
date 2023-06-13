@@ -161,48 +161,42 @@ d.addEventListener("click", e =>{
 //OBJETO MODAL
 class Modal {
 
-  constructor(idModal, classBtnModal, idAcceptBtn, idCancelBtn) {
-    this.modal = document.getElementById(idModal);
-    this.openBtn = document.querySelectorAll(classBtnModal);
-    this.acceptBtn = document.getElementById(idAcceptBtn);
-    this.cancelBtn = document.getElementById(idCancelBtn);
-
-    this.addCloseEventListener(idModal, idCancelBtn);
-    this.addOpenEventListener();
+    constructor(idModal, classBtnModal, idAcceptBtn, idCancelBtn) {
+      this.modal = document.getElementById(idModal);
+      this.openBtn = document.querySelectorAll(classBtnModal);
+      this.acceptBtn = document.getElementById(idAcceptBtn);
+      this.cancelBtn = document.getElementById(idCancelBtn);
+  
+      this.addCloseEventListener(idModal, idCancelBtn);
+      this.addOpenEventListener();
+    }
+    
+      openModal() {
+          this.modal.classList.remove("oculto");
+      }
+  
+      closeModal() {
+          this.modal.classList.add("oculto");
+      };
+  
+      addCloseEventListener = (idModal, idCancelBtn) => {
+          this.modal.addEventListener("click",(e) => {
+              if (e.target.id === idCancelBtn || e.target.id === idModal){
+                  this.closeModal();
+              }
+          })
+      }
+  
+      addOpenEventListener = () => {
+          this.openBtn.forEach(b => {
+              b.addEventListener("click", () => {
+                  this.openModal();
+                  console.log("me hicieron click");
+              })
+          })
+      }
   }
   
-    openModal() {
-        this.modal.classList.remove("oculto");
-    }
-
-    closeModal() {
-        this.modal.classList.add("oculto");
-    };
-
-    addCloseEventListener = (idModal, idCancelBtn) => {
-        this.modal.addEventListener("click",(e) => {
-            if (e.target.id === idCancelBtn || e.target.id === idModal){
-                this.closeModal();
-            }
-        })
-    }
-
-    addOpenEventListener = () => {
-        this.openBtn.forEach(b => {
-            b.addEventListener("click", () => {
-                this.openModal();
-                console.log("me hicieron click");
-            })
-        })
-    }
-}
-
-const modal = new Modal("myModal", ".openModalBtn", "acceptBtn", "cancelBtn");
-//const modalConfirmacion = new Modal2();
-
-//abrir modal
-modal.openBtn.forEach(button=>{
-    button.addEventListener("click", () => {
-    modal.openModal();
-    });
-})
+  const modal = new Modal("myModal", ".openModalBtn", "acceptBtn", "cancelBtn");
+  //const modalConfirmacion = new Modal2();
+  const modal2 = new Modal("myModal2", ".btn-eliminar", "modal2AceptarBtn", "modal2CancelarBtn");
