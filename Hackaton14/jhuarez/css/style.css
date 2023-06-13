@@ -22,8 +22,12 @@
 
 .contenedor-iframe {
   position: relative;
-  width: 100%;
+  width: 80%;
   height: auto;
+}
+
+iframe {
+  width: 100%;
 }
 
 .btn-editar {
@@ -37,7 +41,7 @@
   display: none;
   position: absolute;
   top: 15px;
-  right: 0px;
+  right: 15px;
 }
 
 .contenedor-iframe:hover .iframe-button {
