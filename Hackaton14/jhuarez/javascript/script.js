@@ -112,7 +112,7 @@ d.addEventListener("submit", async e=>{
     }
 })
 
-d.addEventListener("click", async e =>{
+d.addEventListener("click", e =>{
     if(e.target.matches(".btn-editar")){
 
         modal.openModal();
@@ -125,28 +125,36 @@ d.addEventListener("click", async e =>{
     }
 
     if(e.target.matches(".btn-eliminar")){
-        /*let isDelete=confirm(`¿Estas seguro de eliminar el id ${e.target.dataset.id}?`);
 
-        if(isDelete){
-            //DELETE
-            try{
-                let options = {
-                    method: "DELETE",
-                    headers: {
-                        "Content-type":"application/json; charset=utf-8"
-                    },
-                },
-                    res= await fetch(`http://localhost:3000/videos/${e.target.dataset.id}`, options),
-                    json= await res.json();                
+        modal2.openModal();
+        const elemento=`${e.target.dataset.id}`;
+        //let isDelete=confirm(`¿Estas seguro de eliminar el id ${e.target.dataset.id}?`);
 
-                    if(!res.ok) throw{ status:res.status, statusText: res.statusText};
-                    location.reload();
+    
+        d.addEventListener("click",async e =>{
+            if(e.target.matches(".aceptar-eliminar")){
+                //DELETE
+                try{
+                    let options = {
+                        method: "DELETE",
+                        headers: {
+                            "Content-type":"application/json; charset=utf-8"
+                        },
+                        },
+                        res= await fetch(`http://localhost:3000/videos/${elemento}`, options),
+                        json= await res.json();  
+                    
+                        modal2.closeModal();
 
-            } catch(err){
-                let message = err.statusText || "Ocurrio un error";
-                alert(`Error ${err.status}: ${message}`);
+                        if(!res.ok) throw{ status:res.status, statusText: res.statusText};
+                        location.reload();
+
+                    } catch(err){
+                        let message = err.statusText || "Ocurrio un error";
+                        alert(`Error ${err.status}: ${message}`);
+                }
             }
-        }*/
+        })
     }
 })
 

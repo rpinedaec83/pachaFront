@@ -49,7 +49,7 @@ iframe {
 }
 
 /* Fondo modal */
-.modal-video {
+.modal-video, .modal-confirmacion {
   position: fixed; /* Stay in place */
   z-index: 1; /* Sit on top */
   padding-top: 30vh; /* Location of the box */
