@@ -6,22 +6,22 @@
       </div>
     </template>
   </HeaderComponent>
-  <UpdateComponent></UpdateComponent>
+  <AddComponent></AddComponent>
 </template>
-      
+    
 <script>
 import HeaderComponent from '@/components/HeaderComponent.vue';
-import UpdateComponent from '@/components/UpdateComponent.vue';
+import AddComponent from '@/components/AddComponent.vue';
 
 export default {
-  name: 'UpdateVideo',
+  name: 'AddVideo',
   components: {
     HeaderComponent,
-    UpdateComponent,
+    AddComponent,
   }
 };
 </script>
-      
+    
 <style scoped>
 .header__buttons {
   display: flex;
@@ -40,4 +40,4 @@ export default {
   cursor: pointer;
 }
 </style>
-      
+    

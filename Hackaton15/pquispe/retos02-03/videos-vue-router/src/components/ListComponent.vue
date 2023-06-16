@@ -1,27 +1,30 @@
 <template>
   <HeaderComponent>
-    <template #header-options>
+    <template v-slot:header-options>
       <div class="header__buttons">
-        <button type="button">Ver mapa</button>
+        <button type="button">Agregar video</button>
       </div>
     </template>
   </HeaderComponent>
-  <UpdateComponent></UpdateComponent>
+  <ItemsComponent :arrayVideos="arrayVideos"></ItemsComponent>
 </template>
-      
+
 <script>
 import HeaderComponent from '@/components/HeaderComponent.vue';
-import UpdateComponent from '@/components/UpdateComponent.vue';
+import ItemsComponent from '@/components/ItemsComponent.vue';
 
 export default {
-  name: 'UpdateVideo',
+  name: 'ListComponent',
+  props: {
+    arrayVideos: Array
+  },
   components: {
     HeaderComponent,
-    UpdateComponent,
+    ItemsComponent,
   }
 };
 </script>
-      
+
 <style scoped>
 .header__buttons {
   display: flex;
@@ -40,4 +43,3 @@ export default {
   cursor: pointer;
 }
 </style>
-      

@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import VideoList from '../views/VideoList.vue';
 import MoreDetails from '../views/MoreDetails.vue';
-import CreateVideo from '../views/CreateVideo.vue';
+import AddVideo from '../views/AddVideo.vue';
 import UpdateVideo from '../views/UpdateVideo.vue';
 import NotFound from '../views/NotFound.vue';
 
@@ -12,17 +12,17 @@ const routes = [
     component: VideoList,
   },
   {
-    path: '/video/:id_video/details',
+    path: '/video/id_video/details',
     name: 'MoreDetails',
     component: MoreDetails,
   },
   {
-    path: '/video/create-video',
-    name: 'CreateVideo',
-    component: CreateVideo,
+    path: '/video/add-video',
+    name: 'AddVideo',
+    component: AddVideo,
   },
   {
-    path: '/video/:id_video/update-video',
+    path: '/video/id_video/update-video',
     name: 'UpdateVideo',
     component: UpdateVideo,
   },
