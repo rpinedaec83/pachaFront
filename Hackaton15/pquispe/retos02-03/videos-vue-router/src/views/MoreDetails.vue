@@ -2,15 +2,16 @@
   <HeaderComponent>
     <template v-slot:header-options>
       <div class="header__buttons">
-        <button type="button">Ver mapa</button>
-        <button type="button">Agregar video</button>
+        <button type="button" @click="videoList">Ver mapa</button>
+        <button type="button" @click="addVideo">Agregar video</button>
       </div>
     </template>
   </HeaderComponent>
-  <DetailsComponent></DetailsComponent>
+  <DetailsComponent :video="video"></DetailsComponent>
 </template>
   
 <script>
+import axios from 'axios';
 import HeaderComponent from '@/components/HeaderComponent.vue';
 import DetailsComponent from '@/components/DetailsComponent.vue';
 
@@ -19,7 +20,37 @@ export default {
   components: {
     HeaderComponent,
     DetailsComponent,
-  }
+  },
+  data() {
+    return {
+      video: {},
+    };
+  },
+  methods: {
+    videoList() {
+      this.$router.push({
+        name: 'VideoList',
+      });
+    },
+    addVideo() {
+      this.$router.push({
+        name: 'AddVideo',
+      });
+    }
+  },
+  mounted() {
+    const id_video = this.$route.params.id_video;
+
+    axios.get(`http://localhost:3000/videos/${id_video}`)
+      .then(response => {
+        if (response.data) {
+          this.video = response.data;
+        }
+      })
+      .catch(error => {
+        console.error(`Error al traer los datos: ${error}`);
+      });
+  },
 };
 </script>
   

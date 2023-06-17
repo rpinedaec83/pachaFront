@@ -14,6 +14,7 @@ export default {
 <style scoped>
 .header {
   background-color: #FF5252;
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;

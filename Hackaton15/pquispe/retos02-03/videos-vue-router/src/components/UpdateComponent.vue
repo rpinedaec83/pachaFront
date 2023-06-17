@@ -3,12 +3,13 @@
     <form action="#" class="main__form">
       <h4 class="form__title">Editar video</h4>
       <div class="form__inputsContainer">
-        <input type="text" id="title" name="title" placeholder="Titulo" autocomplete="off">
-        <input type="text" id="url" name="url" placeholder="url-video" autocomplete="off">
+        <input type="text" id="title" name="title" placeholder="Titulo" autocomplete="off" v-model="updateVideo.title">
+        <input type="text" id="url" name="url" placeholder="url-video" autocomplete="off" v-model="updateVideo.url">
       </div>
-      <textarea name="description" id="description" rows="6" placeholder="Descripcion" autocomplete="off"></textarea>
+      <textarea name="description" id="description" rows="6" placeholder="Descripcion" autocomplete="off"
+        v-model="updateVideo.description"></textarea>
       <div class="form___buttonsContainer">
-        <button type="button" class="btnAdd">Guardar</button>
+        <button type="button" class="btnAdd" @click="putVideo">Guardar</button>
         <button type="button" class="btnCancel">Cancelar</button>
       </div>
     </form>
@@ -16,8 +17,36 @@
 </template>
   
 <script>
+import axios from 'axios';
+
 export default {
-  name: 'AddComponent',
+  name: 'UpdateComponent',
+  props: {
+    video: {
+      type: Object,
+      required: true
+    }
+  },
+  data() {
+    return {
+      updateVideo: {
+        title: this.video.title,
+        url: this.video.url,
+        description: this.video.description,
+        views: 0
+      }
+    };
+  },
+  methods: {
+    putVideo() {
+      const id_video = this.$route.params.id_video;
+
+      axios.put(`http://localhost:3000/videos/${id_video}`,this.updateVideo)
+        .catch(error => {
+          console.error(`Error al editar video: ${error}`);
+        });
+    }
+  }
 };
 </script>
 

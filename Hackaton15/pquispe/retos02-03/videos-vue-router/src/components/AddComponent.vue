@@ -3,12 +3,12 @@
     <form action="#" class="main__form">
       <h4 class="form__title">Agrear video</h4>
       <div class="form__inputsContainer">
-        <input type="text" id="title" name="title" placeholder="Titulo" autocomplete="off">
-        <input type="text" id="url" name="url" placeholder="url-video" autocomplete="off">
+        <input type="text" id="title" name="title" placeholder="Titulo" autocomplete="off" v-model="newVideo.title">
+        <input type="text" id="url" name="url" placeholder="url-video" autocomplete="off" v-model="newVideo.url">
       </div>
-      <textarea name="description" id="description" rows="6" placeholder="Descripcion" autocomplete="off"></textarea>
+      <textarea name="description" id="description" rows="6" placeholder="Descripcion" autocomplete="off" v-model="newVideo.description"></textarea>
       <div class="form___buttonsContainer">
-        <button type="button" class="btnAdd">Agregar</button>
+        <button type="button" class="btnAdd" @click="postVideo">Agregar</button>
         <button type="button" class="btnCancel">Cancelar</button>
       </div>
     </form>
@@ -16,8 +16,28 @@
 </template>
   
 <script>
+import axios from 'axios';
+
 export default {
   name: 'AddComponent',
+  data() {
+    return {
+      newVideo: {
+        title: '',
+        url: '',
+        description: '',
+        views: 0
+      }
+    };
+  },
+  methods: {
+    postVideo() {
+      axios.post('http://localhost:3000/videos/', this.newVideo)
+        .catch(error => {
+          console.error(`Error al crear nuevo video: ${error}`);
+        });
+    }
+  }
 };
 </script>
 

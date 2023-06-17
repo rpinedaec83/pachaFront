@@ -2,8 +2,8 @@
   <main class="main">
     <h2 class="main__title">Lista de videos</h2>
     <ul class="main__listCards">
-      <li class="itemCard" v-for="video in arrayVideos" :key="video.id">
-        <div class="editContainer">
+      <li class="itemCard" v-for="video in reversedArrayVideos" :key="video.id">
+        <div class="editContainer" @click="updateVideo(video.id)">
           <img src="../assets/edit.svg" alt="edit icon">
         </div>
         <div class="deleteContainer">
@@ -18,7 +18,7 @@
           <h3 class="itemCard__title">{{ video.title }}</h3>
           <span class="itemCard__views">{{ viewsFormat(video.views) }} visualizaciones</span>
           <p class="itemCard__description">{{ video.description }}</p>
-          <button class="itemCard__button">Ver Detalle</button>
+          <button class="itemCard__button" @click="moreDetails(video.id)">Ver Detalle</button>
         </div>
       </li>
     </ul>
@@ -29,9 +29,14 @@
 export default {
   name: 'ItemsComponent',
   props: {
-    arrayVideos: Array
+    arrayVideos: {
+      type: Array,
+    }
   },
   computed: {
+    reversedArrayVideos() {
+      return this.arrayVideos.slice().reverse();
+    },
     modifiedUrl() {
       return (url) => {
         return url.replace('/watch?v=', '/embed/');
@@ -41,6 +46,24 @@ export default {
       return (views) => {
         return views.toLocaleString();
       };
+    }
+  },
+  methods: {
+    moreDetails(idVideo) {
+      this.$router.push({
+        name: 'MoreDetails',
+        params: {
+          id_video: idVideo,
+        },
+      });
+    },
+    updateVideo(idVideo) {
+      this.$router.push({
+        name: 'UpdateVideo',
+        params: {
+          id_video: idVideo,
+        },
+      });
     }
   }
 };
@@ -59,14 +82,13 @@ export default {
   font-style: normal;
   font-weight: 700;
   margin-bottom: 36px;
-  padding: 0 20px;
+  padding: 0 27px;
 }
 
 .main__listCards {
   display: flex;
   justify-content: center;
-  flex-direction: row-reverse;
-  flex-wrap: wrap-reverse;
+  flex-wrap: wrap;
   column-gap: 23px;
   row-gap: 20px;
   list-style: none;

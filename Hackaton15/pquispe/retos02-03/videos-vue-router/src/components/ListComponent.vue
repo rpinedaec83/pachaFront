@@ -2,7 +2,7 @@
   <HeaderComponent>
     <template v-slot:header-options>
       <div class="header__buttons">
-        <button type="button">Agregar video</button>
+        <button type="button" @click="addVideo">Agregar video</button>
       </div>
     </template>
   </HeaderComponent>
@@ -21,6 +21,13 @@ export default {
   components: {
     HeaderComponent,
     ItemsComponent,
+  },
+  methods: {
+    addVideo() {
+      this.$router.push({
+        name: 'AddVideo',
+      });
+    }
   }
 };
 </script>

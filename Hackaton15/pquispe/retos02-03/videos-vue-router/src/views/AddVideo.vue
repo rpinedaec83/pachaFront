@@ -1,8 +1,8 @@
 <template>
   <HeaderComponent>
-    <template #header-options>
+    <template v-slot:header-options>
       <div class="header__buttons">
-        <button type="button">Ver mapa</button>
+        <button type="button" @click="videoList">Ver mapa</button>
       </div>
     </template>
   </HeaderComponent>
@@ -18,6 +18,13 @@ export default {
   components: {
     HeaderComponent,
     AddComponent,
+  },
+  methods: {
+    videoList() {
+      this.$router.push({
+        name: 'VideoList',
+      });
+    }
   }
 };
 </script>

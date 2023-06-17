@@ -12,7 +12,7 @@ const routes = [
     component: VideoList,
   },
   {
-    path: '/video/id_video/details',
+    path: '/video/:id_video/details',
     name: 'MoreDetails',
     component: MoreDetails,
   },
@@ -22,7 +22,7 @@ const routes = [
     component: AddVideo,
   },
   {
-    path: '/video/id_video/update-video',
+    path: '/video/:id_video/update-video',
     name: 'UpdateVideo',
     component: UpdateVideo,
   },

@@ -13,25 +13,12 @@
 </template>
   
 <script>
-import axios from 'axios';
-
 export default {
   name: 'DetailsComponent',
-  data() {
-    return {
-      video: {}
-    };
-  },
-  mounted() {
-    axios.get('http://localhost:3000/videos/8')
-      .then(response => {
-        if (response.data) {
-          this.video = response.data;
-        }
-      })
-      .catch(error => {
-        console.error(`Error al traer los datos: ${error}`);
-      });
+  props: {
+    video: {
+      type: Object,
+    }
   },
   computed: {
     modifiedUrl() {
