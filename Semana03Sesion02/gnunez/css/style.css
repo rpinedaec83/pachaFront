@@ -1,0 +1,16 @@
+/*
+Hola de estilos para el index
+*/
+
+h1, h2, h3 {
+    font-family: 'Courier New', Courier, monospace; color: aquamarine;
+}
+
+h3 {
+    font-family: fantasy; color: black;
+}
+
+#h2especial {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: yellowgreen;
+}

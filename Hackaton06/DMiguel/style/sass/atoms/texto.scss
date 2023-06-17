@@ -1,0 +1,96 @@
+@import "./colors.scss";
+@import "./text-font.scss";
+
+p,a,h1,h2,h3,h4,h5,h6{
+    font-style: normal;
+    text-decoration: none;
+    color: #000;
+    letter-spacing: 0.04em;
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-weight: 700;
+}
+
+.title-principal{
+    font-family: $font-presentation;
+    color: $color-text-footer;
+    font-size: 2em;
+    font-style: normal;
+    font-weight: 100;
+}
+
+.title-secondary{
+    font-family: $font-presentation;
+    color: $color-text-footer;
+    font-size: 1em;
+    font-weight: 100;
+    width: 30em;
+    margin: 1em auto;
+    opacity: 0.7;
+}
+
+.title-h1{
+    color: $color-text-principal;
+    font-family: $font-titles;
+}
+
+.title-h2{
+    color:$color-text-secundari;
+    font-family: $font-titles;
+    font-size: 1.2em;
+}
+
+.title-h3{
+    color:$color-text-principal;
+    font-family: $font-titles;
+    font-size: 0.9em;
+}
+
+p{
+    font-family: $font-normal;
+}
+
+nav{
+    font-family: $font-footer-titles;
+    a{
+        margin-inline: 0.7em;
+    }
+}
+
+.nav-opc-i{
+    color: $color-text-principal;
+    font-weight: 600;;
+}
+
+.nav-opc{
+    color: $color-text-normal;
+}
+
+.post-fecha{
+    color: $color-text-fech;
+    font-weight: 400;
+}
+
+.name-logo,.title-footer,.option-footer{
+    color:$color-text-footer;
+    font-family: $font-footer;
+    font-weight: 500;
+}
+
+.name-logo,.title-footer{
+    font-weight: 600;
+}
+
+.title-footer{
+    font-size: 1.2em;
+}
+
+.option-footer{
+    font-size: 1em;
+}
+
+.derechos{
+    color: $color-text-footer;
+    opacity: 0.5;
+}

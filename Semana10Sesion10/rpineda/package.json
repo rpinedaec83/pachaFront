@@ -1,0 +1,18 @@
+{
+  "name": "rpineda",
+  "version": "1.0.0",
+  "description": "Semana 10 sesion 01",
+  "main": "app.js",
+  "scripts": {
+    "test": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rpinedaec83/pachaFront"
+  },
+  "author": "rpineda",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}

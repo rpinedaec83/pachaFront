@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etiquetas de un FORM en HTML5</title>
+</head>
+<body>
+    <p>
+        Toda el documento esta documentado con comentario HTML
+    </p>
+    <!-- la etiqueta form esta dedicada a los formularios -->
+    <!-- al atributo action se le pasa la ubicacion del archivo en el servidor como /fomr_contac.php -->
+    <form action="" method="get">
+        <!-- la etiqueta label representa una etiqueta para un elemento de una instancia de usuario , la etiqueta label se asocia con otra etiqueta atravez del atributo for=""-->
+        <label for="fname">Nombre : </label>
+        <!-- la etiqueta input como dice su nombre de entrada de datos -->
+        <!-- el atributo id="" es con el cual se asocia con su label -->
+        <!-- el atributo name es el nombre del input -->
+        <!-- la etiqueta type no dice que tipo de dato se debe ingresar en el input -->
+        <!-- cuando creamos un input por defecto sera de type="text" -->
+        <input type="text" id="fname" name="fname">
+        <br>
+        <!-- la etiqueta select se usa para selccionar una opcion de una lista desplegable  -->
+        <label for="frutas">Escoje tu Fruta : </label>
+        <select name="frutas" id="frutas">
+            <!-- la etiqueta option no permie ingresa una opcion -->
+            <!-- el atributo value="" devolvera al servidor el valor que se ingrese ahi-->
+            <option value="manzana">manzana</option>
+            <option value="platano">platano</option>
+            <option value="fresa">fresa</option>
+            <!-- podemos usar el trabuto selected para escojer una opcion preseleccionado -->
+            <option value="pera" selected>pera</option>
+        </select>
+        <br>
+        <label for="mensaje">Ingrese su mensaje :</label>
+        <!-- en la etiqueta textarea  podemos ingresar un pedaso de texto de varias lineas-->
+        <textarea id="mensaje" name="mensaje" cols="30" rows="10">
+
+        </textarea>
+        <!-- la etiqueta <button> define un botón en el que se puede hacer clic, podemos agregar que al hacer click suceda algo con el atributo onclick -->
+        <button type="button" onclick="alert('se presiono el boton')">Presioname</button>
+        <!-- la etiqueta fieldset se utilizapara agrupar datos relacionados -->
+        <fieldset>
+            <!-- la etiqueta legend define le titulo de un fieldset -->
+            <   >
+                Mis Datos:
+            </legend>
+            <label for="fname.">Nombre : </label>
+            <input type="text" id="fname." name="fname.">
+            <label for="lname">Apellido : </label>
+            <input type="text" id="lname" name="lname">
+        </fieldset>
+        <label for="navegador">Escoje tu Navegador : </label>
+        <input list="Navegadores" id="navegador">
+        <!-- la etiqueta datalist especifica una lista de opciones predefinidas para un input -->
+        <datalist id="Navegadores">
+            <option value="Internet Explorer">
+            <option value="Firefox">
+            <option value="Chrome">
+            <option value="Opera">
+            <option value="Safari">
+        </datalist>
+        <label for="pwd">Contraseña : </label>
+        <!-- el atributo type="password" nos dice que es dato tipo string pero que es una contraseña-->
+        <input type="password" id="pwd" name="pwd">
+
+        <br>
+
+        <input type="radio" id="html" name="fav_language" value="HTML">
+        <label for="html">HTML</label><br>
+        <input type="radio" id="css" name="fav_language" value="CSS">
+        <label for="css">CSS</label><br>
+        <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+        <label for="javascript">JavaScript</label>
+
+        <br>
+
+        <label for="birthday">Cumpleaños:</label>
+        <input type="date" id="birthday" name="birthday">
+
+        <br>
+
+        <label for="email">Ingresa tu email:</label>
+        <input type="email" id="email" name="email">
+
+        <br>
+
+        <label for="myfile">Agrega un archivo : </label>
+        <input type="file" id="myfile" name="myfile">
+
+        <br>
+
+        <label for="rang">Rango (0 - 50):</label>
+        <input type="range" id="rang" name="rang" min="0" max="50">
+
+        <br>
+
+        <label for="colr">Escoje tu color : </label>
+        <input type="color" id="colr">
+        <br> 
+        <label for="requerido">Ingresaro algo :</label>
+        <!-- podemos agregar el atributo required para decirle al usuario que ese datos es nesesario -->
+        <input type="text" id="requerido" name="requerido" required>
+        <!-- el atributo type="submit" con dice que esel boton para confirmar que termino el formulario y para madar el Servidor-->
+        <input type="submit" value="Submit">
+        <!-- el atributo type="reset" sirve para restablecer los datos a nulos -->
+        <input type="reset">
+    </form>
+</body>
+</html>

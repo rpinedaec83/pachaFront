@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <!-- Elemento "input" -->
+    
+     <h4> Busqueda <br> <input type="search" name="search" placeholder="Introducir para busqueda"></h4>
+    
+     <h4> Número <br><input type="tel" name="tel" required pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Introduce tu numero"></h4>
+    
+     <h4>Url <br><input type="url" name="url" placeholder="Introduce tu url"></h4>
+
+     <h4>Email <br><input type="email" name="email" placeholder="Introduce tu email"></h4>
+
+
+     <br>
+     <br>
+     <h1>Elemento Form</h1>
+
+    <!-- Elemento form -->
+    <form action="popupwind.html" novalidate>
+        <label for="name">USUARIO:</label>
+        <input type="name" id="name" name="name"><br><br>
+        <input type="submit" value="Envialo ya!">
+      </form>
+
+
+
+       <!-- Elemento "input" /datalist -->
+       <h4>Mantenimientos <br><input list="tipos de mantenimientos" name="tdm" placeholder="Ingresa tipo de Mant."/>
+        <datalist id="tipos de mantenimientos">
+          <option label="Preventivo" value="Preventivo"></option>
+          <option label="Correctivo" value="Correctivo"></option>
+          <option label="Predictivo" value="Predictivo"></option>
+          </datalist><h4>
+
+
+        <!-- Elemento "output" -->
+            <h1>Ejemplo de output</h1>
+
+            <form oninput="z.value=parseInt(x.value)+parseInt(y.value)">
+             <input type="range" id="x" value="80">
+              +<input type="number" id="y" value="40">
+              =<output name="z" for="x y"></output>
+            </form>
+       
+        
+            <script>
+             function calcular() {
+              var num1 = document.getElementById("num1");
+              var num2 = document.getElementById("num2");
+              var resultado = document.getElementById("resultado");
+              var a = Number(num1.value);
+              var b = Number(num2.value);
+                resultado.value = a + b;
+                }
+            </script>
+
+                </head>
+                <body>
+                <p>Ingresa dos números y presiona el botón para ver la suma:</p>
+                <input id="num1" type="number" value="0">
+                <input id="num2" type="number" value="0">
+                <button onclick="calcular()">Calcular</button>
+                <p>La suma es: <output id="resultado">0</output></p>
+
+
+               <!-- Atributo "autofocus" -->
+
+               <h1>Ejemplo atributo autofocus</h1>
+
+                <form action="popupwind.html">
+                    <label for="nombre">nombre:</label>
+                    <input type="text" id="nombre" name="nombre" autofocus><br><br>
+                    <label for="apellido">apellido:</label>
+                    <input type="text" id="apellido" name="apellido"><br><br>
+                    <input type="submit" value="Validar">
+                  </form>
+
+
+</body>
+</html>

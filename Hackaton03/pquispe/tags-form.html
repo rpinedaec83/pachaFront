@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Etiquetas de formularios HTML 5</title>
+        <style>
+            body {
+                padding: 10px 30px;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            h1 {
+                color: #9717af;
+                text-align: center;
+            }
+
+            h2 {
+                color: #1271e7;
+            }
+
+            h2 span {
+                color: #fa8072;
+            }
+
+            label[for="oculto"] {
+                color: #cc00ff;
+            }
+
+            input[type="submit"],
+            input[type="reset"],
+            input[type="button"],
+            input[type="checkbox"],
+            input[type="radio"],
+            input[type="checkbox"] + label,
+            input[type="radio"] + label {
+                cursor: pointer;
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <h1>Reto 02 Hackaton 03</h1> 
+        
+        <br><hr>
+
+        <h2>Inputs para ingresar datos de los usuarios: <span>text, number, email, password, tel</span></h2>
+        <form action="./enviarFormPrueba.html" method="post">
+            <label for="usuario">Nombre y Apellido: </label>
+            <input type="text" name="usuario" id="usuario"> <br><br>
+
+            <label for="edad">Edad: </label>
+            <input type="number" name="edad" id="edad"> <br><br>
+            
+            <label for="email">Email: </label>
+            <input type="email" name="email" id="email"> <br><br>
+            
+            <label for="contraseña">Contraseña: </label>
+            <input type="password" name="contraseña" id="contraseña"> <br><br>
+            
+            <label for="celular">Número de celular: </label>
+            <input type="tel" name="celular" id="celular"> <br><br>
+            
+            
+            <input type="reset" value="Borrar">
+            <input type="submit" value="Enviar">
+        </form>
+
+        <br><br><br><hr><br>
+
+        <h2>Inputs de tiempo: <span>time, week, month, date, datetime-local</span></h2>
+        <form action="./enviarFormPrueba.html" method="post">
+            <label for="hora">Ingrese la hora: </label>
+            <input type="time" name="hora" id="hora"> <br><br>
+            
+            <label for="semana">Ingrese un número de semana y año: </label>
+            <input type="week" name="semana" id="semana"> <br><br>
+            
+            <label for="mes">Ingrese mes y año: </label>
+            <input type="month" name="mes" id="mes"> <br><br>
+            
+            <label for="dma">Ingrese día, mes y año: </label>
+            <input type="date" name="dma" id="dma"> <br><br>
+            
+            <label for="dma-h">Ingrese día, mes, año y hora: </label>
+            <input type="datetime-local" name="dma-h" id="dma-h"> <br><br>
+            
+            
+            <input type="reset" value="Borrar">
+            <input type="submit" value="Enviar">
+        </form>
+
+        <br><br><br><hr><br>
+
+        <h2>Inputs de selección: <span>color, range, checkbox, radio</span></h2>
+        <form action="./enviarFormPrueba.html" method="post">
+            <label for="color">Seleccione su color favorito: </label>
+            <input type="color" name="color" id="color"> <br><br>
+            
+            <label for="rango">Seleccione un rango de 0 a 10: </label>
+            <input type="range" name="rango" id="rango" min="0" max="10"> <br><br><br>
+            
+            <span>Seleccione una o más opciones: </span> <br><br>
+            <input type="checkbox" name="opcion1" id="opcion1" value="opcion1">
+            <label for="opcion1">Opción 1</label> <br>
+            <input type="checkbox" name="opcion2" id="opcion2" value="opcion2">
+            <label for="opcion2">Opción 2</label> <br>
+            <input type="checkbox" name="opcion3" id="opcion3" value="opcion3">
+            <label for="opcion3">Opción 3</label> <br><br><br>
+            
+            <span>Seleccione solo una respuesta: </span> <br><br>
+            <input type="radio" name="respuesta" id="respuesta1" value="respuesta1">
+            <label for="respuesta1">Respuesta1</label> <br>
+            <input type="radio" name="respuesta" id="respuesta2" value="respuesta2">
+            <label for="respuesta2">Respuesta2</label> <br>
+            <input type="radio" name="respuesta" id="respuesta3" value="respuesta3">
+            <label for="respuesta3">Respuesta3</label> <br><br>
+            
+
+            <input type="reset" value="Borrar">
+            <input type="submit" value="Enviar">
+        </form>
+
+        <br><br><br><hr><br>
+
+        <h2>Otros tipos de Inputs: <span>file, hidden, image, search, url</span></h2>
+        <form action="./enviarFormPrueba.html" method="post">
+            <label for="archivo">Suba algún archivo:</label>
+            <input type="file" name="archivo" id="archivo"> <br><br>
+            
+            <label for="oculto">Este es un input oculto</label>
+            <input type="hidden" name="oculto" id="oculto"> <br><br>
+            
+            <label for="imagen">Este es un input de tipo imagen: </label> <br>
+            <input type="image" name="imagen" src="./imgs/inputImage.png" alt="Enviar mensaje"> <br><br><br>
+            
+            <label for="buscar">Buscar: </label>
+            <input type="search" name="buscar" id="buscar"> <br><br>
+            
+            <label for="url">Ingrese un enlace: </label>
+            <input type="url" name="url" id="url"> <br><br>
+            
+
+            <input type="reset" value="Borrar">
+            <input type="submit" value="Enviar">
+        </form>
+
+        <br><br><br><hr><br>
+
+        <h2>Input de tipo button:</h2>
+        <form action="./enviarFormPrueba.html">
+            <label for="btnSaludo">Haz click para saludar: </label>
+            <input type="button" name="btnSaludo" id="btnSaludo"
+                onclick="alert('Hola, este es un input type button')" value="Saludar">
+        </form>
+
+        <br><br><br><hr><br>
+
+        <h2>Etiqueta select:</h2>
+        <form action="./enviarFormPrueba.html" method="post">
+            <label for="autos">Seleccione una marca de auto: </label>
+            <select name="autos" id="autos">
+                <option value="volvo">Volvo</option>
+                <option value="saab">Saab</option>
+                <option value="mercedes">Mercedes</option>
+                <option value="audi">Audi</option>
+            </select>
+            <br><br>
+
+            <input type="reset" value="Borrar">
+            <input type="submit" value="Enviar">
+        </form>
+
+        <br><br><br><hr><br>
+
+        <h2>Etiqueta datalist:</h2>
+        <form action="./enviarFormPrueba.html" method="post">
+            <label for="navegadores">Seleccione su navegador favorito: :</label>
+            <input list="navegadoress" name="navegadores" id="navegadores">
+            <datalist id="navegadoress">
+                <option value="Edge">
+                <option value="Firefox">
+                <option value="Chrome">
+                <option value="Opera">
+                <option value="Safari">
+            </datalist>
+            <br><br>
+
+            <input type="reset" value="Borrar">
+            <input type="submit" value="Enviar">
+        </form>
+
+        <br><br><br><hr><br>
+
+        <h2>Etiqueta output:</h2>
+        <form action="./enviarFormPrueba.html" method="post" oninput="result.value=(parseInt(a.value)+parseInt(b.value)+parseInt(c.value))/3">
+            <label for="output">Calcule el promedio de 3 números: </label> <br><br>
+
+            <input type="number" id="a" value="0">
+            +
+            <input type="number" id="b" value="0">
+            +
+            <input type="number" id="c" value="0">
+            /3 =
+            <output name="result" for="a b"></output>
+        </form>
+
+        <br><br><br><hr><br>
+
+        <h2>Etiqueta textarea:</h2>
+        <form action="./enviarFormPrueba.html" method="post">
+            <label for="textarea">Puede escribir en este campo: </label> <br>
+            <textarea name="textarea" id="textarea" cols="30" rows="10"></textarea>
+        </form>
+
+        <br><br><br><hr><br>
+
+        <h2>Atributo placeholder:</h2>
+        <form action="./enviarFormPrueba.html" method="post">
+            <label for="correo">Ingrese su correo: </label>
+            <input type="email" name="correo" id="correo" placeholder="example@email.com">
+        </form>
+
+        <br><br><br><br>
+
+    </body>
+</html>

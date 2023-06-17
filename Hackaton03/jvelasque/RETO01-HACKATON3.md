@@ -1,0 +1,6 @@
+# 1· ¿Para qué sirve la validación de formularios?
+La validación de formularios es un aspecto muy importante cuando se crea una página web que capturará información, y más aún si esta información será almacenada en una base de datos. Además nos permiten enviar información del usuario al sistema. Pudiéndose enviar, por ejemplo, un nombre, un apellido, una fecha de nacimiento, un número de cuenta, etc.
+# 2· ¿Cuáles son los problemas al no validar un formulario?
+ Cuando se envían los datos, el sistema que los recibe espera los formatos correspondientes por cada tipo de dato. Si enviamos un nombre esperará un string, si enviamos una fecha esperará un formato de fecha, si enviamos un número esperará un número. El error se genera cuando enviemos información incorrecta en los campos, o sea, si en un campo que tienes que enviar un dato tipo string envías un número.
+# 3. ¿Cuáles son los beneficios?
+Permiten enviar información del usuario al sistema. Pudiéndose enviar, por ejemplo, un nombre, un apellido, una fecha de nacimiento, un número de cuenta, etc. También evitaremos las inyecciones SQL (SQL Injection es una falla en la codificación de una aplicación cualquiera (web o local) que posibilita por medio de un input cualquiera, la manipulación de una consulta SQL.).

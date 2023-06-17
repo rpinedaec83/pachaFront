@@ -1,0 +1,182 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+main {
+    display: flex;
+    justify-items: center;
+    flex-direction: column;
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: 400;
+}
+header {
+    height: 100vh;
+    background-image: url('../imgcodiGO/codiGO.png');
+    position: relative;
+    background-position: center;
+}
+h1 {
+    position: absolute;
+    top: 378px;
+    left: 200px;
+    width: 30rem;
+    font-size: 3rem;
+    background: #729afe76;
+    color: #fff;
+    padding: 1rem;
+}
+section .container {
+    width: 960px;
+    margin: 0 auto;
+}
+.about {
+    background: #7299fe;
+    padding: 0 4rem 3rem;
+}
+.about .title {
+    text-align: center;
+    color: #1d06a7;
+    font-size: 2.2rem;
+}
+.about .description {
+    color: #fff;
+    line-height: 1.2rem;
+}
+.about .button {
+    background: #d16fff;
+    color: #fff;
+    width: 187px;
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding: 1rem 0;
+    border-style: none;
+    border-radius: 15px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+}
+.skills {
+    background: #9022ff;
+    padding: 0 4rem 2.5rem;
+}
+.skills .title {
+    text-align: center;
+    color: #26cc4b;
+    font-size: 2.2rem;
+}
+.skills .box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+}
+.skills div {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2.5rem;
+}
+.skills label {
+    color: #fff;
+    font-size: 1.2rem;
+    margin: 0 0 1rem 0;
+    text-transform: uppercase;
+}
+.skills progress {
+    width: 25rem;
+    height: 20px;
+    -webkit-appearance: none;
+}
+.skills progress::-webkit-progress-bar {
+    border-radius: 40px;
+    background-color: #fff;
+}
+.skills progress::-webkit-progress-value {
+    border-radius: 40px;
+    background-color: #57eff9;
+}
+.portfolio {
+    background-color: #ffd233;
+    padding: 0 4rem 3rem;
+}
+.portfolio .title {
+    text-align: center;
+    color: #00ad84;
+    font-size: 2.2rem;
+}
+.portfolio .box {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    justify-items: center;
+}
+.portfolio .box img {
+    width: 140px;
+    height: 92px;
+}
+.clientes {
+    background-color: #3f4e62;
+    padding: 0 4rem 3rem;
+}
+.clientes .title {
+    text-align: center;
+    color: #adff28;
+    font-size: 2.2rem;
+}
+.clientes .box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+.contacto {
+    background-color: #1687a0;
+    padding: 0 4rem 3rem;
+}
+.contacto .title {
+    text-align: center;
+    color: #ff1b1b;
+    font-size: 2.2rem;
+}
+.contacto form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem;
+}
+.contacto form div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.2rem;
+}
+.contacto form div input {
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: 400;
+    width: 363px;
+    height: 39px;
+    padding-left: 1rem;
+    border: 1px solid #bfbfbf;
+}
+.contacto form textarea {
+    width: 768px;
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: 400;
+    padding: 1rem 0 0 1rem;
+    border: 1px solid #bfbfbf;
+    resize: none;
+}
+.contacto form button {
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: #233451;
+    width: 167px;
+    height: 56px;
+    border-style: none;
+    cursor: pointer;
+}

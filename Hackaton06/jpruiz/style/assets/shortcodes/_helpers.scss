@@ -1,0 +1,83 @@
+
+.more-post{
+    margin-top: 50px;
+    .more-post-inner{
+        text-align: right;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+        padding: 30px 0;
+        p{
+            font-size: 16px;
+            color: rgba($color: $blue1, $alpha: 0.8);
+            font-weight: $bold;
+            text-transform: uppercase;
+            font-family: $heading-font-family;
+        }
+    }
+}
+
+
+.blue-section{
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 350px;
+    &::before{
+        content: '';
+        position: absolute;
+        background: $blue3;
+        width: 100vw;
+        height: calc((100% + 100px));
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .blue-section-inner{
+        position: relative;
+        z-index: 2;
+        display: flex;
+        align-items: center;
+        @media only screen and (max-width: 989px) {
+            flex-direction: column;
+        }
+        .blue-content{
+            width: 39.69%;
+            @media only screen and (max-width: 989px) {
+               width: 100%;
+            }
+            .blue-content-title{
+                margin-bottom: 50px;
+                @media only screen and (max-width: 989px) {
+                    margin-bottom: 30px;
+                }
+                h2{
+                    color: $white;
+                    font-family: $heading-font-family;
+                    line-height: 46px;
+                    @media only screen and (max-width: 989px) {
+                        text-align: center;
+                    }
+                }
+            }
+            .blue-content-text{
+                p{
+                    color: rgba($color: $white, $alpha: 0.6);
+                    font-family: $body-font-family;
+                    line-height: 26px;
+                    @media only screen and (max-width: 989px) {
+                        text-align: center;
+                    }
+                }
+            }
+        }
+        .blue-section-button{
+            width: calc(100% - 39.69%);
+            display: flex;
+            justify-content: flex-end;
+            @media only screen and (max-width: 989px) {
+                width: 100%;
+                justify-content: center;
+                margin-top: 25px;
+            }
+        }
+    }
+}

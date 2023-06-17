@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tercer Reto</title>
+    <style>
+        .cls-format>input{
+            margin-top: 10px;
+            border: solid blue;
+        }
+
+    </style>
+</head>
+<body>
+    <form class="cls-format" action="#" method="get">
+
+        <label for="nombre">Nombre: </label>
+        <input type="text" name="nombre" id="nombre">
+
+        <br>
+
+        <label for="apellido">Apellido: </label>
+        <input type="text" name="apellido" id="apellido">
+
+        <br>
+
+        <labe for="edad">Edad: </labe>
+        <input type="number" name="" id="edad" min="18" max="80">
+
+        <br>
+
+        <label for="sexo">Sexo: </label>
+        <input type="text" name="sexo" id="sexo">
+
+        <br>
+
+        <label for="dni">DNI: </label>
+        <input type="text" name="dni" id="dni" pattern="[0-9]{8}">
+
+        <br>
+
+        <label for="email">E-mail: </label>
+        <input type="email" name="email" id="email" pattern="[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{1,5}">
+
+        <br>
+
+        <input class="botons" type="submit" value="Enviar">
+
+    </form>
+</body>
+</html>

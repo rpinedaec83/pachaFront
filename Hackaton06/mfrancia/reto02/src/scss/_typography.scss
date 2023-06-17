@@ -1,0 +1,106 @@
+body{
+    font-family: $body-font-family;
+    font-size: 16px;
+    font-weight: $regular;
+    line-height: 1.625;
+    letter-spacing: calc(( 16px / 1000 ) * 26);
+}
+
+h1, h2, h3, h4, h5{
+    --headingFamily: #{$heading-font-family};
+    --headingWeight: #{$bold};
+    font-family: var(--fontFamily);
+    font-weight: var(--headingWeight);
+    font-size: var(--headingSize);
+    line-height: var(--headingHeight);
+    letter-spacing: calc(( var(--headingSize) / 1000 ) * $letter-spacing);
+}
+
+h1{
+   --headingFamily: #{$body-font-family};
+   --headingSize: #{$h1-mobile};
+   --headingWeight: #{$regular};
+   --headingHeight: 1.681;
+   @media only screen and (min-width: 768px) and (max-width: 989px){
+    --headingSize: #{$h1-tablet};
+    }
+    @media only screen and (min-width: 990px){
+        --headingSize: #{$h1};
+    }
+}
+
+h2{
+    --headingSize: #{$h2-mobile};
+    --headingHeight: 1.2778;
+    @media only screen and (min-width: 768px) and (max-width: 989px){
+        --headingSize: #{$h2-tablet};
+    }
+    @media only screen and (min-width: 990px){
+        --headingSize: #{$h2};
+    }
+}
+
+h3{
+    --headingSize: #{$h3-mobile};
+    --headingHeight: 1.45;
+    @media only screen and (min-width: 768px) and (max-width: 989px){
+        --headingSize: #{$h3-tablet};
+    }
+    @media only screen and (min-width: 990px){
+        --headingSize: #{$h3};
+    }
+}
+
+h4{
+    --headingSize: #{$h4-mobile};
+    --headingHeight: 1.15;
+    @media only screen and (min-width: 990px){
+        --headingSize: #{$h4};
+    }
+}
+
+h5{
+    text-transform: uppercase;
+    --headingSize: #{$h5};
+    --headingHeight: 1.125;
+}
+
+ul{
+    li{
+        list-style: none;
+    }
+}
+
+a:not(.btn){
+    text-decoration: none;
+    &:hover{
+        text-decoration: underline;
+    }
+}
+
+.main_color{
+    background-color: $white;
+    color: $black;
+
+    a:not(.btn){
+        color: $blue;
+    }
+
+    h1, h2, h3{
+        color: $darkblue2;
+    }
+
+    h4, h5{
+        color: $blue;
+    }
+
+}
+.alternate_color{
+    background-color: $blue2;
+    color: $white;
+
+    a:not(.btn){
+        color: $white;
+    }
+    
+}

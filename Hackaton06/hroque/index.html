@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Reto 02</title>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+			integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+		<link href="https://fonts.cdnfonts.com/css/gilroy-bold?styles=20880" rel="stylesheet" />
+
+		<link rel="stylesheet" href="./styles/style.css" />
+	</head>
+	<body>
+		<header class="header">
+			<nav class="nav">
+				<div class="nav__logo">
+					<img class="nav__logo-img" src="./logo.png" alt="Logo" />
+				</div>
+				<div class="nav__links">
+					<a class="nav__link nav__link--active">Home</a>
+					<a class="nav__link">Espectaculo</a>
+					<a class="nav__link">Deportes</a>
+				</div>
+			</nav>
+		</header>
+		<aside class="hero" id="home">
+			<h1 class="hero__title">Blog Afrianska</h1>
+			<p class="hero__description">
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+				aliqua.
+			</p>
+		</aside>
+		<main class="main">
+			<div class="search" id="search">
+				<i class="search__icon fa-solid fa-magnifying-glass"></i>
+				<input class="search__input" type="search" placeholder="Search Article" />
+			</div>
+			<section class="popular">
+				<h2 class="popular__title">Popular</h2>
+				<article class="popular__article popular__article--top">
+					<h3 class="popular__article-title popular__article-title--top">Feugiat sodales at nullam tellus.</h3>
+					<p class="popular__article-description popular__article-description--top">
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+						aliqua. Mi posuere nibh tempor fringilla porta pellentesque ipsum.
+					</p>
+					<div class="popular__article-about">
+						<div class="popular__article-author">
+							<h4 class="popular__article-author-name">Samatha Leuthex</h4>
+							<span class="popular__article-author-date">May 5, 3min read</span>
+						</div>
+						<div class="popular__article-tools">
+							<i class="popular__article-icon fa-solid fa-bookmark"></i>
+							<i class="popular__article-icon fa-solid fa-share-nodes"></i>
+						</div>
+					</div>
+					<img class="popular__article-img popular__article-img--top" src="./assets/img/img-post-1.png" alt="Article Image" />
+				</article>
+				<article class="popular__article popular__article--post2">
+					<h3 class="popular__article-title">Porta proin tellus sed pulvinar odio eu pulvinar.</h3>
+					<p class="popular__article-description">
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+						aliqua.
+					</p>
+					<div class="popular__article-about">
+						<div class="popular__article-author">
+							<h4 class="popular__article-author-name">Samatha Leuthex</h4>
+							<span class="popular__article-author-date">May 5, 3min read</span>
+						</div>
+						<div class="popular__article-tools">
+							<i class="popular__article-icon fa-solid fa-bookmark"></i>
+							<i class="popular__article-icon fa-solid fa-share-nodes"></i>
+						</div>
+					</div>
+					<img class="popular__article-img" src="./assets/img/img-post-2.png" alt="Article Image" />
+				</article>
+				<article class="popular__article popular__article--post3">
+					<h3 class="popular__article-title">Non quam tortor, proin eu egestas scelerisque.</h3>
+					<p class="popular__article-description">
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+						aliqua.
+					</p>
+					<div class="popular__article-about">
+						<div class="popular__article-author">
+							<h4 class="popular__article-author-name">Samatha Leuthex</h4>
+							<span class="popular__article-author-date">May 5, 3min read</span>
+						</div>
+						<div class="popular__article-tools">
+							<i class="popular__article-icon fa-solid fa-bookmark"></i>
+							<i class="popular__article-icon fa-solid fa-share-nodes"></i>
+						</div>
+					</div>
+					<img class="popular__article-img" src="./assets/img/img-post-3.png" alt="Article Image" />
+				</article>
+				<article class="popular__article popular__article--post4">
+					<h3 class="popular__article-title">Amet amet sed pharetra risus sit eget interdum.</h3>
+					<p class="popular__article-description">
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+						aliqua.
+					</p>
+					<div class="popular__article-about">
+						<div class="popular__article-author">
+							<h4 class="popular__article-author-name">Samatha Leuthex</h4>
+							<span class="popular__article-author-date">May 5, 3min read</span>
+						</div>
+						<div class="popular__article-tools">
+							<i class="popular__article-icon fa-solid fa-bookmark"></i>
+							<i class="popular__article-icon fa-solid fa-share-nodes"></i>
+						</div>
+					</div>
+					<img class="popular__article-img" src="./assets/img/img-post-4.png" alt="Article Image" />
+				</article>
+				<a class="popular__link" href="#">See all popular article</a>
+			</section>
+			<hr />
+			<section class="article">
+				<h2 class="article__title-head">All Article</h2>
+				<article class="article__container">
+					<h3 class="article__title">Massa eu in laoreet enim augue vulputate nunc.</h3>
+					<p class="article__description">
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+						aliqua. Lectus quisque magna in nisl nibh bibendum ipsum, elit duis. Donec.
+					</p>
+					<div class="article__about">
+						<div class="article__author">
+							<h4 class="article__author-name">Samatha Leuthex</h4>
+							<span class="article__author-date">May 5, 3min read</span>
+						</div>
+						<div class="article__tools">
+							<i class="article__icon fa-solid fa-bookmark"></i>
+							<i class="article__icon fa-solid fa-share-nodes"></i>
+						</div>
+					</div>
+					<img class="article__img" src="./assets/img/img-post-5.png" alt="Article Image" />
+				</article>
+				<article class="article__container">
+					<h3 class="article__title">Feugiat a euismod arcu feugiat posuere morbi.</h3>
+					<p class="article__description">
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+						aliqua. Lectus quisque magna in nisl nibh bibendum ipsum, elit duis. Donec.
+					</p>
+					<div class="article__about">
+						<div class="article__author">
+							<h4 class="article__author-name">Samatha Leuthex</h4>
+							<span class="article__author-date">May 5, 3min read</span>
+						</div>
+						<div class="article__tools">
+							<i class="article__icon fa-solid fa-bookmark"></i>
+							<i class="article__icon fa-solid fa-share-nodes"></i>
+						</div>
+					</div>
+					<img class="article__img" src="./assets/img/img-post-6.png" alt="Article Image" />
+				</article>
+				<article class="article__container">
+					<h3 class="article__title">Sociis purus pellentesque faucibus vitae et felis.</h3>
+					<p class="article__description">
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+						aliqua. Lectus quisque magna in nisl nibh bibendum ipsum, elit duis. Donec.
+					</p>
+					<div class="article__about">
+						<div class="article__author">
+							<h4 class="article__author-name">Samatha Leuthex</h4>
+							<span class="article__author-date">May 5, 3min read</span>
+						</div>
+						<div class="article__tools">
+							<i class="article__icon fa-solid fa-bookmark"></i>
+							<i class="article__icon fa-solid fa-share-nodes"></i>
+						</div>
+					</div>
+					<img class="article__img" src="./assets/img/img-post-7.png" alt="Article Image" />
+				</article>
+				<article class="article__container">
+					<h3 class="article__title">Cursus feugiat mi pellentesque mauris sed eu.</h3>
+					<p class="article__description">
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+						aliqua. Lectus quisque magna in nisl nibh bibendum ipsum, elit duis. Donec.
+					</p>
+					<div class="article__about">
+						<div class="article__author">
+							<h4 class="article__author-name">Samatha Leuthex</h4>
+							<span class="article__author-date">May 5, 3min read</span>
+						</div>
+						<div class="article__tools">
+							<i class="article__icon fa-solid fa-bookmark"></i>
+							<i class="article__icon fa-solid fa-share-nodes"></i>
+						</div>
+					</div>
+					<img class="article__img" src="./assets/img/img-post-8.png" alt="Article Image" />
+				</article>
+				<article class="article__container">
+					<h3 class="article__title">A morbi arcu curabitur etiam fringilla augue.</h3>
+					<p class="article__description">
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+						aliqua. Lectus quisque magna in nisl nibh bibendum ipsum, elit duis. Donec.
+					</p>
+					<div class="article__about">
+						<div class="article__author">
+							<h4 class="article__author-name">Samatha Leuthex</h4>
+							<span class="article__author-date">May 5, 3min read</span>
+						</div>
+						<div class="article__tools">
+							<i class="article__icon fa-solid fa-bookmark"></i>
+							<i class="article__icon fa-solid fa-share-nodes"></i>
+						</div>
+					</div>
+					<img class="article__img" src="./assets/img/img-post-9.png" alt="Article Image" />
+				</article>
+				<div class="article__tools-page">
+					<div class="article__tools-page-old">
+						<i class="article__icon-old fa-solid fa-arrow-left"></i>
+						<span>Old Post</span>
+					</div>
+					<div class="article__tools-page-new">
+						<span>New Post</span>
+						<i class="article__icon-new fa-solid fa-arrow-right"></i>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer class="footer">
+			<div class="footer__hero">
+				<h3 class="footer__hero-title">Intersted to woek with our team?</h3>
+				<p class="footer__hero-description">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+					aliqua. Ut enim ad minim veniam.
+				</p>
+				<button class="footer__hero-button">Let’s Talk</button>
+			</div>
+			<hr class="footer__hr" />
+			<div class="footer__container">
+				<div class="footer__contact">
+					<div class="footer__logo">
+						<img class="footer__logo-img" src="./logo_alt.png" alt="Logo" />
+						<p class="footer__logo-title">Afrianska</p>
+					</div>
+					<ul class="footer__list">
+						<li class="footer__list-item">
+							<span class="footer__list-span">A.</span>
+							<p class="footer__list-info">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+						</li>
+						<li class="footer__list-item">
+							<span class="footer__list-span">T.</span>
+							<p class="footer__list-info">+62-812-7313-4321</p>
+						</li>
+						<li class="footer__list-item">
+							<span class="footer__list-span">E.</span>
+							<p class="footer__list-info">hello.afrian@gmail.com</p>
+						</li>
+					</ul>
+				</div>
+				<div class="footer__about">
+					<h5 class="footer__title">About US</h5>
+					<ul class="footer__list">
+						<li class="footer__list-item">About</li>
+						<li class="footer__list-item">What We Do</li>
+						<li class="footer__list-item">Project</li>
+						<li class="footer__list-item">How It Work With Us</li>
+					</ul>
+				</div>
+				<div class="footer__follow">
+					<h5 class="footer__title">Follow US</h5>
+					<ul class="footer__list">
+						<li class="footer__list-item">Instagram</li>
+						<li class="footer__list-item">Facebook</li>
+						<li class="footer__list-item">Linkedin</li>
+						<li class="footer__list-item">Youtube</li>
+					</ul>
+				</div>
+			</div>
+			<span class="footer__copyright">2019 © Afrianska. All rights reserved.</span>
+		</footer>
+	</body>
+</html>

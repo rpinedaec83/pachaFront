@@ -1,0 +1,24 @@
+footer {
+    div {
+        background-color: $backg-color;
+        display: flex;
+        justify-content: center;
+        padding: $padding-containers;
+    
+        a:not(a:last-child) {
+            padding-right: $padding-elements;
+        }
+    
+        a img {
+            width: 3em;
+        }
+    }
+
+    p {
+        background-color: $backg-color;
+        font-size: 80%;
+        text-align: center;
+        margin-top: $margin-containers;
+        padding: $padding-containers;
+    }
+}

@@ -1,0 +1,54 @@
+/* Fin del RETO 4 */
+
+*{
+    margin: auto;
+    border: 0;
+    padding: 0;
+}
+
+.section-normal{
+    background-color: #7299FE;
+    padding-top:2em;
+}
+
+.sct_5{
+    background-color: #1687A0;
+}
+
+.section-normalTitle{
+    color: #1D06A7;
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    text-align: center;
+}
+
+.title_5{
+    color: #FF1B1B;
+}
+
+.section-normalInformation{
+    margin-inline: 8em;
+    margin-top: 2em;
+    font-family: 'Arial';
+    font-style: normal;
+    font-size: 20px;
+    line-height: 30px;
+    color: #fff;
+
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+}
+
+.section-normalInformation input{
+    margin: 1em;
+    width: 20em;
+    height: 4em;
+    background: #FFFFFF;
+    border: 1px solid #BFBFBF;
+    padding-inline-start: 1em;
+}

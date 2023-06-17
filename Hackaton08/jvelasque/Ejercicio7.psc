@@ -1,0 +1,13 @@
+Algoritmo Ejercicio7
+	Escribir "INGRESE SU TIPO DE MEMBRECIA"
+	Escribir "TIPO A(1), TIPO B(2), TIPO C(3)"
+	LEER N
+	
+	SEGUN N Hacer
+		1: ESCRIBIR "SU DESCUENTO ES 10%"
+		2: ESCRIBIR "SU DESCUENTO ES 15%"
+		3: ESCRIBIR "SU DESCUENTO ES 20%"
+			
+	FinSegun
+	
+FinAlgoritmo

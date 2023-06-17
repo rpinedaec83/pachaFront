@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Formulario de Figma</title>
+</head>
+<body>
+    <section class="section-normal sct_5">
+        <h2 class="section-normalTitle title_5">
+            Contactos
+        </h2>
+        <form action="/get.php" class="section-normalInformation sct_form">
+            <div>
+                <input type="text" id="nombre" required placeholder="Nombre" pattern="[a-zA-Z]+">
+                <input type="text" id="apellido" required placeholder="Apellido" pattern="[a-zA-Z]+">
+            </div>
+            <div>
+                <input type="email" id="correo" required placeholder="Email" pattern="[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{1,5}" >
+                <input type="number" id="cell" required placeholder="Telefono" min="100000000" max="999999999">
+            </div>
+            <div>
+                <textarea cols="30" rows="7" required id="mensaje" placeholder="Descripcion"></textarea>          
+            </div>
+            <input type="submit" value="Enviar">
+        </form>
+    </section>
+</body>
+</html>

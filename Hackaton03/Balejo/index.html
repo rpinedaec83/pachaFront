@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reto04</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <section class="section-4">
+        <h1 class="titulo-4">Contacto</h1>
+        <form action="resp.html">
+          <label for="nombre"></label>
+          <input  type="text" name="nombre" id="nombre" placeholder="Nombre" value="" pattern="^[A-Z][a-z]+ [A-Z][a-z]+$"required>
+          <label for="apellido"></label>
+          <input type="text" name="apellido" id="apellido" placeholder="Apellido" value="" pattern="^[A-Z][a-z]+ [A-Z][a-z]+$"required>
+          <label for="email"></label>
+          <input type="email" name="email" id="email" placeholder="E-mail" value="" required>
+          <label for="tel"></label>
+          <input type="tel" name="tel" id="tel" placeholder="Telefono" value="" pattern="^\+51[0-9]{9}$"required>
+          <label for="descrip"></label>
+          <input type="text" name="descrip" id="descrip" placeholder="Descripcion" value="" >
+          <input type="submit" id=submit value="Enviar" />
+  
+      </section>
+</body>
+</html>

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>codiGO</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<body>
+    <header>
+        <h1>codiGO</h1>
+        <h4>Hola, mi nombre es Sebastian Yabiku</h4>
+    </header>
+    <main>
+        <aside>
+            <h1>Sobre mi</h1>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis diam commodo, arcu gravida erat
+                quam donec convallis. Gravida arcu, suspendisse semper mauris tristique tortor. Eu, malesuada
+                elit feugiat laoreet malesuada vitae. zz enim habitasse malesuada lacus, euismod pharetra
+                habitasse. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis diam commodo, arcu
+                gravida erat quam donec convallis. Gravida arcu, suspendisse semper mauris tristique tortor. Eu,
+                malesuada elit feugiat laoreet malesuada vitae. zz enim habitasse malesuada lacus, euismod
+                pharetra habitasse. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis diam commodo,
+                arcu gravida erat quam donec convallis. Gravida arcu, suspendisse semper mauris tristique
+                tortor. Eu, malesuada elit feugiat laoreet malesuada vitae. zz enim habitasse malesuada lacus,
+                euismod pharetra habitasse.
+            </p>
+            <a href="assets/files/COLLADO_CV.pdf" download>
+                <button type="button">
+                    Ver CV
+                </button>
+            </a>
+            <br>
+        </aside>
+        <section>
+            <h1>Mis Skills</h1>
+            <br>
+            <div>
+                <div>
+                    <h5>HTML</h5>
+                    <progress max="100" value="79.16"> 79.16% </progress>
+                </div>
+                <br>
+                <div>
+                    <h5>CSS</h5>
+                    <progress max="100" value="15.88"> 15.88% </progress>
+                </div>
+                <br>
+                <div>
+                    <h5>JavaScript</h5>
+                    <progress max="100" value="53.35"> 53.35% </progress>
+                </div>
+                <br>
+                <div>
+                    <h5>Vue</h5>
+                    <progress max="100" value="84.12"> 84.12% </progress>
+                </div>
+                <br>
+                <div>
+                    <h5>Flexbox</h5>
+                    <progress max="100" value="90.07"> 90.07% </progress>
+                </div>
+                <br>
+                <div>
+                    <h5>CSS Grid</h5>
+                    <progress max="100" value="45.91"> 45.91% </progress>
+                </div>
+            </div>
+            <br>
+        </section>
+        <section>
+            <h1>Portafolio</h1>
+            <div>
+                <div>
+                    <img src="assets/img/portafolio/portafolio-1.png" alt="">
+                </div>
+                <br>
+                <div>
+                    <img src="assets/img/portafolio/portafolio-2.png" alt="">
+                </div>
+                <br>
+                <div>
+                    <img src="assets/img/portafolio/portafolio-3.png" alt="">
+                </div>
+                <br>
+                <div>
+                    <img src="assets/img/portafolio/portafolio-4.png" alt="">
+                </div>
+                <br>
+                <div>
+                    <img src="assets/img/portafolio/portafolio-5.png" alt="">
+                </div>
+                <br>
+                <div>
+                    <img src="assets/img/portafolio/portafolio-6.png" alt="">
+                </div>
+                <br>
+                <div>
+                    <img src="assets/img/portafolio/portafolio-7.png" alt="">
+                </div>
+                <br>
+                <div>
+                    <img src="assets/img/portafolio/portafolio-8.png" alt="">
+                </div>
+            </div>
+            <br>
+        </section>
+        <section>
+            <h1>Clientes</h1>
+            <br>
+            <div>
+                <div>
+                    <img src="assets/img/clientes/clientes-1.png" alt="">
+                </div>
+                <br>
+                <div>
+                    <img src="assets/img/clientes/clientes-2.png" alt="">
+                </div>
+                <br>
+                <div>
+                    <img src="assets/img/clientes/clientes-3.png" alt="">
+                </div>
+                <br>
+                <div>
+                    <img src="assets/img/clientes/clientes-4.png" alt="">
+                </div>
+            </div>
+        </section>
+        <section>
+            <h1>Contacto</h1>
+            <div>
+                <form id="idFormContacto" onsubmit="preventSubmit(event)" method="POST">
+                    <div>
+                        <input type="text" placeholder="Nombre" name="nombre" pattern="[A-Za-z ]+" required>
+                    </div>
+                    <br>
+                    <div>
+                        <input type="text" placeholder="Apellido" name="apellido" pattern="[A-Za-z ]+" required>
+                    </div>
+                    <br>
+                    <div>
+                        <input type="email" placeholder="Email" name="email" required>
+                    </div>
+                    <br>
+                    <div>
+                        <input type="text" placeholder="Teléfono" name="teléfono" pattern="\+51[0-9]{9}" required>
+                    </div>
+                    <br>
+                    <div>
+                        <textarea placeholder="Descripción" name="descripción" required></textarea>
+                    </div>
+                    <br>
+                    <div>
+                        <input type="submit" value="ENVIAR">
+                    </div>
+                    <br>
+                </form>
+            </div>
+            <br>
+        </section>
+    </main>
+    <script>
+        const preventSubmit = (e) => {
+			e.preventDefault();
+			alert('Formulario enviado.');
+            location.reload();
+		};
+    </script>
+</body>
+
+</html>

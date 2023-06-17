@@ -1,0 +1,26 @@
+{
+    "name": "sv46723403",
+    "version": "1.0.0",
+    "description": "Hackaton 09",
+    "main": "app.js",
+    "scripts": {
+      "test": "node app.js"
+    },
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/DELACRUZGER/pachaFront.git"
+    },
+    "keywords": [
+      "hackaton09"
+    ],
+    "author": "Germán de la cruz",
+    "license": "ISC",
+    "bugs": {
+      "url": "https://github.com/DELACRUZGER/pachaFront/issues"
+    },
+    "homepage": "https://github.com/DELACRUZGER/pachaFront#readme",
+    "dependencies": {
+      "prompt": "^1.3.0"
+    }
+  }
+  

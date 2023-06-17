@@ -1,0 +1,28 @@
+{
+  "name": "sv72215038",
+  "version": "1.0.0",
+  "description": "Hackaton 09",
+  "main": "app.js",
+  "scripts": {
+    "test": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MaxMont19/pachaFront.git"
+  },
+  "keywords": [
+    "hackaton09",
+    "09",
+    "hackaton"
+  ],
+  "author": "Max Monterola",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MaxMont19/pachaFront/issues"
+  },
+  "homepage": "https://github.com/MaxMont19/pachaFront#readme",
+  "dependencies": {
+    "prompt-sync": "^4.2.0",
+    "readline-sync": "^1.4.10"
+  }
+}

@@ -1,0 +1,41 @@
+h1{
+    color: red;
+}
+h1{
+    color: blue;
+}
+
+.myselector{
+    color: brown;
+}
+
+body{
+    color: darkred;
+}
+
+span{
+    color: violet;
+}
+
+h1 {
+    color: black;
+    background-color: rgb(90, 46, 75);
+  }
+
+  .wrapper {
+    width: 400px;
+    border: 5px solid rebeccapurple;
+  }
+  
+  .px {
+    width: 200px;
+  }
+  
+  .percent {
+    width: 40%;
+  }
+
+  li {
+    font-size: 80%;
+   
+  }

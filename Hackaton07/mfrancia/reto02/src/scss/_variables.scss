@@ -1,0 +1,79 @@
+/* Fonts */
+
+@font-face {
+    font-family: 'Helvetica';
+    src: url('../../assets/fonts/Helvetica-Light.woff2') format('woff2'),
+        url('../../assets/fonts/Helvetica-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Helvetica';
+    src: url('../../assets/fonts/Helvetica.woff2') format('woff2'),
+        url('../../assets/fonts/Helvetica.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Helvetica';
+    src: url('../../assets/fonts/Helvetica-Bold.woff2') format('woff2'),
+        url('../../assets/fonts/Helvetica-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+/* Colors */
+$white: white;
+$black: black;
+$gray: #F4F4F4;
+$blue: #356EAD;
+$blue2: #316099;
+$blue3: #5A98D0;
+$darkblue2: #1F3F68;
+
+/* Typography */
+
+$h1: 44px;
+$h2: 36px;
+$h3: 22px;
+$h4: 20px;
+$h5: 16px;
+
+$h1-tablet: 32px;
+$h2-tablet: 28px;
+$h3-tablet: 18px;
+
+$h1-mobile: 24px;
+$h2-mobile: 20px;
+$h3-mobile: 18px;
+$h4-mobile: 20px;
+
+$letter-spacing: 26px;
+
+
+$heading-font-family: 'Helvetica';
+$body-font-family: 'Arial', sans-serif;
+
+$light: 300;
+$regular: 400;
+$medium: 500;
+$semibold: 600;
+$bold: 700;
+
+/* Sizes */
+
+$container: 1310px;
+
+/**/
+
+
+%gradient-darkblue-to-blue{
+    background: linear-gradient(253.6deg, #98D0FC 2.46%, #3481D7 93.24%);
+}
+

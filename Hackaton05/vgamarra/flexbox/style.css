@@ -1,0 +1,146 @@
+* {
+    box-sizing: border-box;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {}
+
+.main-content .home-menu {
+
+    background-image: linear-gradient(to right, #1f1c45 67%, #db341e 33%)
+}
+
+.main-content .home-menu .zone-coffe-detail {}
+
+.main-content {}
+
+.main-content .home-menu .menu {
+
+    display: flex;
+    flex-direction: row;
+}
+
+.main-content .home-menu .menu .zone-menu {
+
+    width: 67%;
+    font-size: 14px;
+    display: flex;
+    flex-direction: row;
+    padding-left: 30px;
+}
+
+.main-content .home-menu .menu .zone-menu .log {
+
+    font-size: 25px;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding-top: 36px;
+    padding-right: 50px;
+}
+
+.main-content .home-menu .menu .zone-menu .home {
+
+    background: #db341e;
+    padding: 50px 12px 10px 12px;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.main-content .home-menu .menu .zone-menu .menu-items {
+
+    padding: 50px 12px 10px 12px;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+
+}
+
+.main-content .home-menu .menu .zone-menu .menu-items:hover {
+    background-color: #db341e;
+}
+
+.main-content .home-menu .menu .number-menu {
+
+    display: flex;
+    flex-direction: row;
+    width: 33%;
+    gap: 30px;
+    padding-top: 50px;
+    padding-left: 30px;
+
+}
+
+.main-content .home-menu .menu .number-menu .email {
+    cursor: pointer;
+}
+
+.main-content .home-menu .zone-coffe-detail .image {}
+
+.main-content .home-menu .zone-coffe-detail .box-detail-image {
+
+    display: flex;
+    flex-direction: row;
+
+}
+
+.main-content .home-menu .zone-coffe-detail .box-detail-image .detail {
+    padding-left: 60px;
+}
+
+.main-content .home-menu .zone-coffe-detail .box-detail-image .detail .title {
+
+    font-size: 121px;
+    font-weight: bold;
+    padding-bottom: 48px;
+
+}
+
+.main-content .home-menu .zone-coffe-detail .box-detail-image .detail .description {
+
+    text-align: left;
+    font-size: 17px;
+    font-weight: 400;
+    padding-bottom: 50px;
+    line-height: 25px;
+
+
+}
+
+.main-content .home-menu .zone-coffe-detail .box-detail-image .detail .buttons {
+
+    display: flex;
+    flex-direction: row;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 17px;
+    font-weight: bold;
+    
+    
+
+
+}
+
+.main-content .home-menu .zone-coffe-detail .box-detail-image .detail .buttons .boton-read {
+    border: 1px dotted red;
+    font-size: 17px;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: #db341e;
+    width: 140px;
+    height: 60px;
+    margin-right: 10px;
+
+    
+}
+.main-content .home-menu .zone-coffe-detail .box-detail-image .detail .buttons .boton-get {
+    border: 1px dotted red;
+    font-size: 17px;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: #db341e;
+    width: 140px;
+    height: 60px;
+
+}

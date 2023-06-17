@@ -1,0 +1,259 @@
+h1{
+    color: red;
+}
+h1{
+    color: blue;
+}
+.mySelector{
+    color: brown;
+}
+body{
+    color: darkred;
+}
+span{
+    color: blueviolet;
+}
+
+.main {
+    color: rebeccapurple;
+    border: 2px solid #ccc;
+    padding: 1em;
+}
+
+.special {
+    color: black;
+    font-weight: bold;
+}
+
+body {
+    color: green;
+}
+          
+.my-class-1 a {
+    color: inherit;
+}
+          
+.my-class-2 a {
+    color: initial;
+}
+          
+.my-class-3 a {
+    color: unset;
+}
+
+blockquote {
+    background-color: rgb(224, 208, 178);
+    border: 2px solid rgb(78, 78, 159);
+}
+
+.fix-this {
+    all: unset;
+}
+
+h2 {
+    font-size: 2em;
+    color: #000;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+        
+.small {
+    font-size: 1em;
+}
+        
+.bright {
+    color: rebeccapurple;
+}         
+    
+
+/* 1. specificity: 1-0-1 */
+#outer a {
+    background-color: red;
+}
+        
+/* 2. specificity: 2-0-1 */
+#outer #inner a {
+    background-color: blue;
+}
+
+/* 3. specificity: 1-0-4 */
+#outer div ul li a {
+    color: yellow;
+}
+
+/* 4. specificity: 1-1-3 */
+#outer div ul .nav a {
+    color: white;
+}
+
+/* 5. specificity: 0-2-4 */
+div div li:nth-child(2) a:hover {
+    border: 10px solid black;
+}
+
+/* 6. specificity: 0-2-3 */
+div li:nth-child(2) a:hover {
+    border: 10px dashed black;
+}
+
+/* 7. specificity: 0-3-3 */
+div div .nav:nth-child(2) a:hover {
+    border: 10px double black;
+}
+
+a {
+    display: inline-block;
+    line-height: 40px;
+    font-size: 20px;
+    text-decoration: none;
+    text-align: center;
+    width: 200px;
+    margin-bottom: 10px;
+}
+
+ul {
+    padding: 0;
+}
+
+li {
+    list-style-type: none;
+}            
+    
+
+
+
+#winning {
+    background-color: rgb(236, 59, 59);
+    border: 1px solid rgb(63, 57, 57);
+}
+    
+.better {
+    background-color: gray;
+    border: none !important;
+}
+    
+p {
+    background-color: blue;
+    color: white;
+    padding: 5px;
+}           
+    
+
+h1 {
+    color: black;
+    background-color: rgb(197,93,161);
+  }
+
+  html {
+    font-size: 16px;
+  }
+  
+  .ems li {
+    font-size: 1.3em;
+  }
+  
+  .rems li {
+    font-size: 1.3rem;
+  }
+
+  .wrapper {
+    width: 400px;
+    border: 5px solid rebeccapurple;
+  }
+  
+  .px {
+    width: 200px;
+  }
+  
+  .percent {
+    width: 40%;
+  }
+
+  li {
+    font-size: 80%;
+  }
+
+.zaku{
+    width: 20%;
+}
+
+.img{
+    background-image: url(zaku3.png);
+    background-repeat: no-repeat;
+    height: 500px; /* You must set a specified height */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+
+}
+
+.box {
+    opacity: 0.6;
+  }
+
+  .one {
+    background-color: #8b0902;
+  }
+  
+  .two {
+    background-color: #e9631b;
+  }
+  
+  .three {
+    background-color: #f0d163;
+  }
+
+
+  .one {
+    background-color: rgba(139, 2, 2, 0.3);
+  }
+  
+  .two {
+    background-color: rgba(176, 86, 11, 0.837);
+  }
+  
+  .three {
+    background-color: rgba(237, 168, 8, 0.9);
+  }
+
+
+  .gradient {
+    height: 400px;
+    width: 400px;
+    background-image: linear-gradient(90deg, rgba(119,0,255,1) 39%, rgba(0,212,255,1) 100%);
+  }
+
+  .box {
+    height: 300px;
+    width: 400px;
+    background-image: url(star.png);
+    background-repeat: no-repeat;
+    background-position: right 40px;
+  }
+
+  .box1 {
+    width:400px;
+    padding: 1em;
+    border-radius: .5em;
+    border: 5px solid rgb(135, 201, 49);
+    background-color: rgb(164, 162, 220);
+  }
+  
+  .box1::after {
+    content: "This is a string. I know because it is quoted in the CSS."
+  }
+      
+
+  .wrapper1 {
+    width: 400px;
+    background-color: #868c8d;
+  }
+  
+  .box2 {
+    width: calc(20% + 100px);
+    background-color: #8f3971;
+  }
+  .gradient02 {
+    height: 400px;
+    width: 400px;
+    background-image: linear-gradient(90deg, rgba(119,0,255,1) 39%, rgba(0,212,255,1) 100%);
+  }

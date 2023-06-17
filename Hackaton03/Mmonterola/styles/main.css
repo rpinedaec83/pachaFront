@@ -1,0 +1,93 @@
+div {
+    width: 40%;
+    height: 43%;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #1687A0;
+}
+
+h2 {
+    
+    color: #FF1B1B;
+    font-family: Arial;
+    font-size: 30px;
+    
+}
+form{
+     
+    width: 650px;
+    height: 350px;
+}
+
+#nombre {
+    position: relative; /* posición absoluta */
+    width: 300px; /* ancho del campo de texto */
+    height: 50px; /* altura del campo de texto */
+    left: -10px;
+    background: #FFFFFF; /* color de fondo */
+    border: 1px solid #BFBFBF; /* borde */
+    padding: 10px; /* espacio interno del campo de texto */
+    font-size: 16px; /* tamaño de letra */
+  }
+  #apellido {
+    position: relative; /* posición absoluta */
+    width: 300px; /* ancho del campo de texto */
+    height: 50px; /* altura del campo de texto */
+    left: 10px;
+    background: #FFFFFF; /* color de fondo */
+    border: 1px solid #BFBFBF; /* borde */
+    padding: 10px; /* espacio interno del campo de texto */
+    font-size: 16px; /* tamaño de letra */
+  }
+  #email {
+    position: relative; /* posición absoluta */
+    width: 300px; /* ancho del campo de texto */
+    height: 50px; /* altura del campo de texto */
+    left: -10px;
+    top: 20px;
+    background: #FFFFFF; /* color de fondo */
+    border: 1px solid #BFBFBF; /* borde */
+    padding: 10px; /* espacio interno del campo de texto */
+    font-size: 16px; /* tamaño de letra */
+  }
+  #telefono{
+    position: relative; /* posición absoluta */
+    width: 300px; /* ancho del campo de texto */
+    height: 50px; /* altura del campo de texto */
+    left: 10px;
+    top: 20px;
+    background: #FFFFFF; /* color de fondo */
+    border: 1px solid #BFBFBF; /* borde */
+    padding: 10px; /* espacio interno del campo de texto */
+    font-size: 16px; /* tamaño de letra */
+  }
+  #comentario{
+    position: relative; /* posición absoluta */
+    width: 620px; /* ancho del campo de texto */
+    height: 80px; /* altura del campo de texto */
+    
+    top: 40px;
+    background: #FFFFFF; /* color de fondo */
+    border: 1px solid #BFBFBF; /* borde */
+    padding: 10px; /* espacio interno del campo de texto */
+    font-size: 16px; /* tamaño de letra */
+  }
+
+input[type="submit"] {
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21px;
+    width: 167px; /* ancho del botón */
+    height: 56px; /* altura del botón */
+    background: #233451; /* color de fondo del botón */
+    color: #fff; /* color del texto */
+    border: none; /* borde del botón */
+    border-radius: 5px; /* bordes redondeados */
+    cursor: pointer; /* cursor al pasar sobre el botón */
+    margin-top: 50px;
+  }

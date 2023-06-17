@@ -1,0 +1,59 @@
+
+.cta_button{
+    text-decoration: none;
+    transition: opacity ease-in-out 0.2s;
+    font-family: $body-font-family;
+    font-size: 14px;
+    color: $blue1;
+    &:hover{
+        opacity: 0.8;
+    }
+
+    &.next{
+        i{
+            margin-left: 20px;
+        }
+    }
+
+    &.previous{
+        i{
+            margin-right: 20px;
+        }
+    }
+
+    @media only screen and (max-width: 480px) {
+        &:not(:last-child){
+            margin-bottom: 20px;
+        }
+    }
+}
+
+a{
+    i{
+        &::before{
+            color: $blue1;
+            font-size: 22px;
+            transition: color ease-in-out 0.25s;
+        }
+        &:hover{
+            &::before{
+                color: $blue4;
+            }
+        }
+    }
+    
+}
+
+.blue_style{
+    background: $blue4;
+    max-width: 220px;
+    color: $white;
+    font-size: 16px;
+    text-align: center;
+    padding: 20px 75px ;
+    opacity: 1;
+    transition: background ease-in-out 0.2s;
+    &:hover{
+        background: $blue2;
+    }
+}
