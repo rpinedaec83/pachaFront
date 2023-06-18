@@ -3,13 +3,14 @@
     <form action="#" class="main__form">
       <h4 class="form__title">Agrear video</h4>
       <div class="form__inputsContainer">
-        <input type="text" id="title" name="title" placeholder="Titulo" autocomplete="off" v-model="newVideo.title">
-        <input type="text" id="url" name="url" placeholder="url-video" autocomplete="off" v-model="newVideo.url">
+        <input type="text" id="title" name="title" placeholder="Titulo" autocomplete="off" v-model="newVideo.title" title="Agrega un título al video">
+        <input type="text" id="url" name="url" placeholder="url-video" autocomplete="off" v-model="newVideo.url" title="Agrega una url: http://www.example.com o https://www.example.com">
       </div>
-      <textarea name="description" id="description" rows="6" placeholder="Descripcion" autocomplete="off" v-model="newVideo.description"></textarea>
+      <textarea name="description" id="description" rows="6" placeholder="Descripcion" autocomplete="off"
+        v-model="newVideo.description" title="Agrega una descripción al video"></textarea>
       <div class="form___buttonsContainer">
-        <button type="button" class="btnAdd" @click="postVideo">Agregar</button>
-        <button type="button" class="btnCancel">Cancelar</button>
+        <button type="submit" class="btnAdd" @click="postVideo">Agregar</button>
+        <button type="reset" class="btnCancel" @click="videoList">Cancelar</button>
       </div>
     </form>
   </main>
@@ -31,11 +32,34 @@ export default {
     };
   },
   methods: {
-    postVideo() {
-      axios.post('http://localhost:3000/videos/', this.newVideo)
-        .catch(error => {
-          console.error(`Error al crear nuevo video: ${error}`);
+    async postVideo(event) {
+      event.preventDefault();
+
+      if ((this.newVideo.title != '' && this.newVideo.description != '') && (this.newVideo.url.startsWith("https://www.") || this.newVideo.url.startsWith("http://www."))) {
+        const postData = await axios.post('http://localhost:3000/videos/', this.newVideo)
+          .catch(error => {
+            console.error(`Error al crear nuevo video: ${error}`);
+          });
+
+        const changeRoute = await this.$router.push({
+          name: 'VideoList',
         });
+
+        return {
+          postData,
+          changeRoute
+        };
+      }
+      else {
+        window.alert('Complete todos los campos correctamente')
+      }
+    },
+    videoList(event) {
+      event.preventDefault();
+
+      this.$router.push({
+        name: 'VideoList',
+      });
     }
   }
 };

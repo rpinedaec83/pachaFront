@@ -3,14 +3,14 @@
     <form action="#" class="main__form">
       <h4 class="form__title">Editar video</h4>
       <div class="form__inputsContainer">
-        <input type="text" id="title" name="title" placeholder="Titulo" autocomplete="off" v-model="updateVideo.title">
-        <input type="text" id="url" name="url" placeholder="url-video" autocomplete="off" v-model="updateVideo.url">
+        <input type="text" id="title" name="title" placeholder="Titulo" autocomplete="off" v-model="updateVideo.title" title="Agrega un título al video">
+        <input type="text" id="url" name="url" placeholder="url-video" autocomplete="off" v-model="updateVideo.url" title="Agrega una url: http://www.example.com o https://www.example.com">
       </div>
       <textarea name="description" id="description" rows="6" placeholder="Descripcion" autocomplete="off"
-        v-model="updateVideo.description"></textarea>
+        v-model="updateVideo.description" title="Agrega una descripción al video"></textarea>
       <div class="form___buttonsContainer">
-        <button type="button" class="btnAdd" @click="putVideo">Guardar</button>
-        <button type="button" class="btnCancel">Cancelar</button>
+        <button type="button" class="btnUpdate" @click="putVideo">Guardar</button>
+        <button type="button" class="btnCancel" @click="videoList">Cancelar</button>
       </div>
     </form>
   </main>
@@ -30,21 +30,52 @@ export default {
   data() {
     return {
       updateVideo: {
-        title: this.video.title,
-        url: this.video.url,
-        description: this.video.description,
+        title: '',
+        url: '',
+        description: '',
         views: 0
-      }
+      },
     };
   },
+  watch: {
+    video(getVideo) {
+      this.updateVideo.title = getVideo.title;
+      this.updateVideo.url = getVideo.url;
+      this.updateVideo.description = getVideo.description;
+    }
+  },
   methods: {
-    putVideo() {
-      const id_video = this.$route.params.id_video;
+    async putVideo(event) {
+      event.preventDefault();
 
-      axios.put(`http://localhost:3000/videos/${id_video}`,this.updateVideo)
-        .catch(error => {
-          console.error(`Error al editar video: ${error}`);
+      if ((this.updateVideo.title != '' && this.updateVideo.description != '') && (this.updateVideo.url.startsWith("https://www.") || this.updateVideo.url.startsWith("http://www."))) {
+        const id_video = await this.$route.params.id_video;
+
+        const putData = await axios.put(`http://localhost:3000/videos/${id_video}`, this.updateVideo)
+          .catch(error => {
+            console.error(`Error al editar video: ${error}`);
+          });
+
+        const changeRoute = await this.$router.push({
+          name: 'VideoList',
         });
+
+        return {
+          id_video,
+          putData,
+          changeRoute
+        };
+      }
+      else {
+        window.alert('Complete todos los campos correctamente')
+      }
+    },
+    videoList(event) {
+      event.preventDefault();
+
+      this.$router.push({
+        name: 'VideoList',
+      });
     }
   }
 };
@@ -130,7 +161,7 @@ export default {
   cursor: pointer;
 }
 
-.btnAdd {
+.btnUpdate {
   background: #FF5252;
   color: #fff;
 }

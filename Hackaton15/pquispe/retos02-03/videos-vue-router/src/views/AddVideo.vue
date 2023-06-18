@@ -25,6 +25,9 @@ export default {
         name: 'VideoList',
       });
     }
+  },
+  mounted() {
+    window.scrollTo(0, 0);
   }
 };
 </script>

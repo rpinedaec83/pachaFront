@@ -6,7 +6,7 @@
         <div class="editContainer" @click="updateVideo(video.id)">
           <img src="../assets/edit.svg" alt="edit icon">
         </div>
-        <div class="deleteContainer">
+        <div class="deleteContainer" @click="modalDelete(video.id)">
           <img src="../assets/delete.svg" alt="delete icon">
         </div>
         <div class="itemCard__videoContainer">
@@ -31,8 +31,10 @@ export default {
   props: {
     arrayVideos: {
       type: Array,
+      required: true,
     }
   },
+  emits: ['modalDelete'],
   computed: {
     reversedArrayVideos() {
       return this.arrayVideos.slice().reverse();
@@ -64,6 +66,9 @@ export default {
           id_video: idVideo,
         },
       });
+    },
+    modalDelete(idVideo) {
+      this.$emit('modalDelete', idVideo)
     }
   }
 };

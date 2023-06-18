@@ -1,7 +1,7 @@
 <template>
   <HeaderComponent></HeaderComponent>
   <main class="main">
-    <button type="button">Agregar video</button>
+    <button type="button" @click="addVideo">Agregar video</button>
   </main>
 </template>
 
@@ -12,6 +12,13 @@ export default {
   name: 'HomeComponent',
   components: {
     HeaderComponent,
+  },
+  methods: {
+    addVideo() {
+      this.$router.push({
+        name: 'AddVideo',
+      });
+    },
   }
 };
 </script>

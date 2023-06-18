@@ -15,6 +15,15 @@ const routes = [
     path: '/video/:id_video/details',
     name: 'MoreDetails',
     component: MoreDetails,
+    beforeEnter: (to, from, next) => {
+      const idVideo = parseInt(to.params.id_video);
+      if (idVideo > 0) {
+        next();
+      }
+      else {
+        next({ name: 'NotFound' });
+      }
+    },
   },
   {
     path: '/video/add-video',
@@ -25,6 +34,15 @@ const routes = [
     path: '/video/:id_video/update-video',
     name: 'UpdateVideo',
     component: UpdateVideo,
+    beforeEnter: (to, from, next) => {
+      const idVideo = parseInt(to.params.id_video);
+      if (idVideo > 0) {
+        next();
+      }
+      else {
+        next({ name: 'NotFound' });
+      }
+    },
   },
   {
     path: '/:pathMatch(.*)*',

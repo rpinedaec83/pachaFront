@@ -6,27 +6,51 @@
       </div>
     </template>
   </HeaderComponent>
-  <ItemsComponent :arrayVideos="arrayVideos"></ItemsComponent>
+  <ItemsComponent :arrayVideos="arrayVideos" @modalDelete="showModalDelete"></ItemsComponent>
+  <DeleteComponent v-if="modalDelete" @closeModal="hiddenModalDelete" @acceptModal="acceptModalDelete"></DeleteComponent>
 </template>
 
 <script>
 import HeaderComponent from '@/components/HeaderComponent.vue';
 import ItemsComponent from '@/components/ItemsComponent.vue';
+import DeleteComponent from '@/components/DeleteComponent.vue';
 
 export default {
   name: 'ListComponent',
-  props: {
-    arrayVideos: Array
-  },
   components: {
     HeaderComponent,
     ItemsComponent,
+    DeleteComponent,
+  },
+  props: {
+    arrayVideos: {
+      type: Array,
+      required: true,
+    }
+  },
+  emits: ['acceptModalDelete'],
+  data() {
+    return {
+      modalDelete: false,
+      id_Video: null,
+    };
   },
   methods: {
     addVideo() {
       this.$router.push({
         name: 'AddVideo',
       });
+    },
+    showModalDelete(idVideo) {
+      this.modalDelete = true;
+      this.id_Video = idVideo;
+    },
+    hiddenModalDelete() {
+      this.modalDelete = false;
+    },
+    acceptModalDelete() {
+      this.$emit('acceptModalDelete', this.id_Video);
+      this.modalDelete = false;
     }
   }
 };

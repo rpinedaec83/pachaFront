@@ -39,6 +39,8 @@ export default {
     }
   },
   mounted() {
+    window.scrollTo(0, 0);
+    
     const id_video = this.$route.params.id_video;
 
     axios.get(`http://localhost:3000/videos/${id_video}`)

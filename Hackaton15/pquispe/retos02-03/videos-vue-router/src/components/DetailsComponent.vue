@@ -18,6 +18,7 @@ export default {
   props: {
     video: {
       type: Object,
+      required: true,
     }
   },
   computed: {
@@ -30,7 +31,7 @@ export default {
     },
     viewsFormat() {
       return (views) => {
-        if (views) {
+        if (views !== undefined && views !== null) {
           return views.toLocaleString();
         }
       };
