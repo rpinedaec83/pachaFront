@@ -1,5 +1,4 @@
 import { defineStore } from 'pinia'
-import productos from '@/data/productos.json'
 import axios from 'axios'
 
 export const useProductosStore = defineStore('productos', {

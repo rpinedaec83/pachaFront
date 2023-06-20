@@ -26,4 +26,9 @@
             "valor": 30.00
         }
     ]
+    ,
+    "login":{
+        "message":"login exitoso",
+        "token":"qwewqwqwqwqwqwqwqwqwqw"
+    }
 }
