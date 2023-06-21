@@ -1,9 +1,9 @@
 <template>
     <header>
         <div class="header-nav d-flex justify-content-between align-items-center">
-            <h2 class="ms-4">{{ titulo }}</h2>
-            <div class="me-4 cursor-pointer" @click="() => $emit('abrir-modal', 'nuevo')">
-                <h6>Agregar mascota</h6>
+            <h2 class="ms-4 header-nav_Titulo">{{ titulo }}</h2>
+            <div v-if="showHeader" class="me-4 cursor-pointer" @click="$redirectPagination($router, 'crearVideo');">
+                <h6>Agregar video</h6>
             </div>
         </div>
     </header>
@@ -12,12 +12,8 @@
 export default {
     name: 'HeaderView',
     props: {
-        titulo: String
-    },
-    components: {
-
-    },
-    methods: {
+        titulo: String,
+        showHeader: Boolean,
     }
 }
 </script>

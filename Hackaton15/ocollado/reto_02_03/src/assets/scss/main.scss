@@ -1,7 +1,8 @@
+$rojo: #ff5252;
 $plomo: #C4C4C4;
 
 @mixin button-style($margin-top, $width, $height) {
-    background-color: $plomo;
+    background-color: $rojo;
     margin-top: $margin-top;
     border: 0;
     width: $width;
@@ -9,17 +10,37 @@ $plomo: #C4C4C4;
 }
 
 .header-nav {
-    background-color: $plomo;
+    background-color: $rojo;
+    &_titulo {
+        font-family: "Roboto";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 42px;
+
+        color: #ffffff;
+
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
 }
 
 .button {
-    &_agregarMascota {
+    &_agregarVideo {
         @include button-style(17em, 244px, 67px);
     }
 
     &_modal {
         @include button-style(0em, 129px, 41px);
     }
+
+    &_editarEliminar {
+        background: $plomo;
+        border-radius: 2px;
+        -webkit-border-radius: 2px;
+        -moz-border-radius: 2px;
+        -ms-border-radius: 2px;
+        -o-border-radius: 2px;
+}
 }
 
 .card {

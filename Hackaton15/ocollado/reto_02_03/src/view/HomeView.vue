@@ -1,40 +1,28 @@
 <template>
-  <header-view :titulo=titulo @abrir-modal="openModalVideo"></header-view>
-  <main-view @abrir-modal="openModalVideo"></main-view>
-  <modal-video-page ref="modalVideoPage"></modal-video-page>
+  <main-view  @redirect="agregarEditarVideo"></main-view>
 </template>
 <script>
-
-import HeaderView from '../view/HeaderView.vue';
 import MainView from '../view/MainView.vue';
-import ModalVideoPage from '../components/pages/video-page/ModalVideoPage.vue';
 
 export default {
   name: 'HomeView',
   components: {
-    HeaderView,
-    MainView,
-    ModalVideoPage
-  },
-  data() {
-    return {
-      titulo: "VIDEO PACHA TV"
-    }
+    MainView
   },
   methods: {
-    openModalVideo(tipoModal) {
+    agregarEditarVideo(tipoModal) {
       switch (tipoModal) {
-        case 'nuevo':
-          this.$refs.modalVideoPage.show();
+        case 'agregar':
+          this.$redirectPagination(this.$router, 'crearVideo');
           break;
         case 'editar':
-          this.$refs.modalVideoPage.show();
-          break;
-        case 'eliminar':
+          this.$redirectPagination(this.$router, 'editarVideo', { id: 1 });
           break;
       }
     }
   }
 }
 </script>
-<style lang="scss"></style>
+<style lang="scss">
+
+</style>
