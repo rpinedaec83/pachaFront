@@ -18,50 +18,7 @@ export default {
     },
     data() {
         return {
-            videos: [
-                {
-                    id: 1,
-                    titulo: 'BOHEMIAN RHAPSDOSADSA',
-                    urlVideo: '8z6wJHPhJUM',
-                    descripcion: 'lorem ipsum dolor sit amet, consectetur adipiscing elit, sed mag meaning',
-                    visualizaciones: 5
-                },
-                {
-                    id: 2,
-                    titulo: 'BOHEMIAN RHAPSDOSADSA',
-                    urlVideo: '8z6wJHPhJUM',
-                    descripcion: 'lorem ipsum dolor sit amet, consectetur adipiscing elit, sed mag meaning',
-                    visualizaciones: 5
-                },
-                {
-                    id: 3,
-                    titulo: 'BOHEMIAN RHAPSDOSADSA',
-                    urlVideo: '8z6wJHPhJUM',
-                    descripcion: 'lorem ipsum dolor sit amet, consectetur adipiscing elit, sed mag meaning',
-                    visualizaciones: 5
-                },
-                {
-                    id: 4,
-                    titulo: 'BOHEMIAN RHAPSDOSADSA',
-                    urlVideo: '8z6wJHPhJUM',
-                    descripcion: 'lorem ipsum dolor sit amet, consectetur adipiscing elit, sed mag meaning',
-                    visualizaciones: 5
-                },
-                {
-                    id: 5,
-                    titulo: 'BOHEMIAN RHAPSDOSADSA',
-                    urlVideo: '8z6wJHPhJUM',
-                    descripcion: 'lorem ipsum dolor sit amet, consectetur adipiscing elit, sed mag meaning',
-                    visualizaciones: 5
-                },
-                {
-                    id: 6,
-                    titulo: 'BOHEMIAN RHAPSDOSADSA',
-                    urlVideo: '8z6wJHPhJUM',
-                    descripcion: 'lorem ipsum dolor sit amet, consectetur adipiscing elit, sed mag meaning',
-                    visualizaciones: 5
-                }
-            ]
+            videos: []
         }
     },
     watch: {
@@ -72,10 +29,12 @@ export default {
     methods: {
         emitirVideos() {
             this.$emit('watch-videos', this.videos.length > 0);
-        }
+        },
+        
     },
     mounted() {
         this.emitirVideos();
+
     }
 }
 </script>

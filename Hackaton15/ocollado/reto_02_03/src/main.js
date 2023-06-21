@@ -11,8 +11,6 @@ import 'bootstrap';
 
 const app = createApp(App);
 
-//app.use(jquery);
-//app.use(bootstrapBundle);
 app.component('YouTube', YouTube);
 app.use(router);
 app.use(helper);
