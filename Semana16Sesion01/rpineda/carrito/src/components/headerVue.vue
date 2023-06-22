@@ -67,10 +67,10 @@ export default {
   },
   computed: {
     getCounterMiniShopCart() {
-      
-const itemsShopCart = useItemsShopCartStore();
-itemsShopCart.fill();
-console.log(itemsShopCart)
+
+      const itemsShopCart = useItemsShopCartStore();
+      itemsShopCart.fill();
+      console.log(itemsShopCart)
       return itemsShopCart.shopCart.length;
     },
   }
@@ -251,4 +251,5 @@ console.log(itemsShopCart)
   .widget-menu {
     width: 35%;
   }
-}</style>
+}
+</style>
