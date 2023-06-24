@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abel&family=Poppins&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+		<title>Hackaton 08</title>
+    <style type="text/tailwindcss">
+      @layer utilities {
+        .button {
+          background-color: rgb(0, 255, 153);
+          color: rgb(91, 91, 91);
+          padding: 0.8rem 1.5rem;
+          width: 140px;
+          font-size: 0.8rem;
+          font-weight: bold;
+          border-radius: 8px;
+          content-visibility: auto;
+          font-family: 'Poppins', sans-serif;
+          border: none;
+        }
+      }
+    </style>
+	</head>
+	<body class="bg-neutral-900 text-white">
+		<h1 class="text-3xl text-center py-4 font-['Roboto'] uppercase mb-4">Hackaton 08</h1>
+		<main class="flex flex-col md:flex-row justify-around h-auto md:h-[34rem] items-center">
+      <section class="w-2/4 h-full p-8 max-w-xl">
+        <div class="flex flex-col space-y-2 md:space-y-none md:flex-row md:flex-wrap overflow-y-scroll w-[20rem] md:w-auto h-[34rem] md:justify-around items-center">
+          <button class="button" onclick="Programa01();">Programa 01</button>
+          <button class="button md:mt-2" onclick="Programa02();">Programa 02</button>
+          <button class="button md:mt-2" onclick="Programa03();">Programa 03</button>
+          <button class="button md:mt-2" onclick="Programa04();">Programa 04</button>
+          <button class="button md:mt-2" onclick="Programa05();">Programa 05</button>
+          <button class="button md:mt-2" onclick="Programa06();">Programa 06</button>
+          <button class="button md:mt-2" onclick="Programa07();">Programa 07</button>
+          <button class="button md:mt-2" onclick="Programa08();">Programa 08</button>
+          <button class="button md:mt-2" onclick="Programa09();">Programa 09</button>
+          <button class="button md:mt-2" onclick="Programa10();">Programa 10</button>
+          <button class="button md:mt-2" onclick="Programa11();">Programa 11</button>
+          <button class="button md:mt-2" onclick="Programa12();">Programa 12</button>
+          <button class="button md:mt-2" onclick="Programa13();">Programa 13</button>
+          <button class="button md:mt-2" onclick="Programa14();">Programa 14</button>
+          <button class="button md:mt-2" onclick="Programa15();">Programa 15</button>
+          <button class="button md:mt-2" onclick="Programa16();">Programa 16</button>
+          <button class="button md:mt-2" onclick="Programa17();">Programa 17</button>
+          <button class="button md:mt-2" onclick="Programa18();">Programa 18</button>
+          <button class="button md:mt-2" onclick="Programa19();">Programa 19</button>
+          <button class="button md:mt-2" onclick="Programa20();">Programa 20</button>
+          <button class="button md:mt-2" onclick="Programa21();">Programa 21</button>
+          <button class="button md:mt-2" onclick="Programa22();">Programa 22</button>
+          <button class="button md:mt-2" onclick="Programa23();">Programa 23</button>
+          <button class="button md:mt-2" onclick="Programa24();">Programa 24</button>
+          <button class="button md:mt-2" onclick="Programa25();">Programa 25</button>
+          <button class="button md:mt-2" onclick="Programa26();">Programa 26</button>
+          <button class="button md:mt-2" onclick="Programa27();">Programa 27</button>
+          <button class="button md:mt-2" onclick="Programa28();">Programa 28</button>
+          <button class="button md:mt-2" onclick="Programa29();">Programa 29</button>
+          <button class="button md:mt-2" onclick="Programa30();">Programa 30</button>
+          <button class="button md:mt-2" onclick="Programa31();">Programa 31</button>
+          <button class="button md:mt-2" onclick="Programa32();">Programa 32</button>
+          <button class="button md:mt-2" onclick="Programa33();">Programa 33</button>
+          <button class="button md:mt-2" onclick="Programa34();">Programa 34</button>
+          <button class="button md:mt-2" onclick="Programa35();">Programa 35</button>
+          <button class="button md:mt-2" onclick="Programa36();">Programa 36</button>
+          <button class="button md:mt-2" onclick="Programa37();">Programa 37</button>
+          <button class="button md:mt-2" onclick="Programa38();">Programa 38</button>
+          <button class="button md:mt-2" onclick="Programa39();">Programa 39</button>
+          <button class="button md:mt-2" onclick="Programa40();">Programa 40</button>
+        </div>
+      </section>
+      <section class="bg-gray-300 font-['Abel'] text-black w-2/4 h-[34rem] md:h-full md:min-h-full rounded-md p-4 relative">
+        <h2 class="text-center text-xl font-bold">Resultados</h2>
+        <div id="resultados" class="bg-gray-300 p-4">
+        </div>
+        <button onclick="resetResultado();" class="bg-gray-500 text-white border-none py-1 px-2 absolute bottom-2 left-9 rounded-md">Limpiar Resultados</button>
+        <p class="absolute bottom-2 right-3 select-none opacity-60 sm:w-[120px] text-center">Solo para programas que sean necesarios.</p>
+      </section>
+    </mai>
+	</body>
+	<script src="./js/helpers.js"></script>
+	<script src="./js/Programa01.js"></script>
+	<script src="./js/Programa02.js"></script>
+	<script src="./js/Programa03.js"></script>
+	<script src="./js/Programa04.js"></script>
+	<script src="./js/Programa05.js"></script>
+	<script src="./js/Programa06.js"></script>
+	<script src="./js/Programa07.js"></script>
+	<script src="./js/Programa08.js"></script>
+	<script src="./js/Programa09.js"></script>
+	<script src="./js/Programa10.js"></script>
+	<script src="./js/Programa11.js"></script>
+	<script src="./js/Programa12.js"></script>
+	<script src="./js/Programa13.js"></script>
+	<script src="./js/Programa14.js"></script>
+	<script src="./js/Programa15.js"></script>
+	<script src="./js/Programa16.js"></script>
+	<script src="./js/Programa17.js"></script>
+	<script src="./js/Programa18.js"></script>
+	<script src="./js/Programa19.js"></script>
+	<script src="./js/Programa20.js"></script>
+	<script src="./js/Programa21.js"></script>
+	<script src="./js/Programa22.js"></script>
+	<script src="./js/Programa23.js"></script>
+	<script src="./js/Programa24.js"></script>
+	<script src="./js/Programa25.js"></script>
+	<script src="./js/Programa26.js"></script>
+	<script src="./js/Programa27.js"></script>
+	<script src="./js/Programa28.js"></script>
+	<script src="./js/Programa29.js"></script>
+	<script src="./js/Programa30.js"></script>
+	<script src="./js/Programa31.js"></script>
+	<script src="./js/Programa32.js"></script>
+	<script src="./js/Programa33.js"></script>
+	<script src="./js/Programa34.js"></script>
+	<script src="./js/Programa35.js"></script>
+	<script src="./js/Programa36.js"></script>
+	<script src="./js/Programa37.js"></script>
+	<script src="./js/Programa38.js"></script>
+	<script src="./js/Programa39.js"></script>
+	<script src="./js/Programa40.js"></script>
+	<script>
+		// Programa19();
+	</script>
+</html>

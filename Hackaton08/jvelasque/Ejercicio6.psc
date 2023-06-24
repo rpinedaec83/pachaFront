@@ -1,0 +1,15 @@
+Algoritmo Ejercicio6
+	Escribir "INGRESE LA CANTIDAD DE HORAS TRABAJADAS EN LA SEMANA"
+	LEER HORAS
+	SI HORAS<=40 Entonces
+		PHORA=20*HORAS
+		Escribir "EL PAGO TOTAL ES: ",PHORA
+	SiNo
+		SI HORAS>40 Entonces
+			PHORA=40*(HORAS-40)
+			TOTAL=40*20+PHORA
+			Escribir "EL PAGO TOTAL ES: ",TOTAL
+		FinSi
+	FinSi
+
+FinAlgoritmo

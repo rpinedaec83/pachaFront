@@ -1,0 +1,108 @@
+
+.nav-links .nav-item a {
+    color: white;
+    text-decoration: none !important;
+    
+}
+
+a:hover {
+    background-color: #db3620;     
+    text-decoration: none;
+    
+    }
+
+
+body {
+
+    font-family: 'Poppins', sans-serif;
+
+}
+
+.navbar {
+
+    
+    display: flex;
+    font-weight: bold;
+    color: white;
+    
+    
+}
+
+.logo {
+    width: 203px;
+    padding: 36px 10px 10px ;
+    font: 25px;
+    align-self: flex-end;
+}
+
+.nav-links {
+    
+    width: 100%;
+    display: flex;
+    color: white;
+    
+
+}
+
+.nav-item{
+    
+    padding: 50px 23px 10px;
+    color: white;
+    font-size: 14px;
+    text-align: center;
+    
+}
+
+.primera-parte{
+    display: flex;
+    position: relative;
+    
+}
+
+.morado{
+    width: 60%;
+    background-color: #1f1d47;
+}
+
+.naranja{
+    background-color: #db3620;
+    width:40%;
+}
+
+.headline {
+    color: white;
+    padding: 15% 30% 10% 50%;
+}
+
+.info {
+
+    width: 100%;
+    display: flex;
+    color: white;
+    flex-direction: row-reverse;
+
+}
+
+.info-item{
+
+    padding: 50px 23px 10px;
+    color: white;
+    font-size: 14px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 121px;
+}
+
+.cafecito {
+    position: absolute;
+    top: 20%;
+    left: 55%;
+
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}

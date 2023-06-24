@@ -1,0 +1,151 @@
+@use 'variables';
+.popular{
+  margin-top: 2rem;
+  width: 100%;
+  position: relative;
+  &__title{
+    font-size: 1.3rem;
+    font-family: variables.$helvetica;
+    font-weight: variables.$bold;
+    text-transform: uppercase;
+    color: variables.$primary;
+    margin-bottom: 1rem;
+  }
+  &__article{
+    display: grid;
+    grid-template-areas: "imgpost" "title" "description" "tools";
+    gap: 10px;
+    margin-bottom: 2rem;
+    &-title{
+      font-size: 1.25rem;
+      font-family: variables.$helvetica;
+      font-weight: variables.$bold;
+      color: variables.$secondary;
+      grid-area: title;
+    }
+    &-description{
+      color: rgba(0, 0, 0, 0.6);;
+      font-size: 0.8rem;
+      font-weight: variables.$normal;
+      line-height: 26px;
+      grid-area: description;
+    }
+    &-about{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      grid-area: tools;
+    }
+    &-author{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.8rem;
+      &-name{
+        font-family: variables.$helvetica;
+        font-weight: variables.$bold;
+        color: variables.$secondary;
+      }
+      &-date{
+        font-weight: variables.$normal;
+        color: variables.$secondary;
+      }
+    }
+    &-tools{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 20px;
+    }
+    &-icon{
+      font-size: 1.1rem;
+      color: variables.$primary;
+      cursor: pointer;
+    }
+    &-img{
+      width: 100%;
+      height: 200px;
+      grid-area: imgpost;
+      &--top{
+        height: 310px;
+      }
+    }
+  }
+  &__link{
+    position: absolute;
+    font-size: 1rem;
+    font-family: variables.$helvetica;
+    font-weight: variables.$bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: variables.$primary;
+    bottom: -80px;
+    right: 10px;
+  }
+}
+
+@media (min-width: 768px) {
+  .popular{
+    display: grid;
+    grid-template-areas:
+      "title void void"
+      "top top top"
+      "post2 post3 post4";
+    gap: 1rem;
+
+    &__title{
+      grid-area: title;
+    }
+    &__article{
+      &--top{
+        display: grid;
+        grid-area: top;
+        grid-template-areas: 
+          "title img" "description img" "tools img";
+        gap: 14px;
+        margin-bottom: 2rem;
+      }
+      &-title{
+        font-size: 1.1rem;
+        font-family: variables.$helvetica;
+        font-weight: variables.$bold;
+        color: variables.$secondary;
+        grid-area: title;
+        &--top{
+          grid-area: title;
+        }
+      }
+      &-description{
+        color: rgba(0, 0, 0, 0.6);;
+        font-size: 1rem;
+        font-weight: variables.$normal;
+        line-height: 26px;
+        grid-area: description;
+        &--top{
+          grid-area: description;
+        }
+      }
+      &-img{
+        width: 100%;
+        height: 200px;
+        grid-area: imgpost;
+        &--top{
+          width: 450px;
+          height: 310px;
+          grid-area: img;
+        }
+      }
+      &--post2{
+        grid-area: post2;
+      }
+      &--post3{
+        grid-area: post3;
+      }
+      &--post4{
+        grid-area: post4;
+      }
+    }
+  }
+}

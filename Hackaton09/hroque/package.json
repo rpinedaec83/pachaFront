@@ -1,0 +1,27 @@
+{
+  "name": "hackaton09",
+  "version": "1.0.0",
+  "description": "Hackaton 09 PachaFront - Heri Roque Tello",
+  "main": "app.js",
+  "scripts": {
+    "run": "node app.js "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HeriRoqueTello/pachaFront-ejercicios.git"
+  },
+  "keywords": [
+    "hackaton09",
+    "09",
+    "hackaton"
+  ],
+  "author": "Heri Roque Tello",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HeriRoqueTello/pachaFront-ejercicios/issues"
+  },
+  "homepage": "https://github.com/HeriRoqueTello/pachaFront-ejercicios#readme",
+  "dependencies": {
+    "prompt": "^1.3.0"
+  }
+}

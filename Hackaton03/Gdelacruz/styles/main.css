@@ -1,0 +1,327 @@
+html{
+    font-family: 'Arial';
+}
+.imagen{
+    height: 525px;
+    background-image: url("./../img/fondo.png");
+    background-position: center;
+    background-size: cover;
+}
+
+.titulo{
+    font-size: 64px;
+    color: #FFFFFF;
+   
+   text-align: center;
+}
+
+.text{
+    font-size: 36px;
+line-height: 42px;
+font-weight: 700;
+    color: #FFFFFF;
+
+}
+
+.cuadrado{
+    position: absolute;
+    width: 361px;
+    height: 97px;
+    left: 94px;
+    top: 278px;
+    padding: 10px;
+    
+background-color: rgba(114, 153, 254, 0.5);
+border-radius: 10px;;
+
+}
+
+.rectangle{
+    
+height: 424px;
+background: #7299FE;
+}
+
+.subtitulo{
+    font-weight: 700;
+font-size: 36px;
+line-height: 41px;
+text-align: center;
+color: #1D06A7;
+}
+
+.historia{
+    font-weight: 400;
+font-size: 14px;
+line-height: 24px;
+color: #F8F8F8;
+padding: 30px;
+}
+
+.cv{
+    width: 187px;
+    height: 62px;
+    margin-left: 30px;
+    background: #D16FFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    border: 0px;
+   
+font-size: 22px;
+color: #FFFFFF;
+
+}
+
+
+.rectan{
+    background: #9122FF;
+
+}
+
+
+.subtitulo3{
+    ont-weight: 700;
+    font-size: 36px;
+    line-height: 41px;
+    text-align: center;
+
+color: #26CC4B;
+}
+
+
+.texto1{
+    font-weight: 400;
+font-size: 18px;
+line-height: 21px;
+
+color: #FFFFFF;
+
+}
+
+.rectangle1{
+    width: 403px;
+height: 20px;
+left: 65px;
+top: 1090px;
+
+background: #FFFFFF;
+border-radius: 10px;
+}
+
+.relleno1{
+    width: 319px;
+height: 20px;
+left: 64px;
+top: 1090px;
+
+background: #57EFF9;
+border-radius: 20px;
+}
+
+
+.texto2{
+    font-weight: 400;
+font-size: 18px;
+line-height: 21px;
+color: #FFFFFF;
+
+}
+
+.rectangle2{
+    width: 403px;
+height: 20px;
+left: 65px;
+top: 1090px;
+
+background: #FFFFFF;
+border-radius: 10px;
+}
+
+.relleno2{
+    width: 64px;
+height: 21px;
+left: 499px;
+top: 1089px;
+
+background: #57EFF9;
+border-radius: 20px;
+
+}
+
+
+.texto3{
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    color: #FFFFFF;
+}
+
+.rectangle3{
+    width: 403px;
+height: 20px;
+left: 65px;
+top: 1090px;
+
+background: #FFFFFF;
+border-radius: 10px;
+}
+
+.relleno3{
+    width: 215px;
+    height: 21px;
+    left: 65px;
+    top: 1170px;
+    
+    background: #57EFF9;
+    border-radius: 20px;
+}
+
+
+.texto4{
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    color: #FFFFFF;
+}
+
+.rectangle4{
+    width: 403px;
+height: 20px;
+left: 65px;
+top: 1090px;
+
+background: #FFFFFF;
+border-radius: 10px;
+}
+
+.relleno4{
+    width: 339px;
+height: 21px;
+left: 500px;
+top: 1170px;
+
+background: #57EFF9;
+border-radius: 20px;
+}
+
+
+.texto5{
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    color: #FFFFFF;
+}
+
+.rectangle5{
+    width: 403px;
+height: 20px;
+left: 65px;
+top: 1090px;
+
+background: #FFFFFF;
+border-radius: 10px;
+}
+
+.relleno5{
+    width: 363px;
+height: 21px;
+left: 66px;
+top: 1262px;
+
+background: #57EFF9;
+border-radius: 20px;
+}
+
+
+.texto6{
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    color: #FFFFFF;
+}
+
+.rectangle6{
+    width: 403px;
+height: 20px;
+left: 65px;
+top: 1090px;
+
+background: #FFFFFF;
+border-radius: 10px;
+}
+
+.relleno6{
+    width: 185px;
+height: 21px;
+left: 501px;
+top: 1262px;
+
+background: #57EFF9;
+border-radius: 20px;
+}
+
+.rectangul{
+   
+height: 424px;
+left: 0px;
+top: 1373px;
+
+background: #FFD233;
+}
+
+.tit{
+   
+
+font-size: 36px;
+line-height: 41px;
+
+color: #00AD84;
+text-align: center;
+}
+
+.contenedor{
+    display: inline-flex;
+    
+    
+    margin: 0% 20px;
+
+}
+
+
+.img1{
+    width: 250px;
+   background: url("foto1.png");
+}
+
+.img2{
+    width: 140px;
+   background: url("foto2.png");
+}
+
+.img3{
+    background: url("foto3.png");
+}
+
+.img4{
+    background: url("foto4.png");
+}
+
+.img5{
+   background: url("foto5.png");
+}
+
+.img6{
+ 
+    background: url("foto6.png");
+}
+
+.img7{
+    width: 142px;
+   
+    background: url("foto7.png" );
+}
+
+.img8{
+
+    background: url("foto8.png");
+}

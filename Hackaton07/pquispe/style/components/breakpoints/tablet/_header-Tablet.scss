@@ -1,0 +1,24 @@
+.header {
+    &__navbar {
+        .navbar-list {
+            &__item a,
+            &__item--active a {
+                font-size: 2.0rem;
+            }
+        }
+    }
+
+    &__presentation {
+        padding: 55px 174px;
+        &__title {
+            max-width: none;
+            font-size: 3.2rem;
+        }
+
+        &__content {
+            max-width: 500px;
+            font-size: 1.6rem;
+            line-height: 3.0rem;
+        }
+    }
+}

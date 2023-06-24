@@ -1,0 +1,33 @@
+:root{
+    --buttonBg: #{$blue3};
+    --buttonSize: 16px;
+    --buttonGap: 15px 34.5px;
+    --buttonColor: #{$white};
+    @media only screen and (min-width: 990px){
+        --buttonGap: 15px 75px;
+    }
+}
+
+div .btn{
+    display: inline-block;
+    background-color: var(--buttonBg);
+    color: var(--buttonColor);
+    font-size: var(--buttonSize);
+    padding: var(--buttonGap);
+    line-height: 1.625;
+    text-decoration: none;
+    transition: box-shadow ease 0.25s, background-color ease 0.25s;
+    text-align: center;
+    &:hover{
+        box-shadow: 0 0 5px rgba($color: $black, $alpha: 0.5)
+    }
+    &:active{
+        --buttonBg: #{blue1};
+    }
+}
+
+@media only screen and (max-width: 767px){
+    div .btn{
+        width: 100%;
+    }
+}

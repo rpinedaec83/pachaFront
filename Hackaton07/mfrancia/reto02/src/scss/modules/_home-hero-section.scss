@@ -1,0 +1,13 @@
+.home-hero-section{
+    --contentGap: 65px;
+    background-image: url('../../assets/img/png/Home-hero-pattern.png');
+    background-size: cover;
+    background-position: center center;
+    .container{
+        max-width: 730px;
+        .content{
+            padding-top: var(--contentGap);
+            padding-bottom: var(--contentGap);
+        }
+    }
+}

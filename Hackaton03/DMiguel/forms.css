@@ -1,0 +1,30 @@
+/* fin de reto  */
+
+body{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 1em;
+}
+
+input:focus{
+    transition: all 2s;
+    background-color:#000;
+    border: 0px;
+    color: #fff;
+}
+
+fieldset{
+    border-radius: 1em;
+    background-color: rgb(212, 234, 255);
+    padding: 1.5em 1.5em;
+}
+
+fieldset:hover{
+    transition: all 2s;
+    border: 3px solid;
+}
+
+legend{
+    font-weight: 700;
+}
+
+

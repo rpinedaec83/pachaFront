@@ -1,0 +1,17 @@
+/* Segunda hoja de estilo*/
+h1, h2 {
+    font-family: 'Courier New', Courier, monospace; color: blue;
+}
+
+#h2esperciales {
+   font-size: larger; color: slateblue; 
+}
+
+.clsBoton{
+    color: blue;
+}
+
+.clsSelEscalas [selected]
+{
+font-family: 'Courier New', Courier, monospace;
+}

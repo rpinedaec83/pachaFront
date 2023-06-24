@@ -1,0 +1,109 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: sans-serif;
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body {
+    font-family: var(--bs-font-sans-serif);
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    padding: 20px 20px 20px 20px !important;
+    text-align: center;
+}
+
+p {
+    font-size: 20px;
+    margin: auto !important;
+    padding: 20px 20px 20px 20px !important;
+}
+
+button {
+    margin: 20px !important;
+}
+
+
+/*::::INIT PROGRESS BAR ::::::*/
+progress[value] {
+    /* Reset the default appearance */
+    -webkit-appearance: none;
+    appearance: none;
+    width: 403px;
+    height: 20px;
+}
+
+progress[value]::-webkit-progress-value {
+    background: #57EFF9;
+    border-radius: 10px !important;
+    -webkit-border-radius: 10px !important;
+    -moz-border-radius: 10px !important;
+    -ms-border-radius: 10px !important;
+    -o-border-radius: 10px !important;
+}
+
+progress[value]::-webkit-progress-bar {
+    background-color: white !important;
+    border-radius: 10px !important;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
+    -webkit-border-radius: 10px !important;
+    -moz-border-radius: 10px !important;
+    -ms-border-radius: 10px !important;
+    -o-border-radius: 10px !important;
+}
+
+progress::-webkit-progress-value {
+    background: red;
+}
+
+progress {
+    background-color: transparent;
+    appearance: auto !important;
+    box-sizing: border-box;
+    display: inline-block;
+    block-size: 1em;
+    inline-size: 10em;
+    vertical-align: -0.2em;
+    writing-mode: horizontal-tb !important;
+}
+/*::::FIN PROGRESS BAR ::::::*/
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #BFBFBF;
+    font-size: 16px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"] {
+    height: 59px;
+}

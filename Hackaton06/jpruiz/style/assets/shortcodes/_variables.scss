@@ -1,0 +1,53 @@
+// colores
+
+$blue1: #356EAD;
+$blue2: #1F3F68; 
+$blue3: #316099;
+$blue4: #5A98D0;
+$gray: #F4F4F4;
+$white: #ffff;
+$black: #000000;
+
+
+
+// weight
+
+$regular: 400;
+$medium: 500;
+$bold: 700;
+$extrabold: 800;
+
+
+
+//font-family
+
+$heading-font-family: Helvetica, sans-serif;
+$body-font-family:  Arial,sans-serif;
+
+
+// heading
+
+h2,h3,h4{
+    font-weight: $bold;
+}
+
+h1{
+    font-size: 44px;
+    color: $white;
+}
+
+h2{
+    font-size: 36px;
+    color: $blue2;
+}
+
+h3{
+    font-size: 22px;
+    color: $blue2;
+}
+
+h4{
+    font-size: 20px;
+    text-transform: uppercase;
+    color: $blue1;
+}

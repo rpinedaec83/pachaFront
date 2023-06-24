@@ -1,0 +1,33 @@
+.colores {
+    border: 3px solid tomato;
+}
+
+.colores2{
+    border: 2px solid greenyellow;
+}
+
+.colores3 {
+    border: 5px ridge dodgerblue;
+   font-family: cursive;
+}
+.container {
+    display: grid; 
+    grid-auto-columns: 1fr; 
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; 
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+      "marco-all marco-all marco-all marco-all marco-all marco-all marco-all marco-all marco-all marco-all marco-all marco-all marco-all marco-all marco-all marco-all marco-all marco-all"
+      
+      "marco-all marco-all marco-all marco-all marco-all marco-all marco-all marco-all marco-all marco-all marco-all marco-all marco-all marco-all marco-all marco-all marco-all marco-all"
+      
+      "marco-all marco-all marco-all marco-all marco-all marco-all marco-all marco-all marco-all marco-all marco-all marco-all marco-all marco-all marco-all marco-all marco-all marco-all"
+     
+      "marco-all marco-all marco-all marco-all marco-all marco-all marco-all marco-all marco-all marco-all marco-all marco-all marco-all marco-all marco-all marco-all marco-all marco-all"
+      "marco-all marco-all marco-all marco-all marco-all marco-all marco-all marco-all marco-all marco-all marco-all marco-all marco-all marco-all marco-all marco-all marco-all marco-all"
+      "marco-all marco-all marco-all marco-all marco-all marco-all marco-all marco-all marco-all marco-all marco-all marco-all marco-all marco-all marco-all marco-all marco-all marco-all"
+      "marco-all marco-all marco-all marco-all marco-all marco-all marco-all marco-all marco-all marco-all marco-all marco-all marco-all marco-all marco-all marco-all marco-all marco-all"
+      "boro_____ boro_____ boro_____ marco-all marco-all marco-all marco-all marco-all marco-all marco-all marco-all marco-all marco-all marco-all marco-all marco-all marco-all marco-all"
+      ". . . . . . . . . . . . . . . . . ."
+      ". . . . . . . . . . . . . . . . . ."; 
+  }

@@ -1,0 +1,170 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+	background: #202e38;
+    color: #fff;
+}
+
+.titlepagine{
+    text-align: center;
+    margin-block: 0.5em;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:1.6em;
+    text-shadow: 0em 0em 0.4em #ffffff;
+}
+
+.tabla-periodica{
+    display: flex;
+}
+
+/* Grupos */
+
+.tp_grupo{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.grup_1_18{
+    margin-block-start: 0em;
+}
+
+.grup_2_13-17{
+    margin-block-start: 6.5em;
+}
+
+.grup_3-12{
+    margin-block-start: 19.5em;
+}
+
+.grup_4{
+    margin-block-start: 19.5em;
+}
+
+.tp_grupo_elemn{
+    width: 6.5em;
+    height: 6.5em;
+    text-align: center;
+}
+
+.elemn_invsible{
+    background-color: #fff;
+    display: none;
+}
+
+.tp_grupo_elemn .elemn_simbolo{
+    font-weight: bold;
+    font-size:3em
+}
+
+.tp_grupo_elemn .elemn_name{
+    font-weight: bold;
+}
+
+.tp_grupo_elemn .elemn_info{
+    display: flex;
+    justify-content: space-between;
+}
+
+.elemn_info span{
+    margin-inline: 0.5em;
+}
+
+/* Tipo de Elemento */
+
+/* Otros no metales */
+
+.alcalino{
+    background: radial-gradient(#eace5d 10%,#ffffff00 50%); 
+}
+
+.alcalino:hover{
+    transition: 3s all;
+    background-color: #eace5d;
+}
+
+.alcalinotérreos{
+    background: radial-gradient(#f1f165 10%,#ffffff00 50%); 
+}
+
+.alcalinotérreos:hover{
+    transition: 3s all;
+    background-color: #f1f165;
+    color: #000;
+}
+
+.lantanidos{
+    background: radial-gradient(#e8d19c 10%,#ffffff00 50%); 
+}
+
+.lantanidos:hover{
+    transition: 3s all;
+    background-color: #e8d19c;
+    color: #000;
+}
+
+.Actinido{
+    background: radial-gradient(#f5ccda 10%,#ffffff00 50%); 
+}
+
+.Actinido:hover{
+    transition: 3s all;
+    background-color: #f5ccda;
+    color: #000;
+}
+
+.metalDeTransicion{
+    background: radial-gradient(#fac5b7 10%,#ffffff00 50%); 
+}
+
+.metalDeTransicion:hover{
+    transition: 3s all;
+    background-color: #fac5b7;
+}
+
+.sinClasificar{
+    background: radial-gradient(#eee 10%,#ffffff00 50%);
+}
+
+.sinClasificar:hover{
+    transition: 3s all;
+    background-color: #eee;
+    color: #000;
+}
+
+.metalDelBloqueP{
+    background: radial-gradient(#acdfec 10%,#ffffff00 50%); 
+}
+
+.metalDelBloqueP:hover{
+    transition: 3s all;
+    background-color: #acdfec;
+}
+
+.semimetales{
+    background: radial-gradient(#9ee5d4 10%,#ffffff00 50%); 
+}
+
+.semimetales:hover{
+    transition: 3s all;
+    background-color: #9ee5d4;
+}
+
+.noMetales{
+    background: radial-gradient(#8ced8c 10%,#ffffff00 50%);
+}
+
+.noMetales:hover{
+    transition: 3s all;
+    background-color: #8ced8c;
+}
+
+.gasesNobles{
+    background: radial-gradient(#e5bde5 10%,#ffffff00 50%);
+}
+
+.gasesNobles:hover{
+    transition: 3s all;
+    background-color: #e5bde5;
+}

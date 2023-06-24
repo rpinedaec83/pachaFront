@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hackaton 08 Max Monterola</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script1.js"></script>
+    
+</head>
+
+<body>
+    <div class="Preguntas">
+        <div class="Pregunta 1">
+            <label class="Pregun" for="numero1">Pregunta 1 | Ingrese un número:</label>
+            <input id="numero1" name="numero1" required>
+            <button onclick="determinarTresDigitos()">Determinar</button>
+            <p id="resultado1"></p>
+        </div>
+        <div class="Pregunta 2">
+            <label class="Pregun" for="numero2">Pregunta 2 | Ingrese un número:</label>
+            <input id="numero2" name="numero2" required>
+            <button onclick="determinarNegativo()">Determinar</button>
+            <p id="resultado2"></p>
+        </div>
+        <div class="Pregunta 3">
+            <label class="Pregun" for="numero3">Pregunta 3 | Ingrese un número:</label>
+            <input id="numero3" name="numero3" required>
+            <button onclick="determinarCuatro()">Determinar</button>
+            <p id="resultado3"></p>
+        </div>
+        <div class="Pregunta 4">
+            <label class="Pregun">Pregunta 4 </label>
+            <label for="num1">Ingrese el primer número:</label>
+            <input id="num1" required>
+            <label for="num2">Ingrese el segundo número:</label>
+            <input id="num2" required>
+            <label for="num3">Ingrese el tercer número:</label>
+            <input id="num3" required>
+            <button onclick="determinarMenorMayor()">Determinar</button>
+            <p id="resultado4"></p>
+        </div>
+        <div class="Pregunta 5">
+            <label class="Pregun" for="numero7">Pregunta 5 | Cantidad de zapatos a comprar:</label>
+            <input id="numero7" name="numero7" required>
+            <button onclick="TiendaZapatos()">Calcular</button>
+            <p id="resultado51"></p>
+            <p id="resultado52"></p>
+            <p id="resultado53"></p>
+        </div>
+        <div class="Pregunta 6">
+            <label class="Pregun" for="numero8">Pregunta 6 | Cantidad de horas trabajadas a la semana:</label>
+            <input id="numero8" name="numero8" required>
+            <button onclick="SueldoSemanal()">Calcular</button>
+            <p id="resultado6"></p>
+        </div>
+        <div class="Pregunta 7">
+            <label class="Pregun">Pregunta 7 </label>
+            <label for="Letra">Ingrese el tipo de membresía (A, B o C):</label>
+            <input id="Letra" name="Letra" required pattern="[A-Za-z]+" title="Ingrese solo letras (A, B o C)">
+            <label for="numero9">Ingrese el monto de la compra:</label>
+            <input id="numero9" name="numero9" required>
+            <button onclick="DescuentoPorMembresia()">Calcular</button>
+            <p id="resultado7"></p>
+        </div>
+        <div class="Pregunta 8">
+            <label class="Pregun">Pregunta 8 </label>
+            <label for="nota1">Nota 1:</label>
+            <input type="number" id="nota1" min="1" max="20" required>
+
+            <label for="nota2">Nota 2:</label>
+            <input type="number" id="nota2" min="1" max="20" required>
+
+            <label for="nota3">Nota 3:</label>
+            <input type="number" id="nota3" min="1" max="20" required>
+
+            <button onclick="calcularPromedioYEstado()">Calcular promedio</button>
+
+            <p id="resultado8"></p>
+        </div>
+
+        <div class="Pregunta 9">
+            <label class="Pregun">Pregunta 9 </label>
+            <label for="numero10">Ingrese el salario actual del trabajador:</label>
+            <input type="numero10" id="numero10" required>
+            <button onclick="AumentoTrabajador()">Calcular</button>
+            <p id="resultado9"></p>
+        </div>
+        <div class="Pregunta 10">
+            <label class="Pregun">Pregunta 10 </label>
+            <label for="numero11">Ingrese un número:</label>
+            <input type="numero11" id="numero11" required>
+            <button onclick="ParImpar()">Determinar</button>
+            <p id="resultado10"></p>
+        </div>
+        <div class="Pregunta 11">
+            <label class="Pregun">Pregunta 11 </label>
+            <label for="num1">Ingrese el primer número:</label>
+            <input type="number" id="num1" required>
+
+            <label for="num2">Ingrese el segundo número:</label>
+            <input type="number" id="num2" required>
+
+            <label for="num3">Ingrese el tercer número:</label>
+            <input type="number" id="num3" required>
+            
+            <button onclick="MayorDeTresNumeros()">Determinar Mayor</button>
+            <p id="resultado11"></p>
+        </div>
+        <div class="Pregunta 12">
+            <label class="Pregun">Pregunta 12 </label>
+            <label for="num1">Ingrese el primer número:</label>
+            <input type="number" id="num1" required>
+
+            <label for="num2">Ingrese el segundo número:</label>
+            <input type="number" id="num2" required>
+            <button onclick="MayorDeDosNumeros()">Determinar Mayor</button>
+            <p id="resultado12"></p>
+        </div>
+        <div class="Pregunta 13">
+            <label class="Pregun">Pregunta 13 </label>
+            <label for="Letra1">Ingrese una letra:</label>
+            <input id="Letra1" name="Letra1" required pattern="[a-z]+">
+            <button onclick="DeterminarVocal()">Determinar</button>
+            <p id="resultado13"></p>
+        </div>
+        <div class="Pregunta 14">
+            <label class="Pregun">Pregunta 14 </label>
+            <label for="num">Ingrese un número entero positivo del 1 al 10: </label>
+            <input type="number" id="num" min="1" max="10" required>
+            <button onclick="determinarPrimo()">Determinar</button>
+            <p id="resultado14"></p>
+        </div>
+        <div class="Pregunta 15">
+            <label class="Pregun">Pregunta 15 </label>
+            <label for="pulga">Ingrese la cantidad de centímetros a convertir a pulgadas: </label>
+            <input type="number" id="pulga" required>
+            <button onclick="convertirPulgadas()">Determinar</button>
+            <p id="resultado15"></p>
+            <label for="kilo">Ingrese la cantidad de libras a convertir a kilogramos: </label>
+            <input type="number" id="kilo" required>
+            <button onclick="convertirKilogramos()">Determinar</button>
+            <p id="resultado16"></p>
+        </div>
+        <div class="Pregunta 16">
+            <label class="Pregun">Pregunta 16 </label>
+            <label for="nu">Ingrese un número del 1 al 7:</label>
+            <input type="number" id="nu" min="1" max="7" required>
+            <button onclick="indicarDia()">Indicar Dia</button>
+            <p id="resultado17"></p>
+        </div>
+        <div class="Pregunta 17">
+            <label class="Pregun">Pregunta 17 </label>
+            <label for="num1">Ingrese la hora:</label>
+            <input type="number" id="Ingrese la hora"  required>
+            <label for="num2">Ingrese el minuto:</label>
+            <input type="number" id="Ingrese el minuto"  required>
+            <label for="num3">Ingrese el segundo:</label>
+            <input type="number" id="Ingrese el segundo"  required>
+            <button onclick="horaEnSegundos()">Indicar Dia</button>
+            <p id="resultado18"></p>
+        </div>
+        <div class="Pregunta 18">
+            <label class="Pregun">Pregunta 18 </label>
+            <label for="num1">Ingrese la cantidad de CD a vender:</label>
+            <input type="number" id="Ingrese la cantidad de CD a vender"  required>
+            <button onclick="venderCD()">Calcular</button>
+            <p id="resultado19"></p>
+        </div>
+        <div class="Pregunta 19">
+            <label class="Pregun">Pregunta 19 </label>
+            <label >Cajero = 11 </label>
+            <label >Servidor = 12 </label>
+            <label >Preparador = 13 </label>
+            <label >Mantenimiento = 14 </label>
+            <label for="num1">Ingrese el número identificador del empleado (11-14)</label>
+            <input type="number" id="Ingrese el número identificador del empleado"  required>
+            <label for="num1">Ingrese la cantidad de días trabajados en la semana (1-6)</label>
+            <input type="number" id="Ingrese la cantidad de días trabajados en la semana"  required>
+            <button onclick="PagarEmpleados()">Calcular Sueldo</button>
+            <p id="resultado20"></p>
+        </div>
+        <div class="Pregunta 20">
+            <label class="Pregun">Pregunta 20 </label>
+            <label for="num1">Ingrese el primer número:</label>
+            <input type="number" id="Ingrese el primer número"  required>
+            <label for="num1">Ingrese el segundo número:</label>
+            <input type="number" id="Ingrese el segundo número"  required>
+            <label for="num1">Ingrese el tercer número:</label>
+            <input type="number" id="Ingrese el tercer número"  required>
+            <label for="num1">Ingrese el cuarto número:</label>
+            <input type="number" id="Ingrese el cuarto número"  required>
+            <button onclick="numeros_pares_mayor()">Calcular</button>
+            <p id="resultado21"></p>
+            <p id="resultado22"></p>
+            <p id="resultado23"></p>
+            <p id="resultado24"></p>
+        </div>
+        <div class="Pregunta 21">
+            <label class="Pregun">Pregunta 21 </label>
+            <label for="num1">Ingrese un número entero:</label>
+            <input type="number" id="Ingrese un número entero"  required>
+            <button onclick="facto()">Calcular</button>
+            <p id="resultado25"></p>
+        </div>
+        <div class="Pregunta 22">
+            <label class="Pregun">Pregunta 22 </label>
+            <label for="num1">Ingrese el valor de n:</label>
+            <input type="number" id="Ingrese el valor de n"  required>
+            <button onclick="suma_n_primeros_numeros()">Calcular</button>
+            <p id="resultado26"></p>
+        </div>
+        <div class="Pregunta 23">
+            <label class="Pregun">Pregunta 23 </label>
+            <label for="num1">Ingrese un número entero positivo:</label>
+            <input type="number" id="Ingrese un número entero positivo"  required>
+            <button onclick="suma_impares()">Calcular</button>
+            <p id="resultado27"></p>
+        </div>
+        <div class="Pregunta 24">
+            <label class="Pregun">Pregunta 24 </label>
+            <label >La suma de todos los números pares hasta el 1000 es: </label>
+            <p id="resultado28"></p>
+            <button onclick="SumaNumerosPares()">Calcular</button>
+        </div>
+        <div class="Pregunta 25">
+            <label class="Pregun">Pregunta 25 </label>
+            <label >Ingrese un número entero:</label>
+            <input type="number" id="Ingrese un número entero2"  required>
+            <button id="boton-calcular" onclick="calcularFactorial()">Calcular</button>
+            <p id="resultado29"></p>
+        </div>
+        <div class="Pregunta 26">
+            <label class="Pregun">Pregunta 26 </label>
+            <label for="Ingrese_el_dividendo">Ingrese el dividendo:</label>
+            <input type="number" id="Ingrese_el_dividendo"  required>
+            <label for="Ingrese_el_divisor">Ingrese el divisor:</label>
+            <input type="number" id="Ingrese_el_divisor"  required>
+            <button onclick="RestaSuce()">Calcular</button>
+            <p id="resultado30"></p>
+        </div>
+        <div class="Pregunta 27">
+            <label class="Pregun">Pregunta 27 </label>
+            <label >Ingrese números positivos. Ingrese un número negativo para terminar.</label>
+            <button onclick="calcularMedia()">Ingresar número</button>
+            <p id="resultado31"></p>
+        </div>
+        <div class="Pregunta 28">
+            <label class="Pregun">Pregunta 28 </label>
+            <label >La suma de los primeros cien números es: </label>
+            <p id="resultado32"></p>
+            <button onclick="sumaPrimerosCienNumerosConRepetir()">Calcular</button>
+        </div>
+        <div class="Pregunta 29">
+            <label class="Pregun">Pregunta 29 </label>
+            <label >La suma de los primeros cien números es: </label>
+            <p id="resultado33"></p>
+            <button onclick="sumaPrimerosCienNumerosConMientras()">Calcular</button>
+        </div>
+        <div class="Pregunta 30">
+            <label class="Pregun">Pregunta 30 </label>
+            <label >La suma de los primeros cien números es: </label>
+            <p id="resultado34"></p>
+            <button onclick="sumaPrimerosCienNumerosConPara()">Calcular</button>
+        </div>
+        <div class="Pregunta 31">
+            <label class="Pregun">Pregunta 31 </label>
+            <label >Ingresar 10 números</label>
+            <button onclick="mediaParesEImpares()">Ingresar número</button>
+            <p id="resultado35"></p>
+            <p id="resultado36"></p>
+        </div>
+        <div class="Pregunta 32">
+            <label class="Pregun">Pregunta 32 </label>
+            <label >Ingresar poblacion de las ciudades de cada provincia</label>
+            <button onclick="Ciudad()">Ingresar poblacion</button>
+            <p id="resultado37"></p>
+        </div>
+        <div class="Pregunta 33">
+            <label class="Pregun">Pregunta 33 </label>
+            <label >Seguir ejecutando</label>
+            <button onclick="Continuar()">Probar</button>
+        </div>
+        <div class="Pregunta 34">
+            <label class="Pregun">Pregunta 34 </label>
+            <label >Tabla de multiplicar de los números del uno al nueve</label>
+            <button onclick="Tablaa()">Observar</button>
+        </div>
+        <div class="Pregunta 35">
+            <label class="Pregun">Pregunta 35 </label>
+            <label >Ingresar 20 numeros para saber mayot y menor</label>
+            <button onclick="Mayor_Menor()">Probar</button>
+            <p id="resultado38"></p>
+            <p id="resultado39"></p>
+        </div>
+        <div class="Pregunta 36">
+            <label class="Pregun">Pregunta 36</label>
+            <label >Serie de Fibonacci</label>
+            <button onclick="Fibonacci()">Probar</button>
+        </div>
+        <div class="Pregunta 37">
+            <label class="Pregun">Pregunta 37</label>
+            <label >conseguir el M.C.D por medio del algoritmo de Euclides</label>
+            <p id="resultado40"></p>
+            <button onclick="MCD_Euclides()">Probar</button>
+        </div>
+        <div class="Pregunta 38">
+            <label class="Pregun">Pregunta 38</label>
+            <label >Número perfecto</label>
+            <p id="resultado41"></p>
+            <button onclick="Número_perfecto()">Probar</button>
+        </div>
+        <div class="Pregunta 39">
+            <label class="Pregun">Pregunta 39</label>
+            <label >número pi con la serie de Gregory-Leibniz</label>
+            <p id="resultado42"></p>
+            <button onclick="GregoryLeibniz()">Probar</button>
+        </div>
+        <div class="Pregunta 40">
+            <label class="Pregun">Pregunta 40</label>
+            <label >aproximación del número pi con la serie de Nilakantha</label>
+            <p id="resultado43"></p>
+            
+            <button onclick="Nilakantha()">Probar</button>
+        </div>
+
+
+
+
+
+
+    </div>
+</body>
+
+</html>

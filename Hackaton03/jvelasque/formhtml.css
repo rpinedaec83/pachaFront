@@ -1,0 +1,11 @@
+body{
+    background-color: black;
+    color: azure;
+}
+label{
+    color: rgb(247, 247, 247);
+    font-size: 40px;
+  }
+  input{
+    background-color: rgba(237, 168, 30, 0.863);
+  }

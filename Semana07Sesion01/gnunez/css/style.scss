@@ -1,0 +1,14 @@
+.media{
+    background-color: black;
+    width: 800px;
+    height: 600px;
+}
+
+@media (max-width:600px) {
+    .media{
+        width: 500px;
+        height: 800px;
+        background-color: burlywood;
+    }
+    
+}

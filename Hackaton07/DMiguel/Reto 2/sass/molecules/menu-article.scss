@@ -1,0 +1,22 @@
+@import '../atoms/colors.scss';
+
+.menu-article{
+    width:  90%;
+    max-width: 55%;
+    margin: 2em auto;
+    display: grid;
+    span{
+        display:flex;
+        align-items: center;
+        justify-content: space-between;
+        color: $color-icons;
+        div{
+            display: flex;
+            align-items: center;
+            justify-content:center; 
+            p{
+                color: $color-icons;
+            }
+        }
+    }
+}
