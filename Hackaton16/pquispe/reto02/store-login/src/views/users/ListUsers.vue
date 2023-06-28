@@ -1,7 +1,7 @@
 <template>
   <h1 class="mt-5">Usuarios</h1>
   <router-link to="/users/add" class="btn btn-success mt-2">Agregar Usuario</router-link>
-  <table class="table table-striped">
+  <table class="table table-striped mt-5">
     <thead>
       <tr>
         <th style="width: 30%">Nombre</th>
