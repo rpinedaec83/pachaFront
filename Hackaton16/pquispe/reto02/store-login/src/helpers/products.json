@@ -16,5 +16,47 @@
     "title": "Minecraft",
     "description": "Construye tu propio mundo virtual, explora vastos paisajes y desafía tu creatividad en este juego de construcción y aventura sin límites.",
     "image": "https://image.api.playstation.com/vulcan/img/cfn/11307uYG0CXzRuA9aryByTHYrQLFz-HVQ3VVl7aAysxK15HMpqjkAIcC_R5vdfZt52hAXQNHoYhSuoSq_46_MT_tDBcLu49I.png"
+  },
+  {
+    "id": 4,
+    "title": "The Witcher 3: Wild Hunt",
+    "description": " Embárcate en una oscura y épica fantasía como Geralt de Rivia, un cazador de monstruos, en una misión para encontrar a la persona de tu pasado y enfrentar a un antiguo mal.",
+    "image": "https://image.api.playstation.com/vulcan/ap/rnd/202211/0714/S1jCzktWD7XJSRkz4kNYNVM0.png"
+  },
+  {
+    "id": 5,
+    "title": "Overwatch",
+    "description": "Únete a un equipo de héroes y participa en intensos combates en línea. Usa habilidades únicas y trabajo en equipo para lograr la victoria en emocionantes partidas de disparos.",
+    "image": "https://m.media-amazon.com/images/M/MV5BYjBkNTJkOWUtNTg1ZS00NGZhLWIxMGUtOWE0ZDA0NzRkODM3XkEyXkFqcGdeQXVyMTA0MTM5NjI2._V1_FMjpg_UX1000_.jpg"
+  },
+  {
+    "id": 6,
+    "title": "Red Dead Redemption 2",
+    "description": " Sumérgete en el salvaje oeste como Arthur Morgan, un forajido en busca de redención. Explora un vasto y detallado mundo abierto lleno de peligros y decisiones morales.",
+    "image": "https://image.api.playstation.com/gs2-sec/appkgo/prod/CUSA08519_00/12/i_3da1cf7c41dc7652f9b639e1680d96436773658668c7dc3930c441291095713b/i/icon0.png"
+  },
+  {
+    "id": 7,
+    "title": "Fortnite",
+    "description": "Únete a una batalla en línea de 100 jugadores y lucha por ser el último en pie. Construye estructuras, recoge armas y demuestra tus habilidades de supervivencia en este juego de acción trepidante.",
+    "image": "https://m.media-amazon.com/images/M/MV5BNzU2YTY2OTgtZGZjZi00MTAyLThlYjUtMWM5ZmYzOGEyOWJhXkEyXkFqcGdeQXVyNTgyNTA4MjM@._V1_FMjpg_UX1000_.jpg"
+  },
+  {
+    "id": 8,
+    "title": "Super Mario Odyssey",
+    "description": "Acompaña a Mario en una emocionante aventura por diferentes reinos en busca de salvar a la princesa Peach. Salta, lucha contra enemigos y descubre secretos en este colorido juego de plataformas.",
+    "image": "https://storegamesperu.com/files/images/productos/1637877406-super-mario-odyssey.jpg"
+  },
+  {
+    "id": 9,
+    "title": "Warzone",
+    "description": "Enfréntate a otros jugadores en un enorme campo de batalla en línea gratuito. Domina diferentes armas, coordina estrategias y sé el último equipo en pie para ganar la partida.",
+    "image": "https://store-images.s-microsoft.com/image/apps.12368.13739535057760905.d290a0fa-1de3-43d4-9eb3-3453bfbc6707.2f43efce-f3a0-42b7-83fc-ceb34e8868e9"
+  },
+  {
+    "id": 10,
+    "title": "Assassin's Creed Valhalla",
+    "description": "Sumérgete en la era vikinga como Eivor, un feroz guerrero en busca de un nuevo hogar. Explora vastos paisajes, saquea y construye tu asentamiento en esta aventura de acción y sigilo.",
+    "image": "https://image.api.playstation.com/vulcan/ap/rnd/202006/1520/EDtkdijFRwbmGKk1G9lrDoEF.png"
   }
 ]
