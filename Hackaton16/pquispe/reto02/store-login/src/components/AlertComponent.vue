@@ -1,5 +1,5 @@
 <template>
-  <div v-if="alert">
+  <div v-if="alert" class="container py-3">
     <div class="alert alert-dismissible" :class="alert.type" role="alert">
       {{ alert.message }}
       <button @click="alertStore.clear()" type="button" class="btn-close"></button>
