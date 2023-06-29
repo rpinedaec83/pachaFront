@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "title": "The Legend of Zelda: Breath of the Wild",
+    "description": "Embárcate en una aventura épica en un vasto mundo abierto lleno de peligros y secretos. Explora templos antiguos, enfréntate a temibles criaturas y descubre el destino de Hyrule.",
+    "image": "https://storegamesperu.com/files/images/productos/1637877345-the-legend-of-zelda-breath-of-the-wild.jpg"
+  },
+  {
+    "id": 2,
+    "title": "Grand Theft Auto V",
+    "description": "Sumérgete en una inmensa y vibrante metrópolis del crimen, donde podrás participar en atracos, carreras ilegales y una gran variedad de actividades delictivas.",
+    "image": "https://gamescenter.pe/wp-content/uploads/2018/06/GTA-V-510x638.webp"
+  },
+  {
+    "id": 3,
+    "title": "Minecraft",
+    "description": "Construye tu propio mundo virtual, explora vastos paisajes y desafía tu creatividad en este juego de construcción y aventura sin límites.",
+    "image": "https://image.api.playstation.com/vulcan/img/cfn/11307uYG0CXzRuA9aryByTHYrQLFz-HVQ3VVl7aAysxK15HMpqjkAIcC_R5vdfZt52hAXQNHoYhSuoSq_46_MT_tDBcLu49I.png"
+  }
+]
